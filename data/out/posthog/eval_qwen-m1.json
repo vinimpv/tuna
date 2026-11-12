@@ -1,0 +1,20 @@
+{
+ "repo": "posthog",
+ "questions": "$TUNA_OUT/posthog/questions/qwen-m1.jsonl",
+ "n": 100,
+ "unreachable_gold": [],
+ "missing_gold": {},
+ "results": {
+  "bm25_qwen-m1": {
+   "hit@1": 0.67,
+   "hit@3": 0.84,
+   "hit@5": 0.91,
+   "hit@10": 0.93,
+   "hit@20": 0.94,
+   "mrr": 0.7685,
+   "mrr@10": 0.7662,
+   "recall@200": 0.98,
+   "n": 100
+  }
+ }
+}

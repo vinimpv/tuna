@@ -1,0 +1,85 @@
+{
+ "rule": "split fixed before it was computed, 2026-11-12 14:32 UTC",
+ "bench": "issues (first run)",
+ "metric": "gold-file rate",
+ "interval": "95% paired bootstrap, 10000 replicates, gold-file clusters resampled within repository",
+ "status": "observational: the split conditions on the agent's own choice to search",
+ "arms": {
+  "B": {
+   "search issues": {
+    "issues": 59,
+    "B_rate": 0.4407,
+    "A_rate": 0.4746,
+    "B-A": [
+     -0.0339,
+     -0.1017,
+     0.0339
+    ]
+   },
+   "no-search issues": {
+    "issues": 262,
+    "B_rate": 0.687,
+    "A_rate": 0.6565,
+    "B-A": [
+     0.0305,
+     0.0036,
+     0.0618
+    ]
+   }
+  },
+  "C": {
+   "search issues": {
+    "issues": 55,
+    "C_rate": 0.5455,
+    "A_rate": 0.5273,
+    "C-A": [
+     0.0182,
+     -0.0909,
+     0.1273
+    ]
+   },
+   "no-search issues": {
+    "issues": 266,
+    "C_rate": 0.6617,
+    "A_rate": 0.6429,
+    "C-A": [
+     0.0188,
+     -0.0077,
+     0.0478
+    ]
+   }
+  },
+  "D": {
+   "search issues": {
+    "issues": 55,
+    "D_rate": 0.5818,
+    "A_rate": 0.5091,
+    "D-A": [
+     0.0727,
+     0.0,
+     0.1667
+    ]
+   },
+   "no-search issues": {
+    "issues": 266,
+    "D_rate": 0.6955,
+    "A_rate": 0.6466,
+    "D-A": [
+     0.0489,
+     0.0189,
+     0.0813
+    ]
+   }
+  }
+ },
+ "D_search_issues_with_gold_file_in_results": {
+  "issues": 55,
+  "with_gold_file": 39,
+  "basis": "union of every D search call's returned symbols"
+ },
+ "rule_case": {
+  "D-A no-search": 0.0489,
+  "D-A search": 0.0727,
+  "case": "the D-A gain is present on issues without a search call, so it is not credited to search"
+ }
+}

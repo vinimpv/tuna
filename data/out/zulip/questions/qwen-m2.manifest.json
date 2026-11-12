@@ -1,0 +1,64 @@
+{
+ "repo": "zulip",
+ "name": "qwen-m2",
+ "seed": 20261111,
+ "prompt_version": "question-v2",
+ "prompt_sha256": "27cfcbd67ddc5ceb94e87d16ba3dc6c7461616349b23c6fe2e1a8d022d2a55b1",
+ "n": 100,
+ "max_attempts": 3,
+ "filter": "v2",
+ "guards": {
+  "timeout_s": 90,
+  "max_tool_calls": 40
+ },
+ "runs": [
+  {
+   "started": "2026-11-11T17:13:00+00:00",
+   "workers": 8,
+   "wall_seconds": 181.1,
+   "files": 110,
+   "accepted": 105
+  }
+ ],
+ "surplus_accepted": [
+  "zerver/views/auth.py",
+  "zerver/lib/stream_subscription.py",
+  "zerver/views/user_settings.py",
+  "zerver/checks.py",
+  "zerver/actions/default_streams.py"
+ ],
+ "writer": [
+  "qwen3.6-35b-a3b"
+ ],
+ "finished": true,
+ "accepted": 100,
+ "files_tried": 110,
+ "files_exhausted": 5,
+ "files_eligible": 596,
+ "attempts": 128,
+ "rejections": {
+  "leaks_identifier": 9,
+  "id_mixed_case": 9,
+  "id_file_word": 3,
+  "gold_not_in_file": 1,
+  "id_underscore": 1
+ },
+ "median_attempt_of_accepted": 1.0,
+ "median_seconds_per_accepted": 10.9,
+ "median_seconds_per_attempt": 10.1,
+ "writer_seconds_total": 1424.8,
+ "accepted_without_reading_target": 0,
+ "questions_per_minute": [
+  {
+   "workers": 8,
+   "qpm": 34.8
+  }
+ ],
+ "updated": "2026-11-11T17:16:01+00:00",
+ "reject_share": 0.1797,
+ "filter_reject_share": 0.1719,
+ "writer_failure_share": 0.0078,
+ "empty_at_cap_share": 0.0,
+ "empty_other_share": 0.0,
+ "prose_before_json_share": 0.0
+}

@@ -1,0 +1,28 @@
+{
+ "repo": "posthog",
+ "tag": "lfm25-ft-full",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/posthog/models/lfm25-ft-full",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 38778,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 158990881,
+ "query_ms": {
+  "p50": 10.05,
+  "p95": 11.06,
+  "mean": 10.23
+ },
+ "encode_ms": {
+  "p50": 6.52,
+  "p95": 6.8,
+  "mean": 6.55
+ },
+ "search_ms": {
+  "p50": 3.53,
+  "p95": 4.46,
+  "mean": 3.69
+ }
+}

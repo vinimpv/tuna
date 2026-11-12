@@ -1,0 +1,25 @@
+{
+ "name": "qwen-trainbug1",
+ "sets": [
+  "qwen-train1",
+  "qwen-bug1"
+ ],
+ "questions": 2000,
+ "splits": {
+  "train": {
+   "questions": 1714,
+   "files": 452
+  },
+  "val": {
+   "questions": 286,
+   "files": 65
+  }
+ },
+ "moved_to_val_by_file": 84,
+ "by_source": {
+  "qwen-train1:train": 1292,
+  "qwen-train1:val": 208,
+  "qwen-bug1:train": 422,
+  "qwen-bug1:val": 78
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "what": "first experiment (bench issues) final rows that recorded a dirty git tree",
+ "generated_by": "scripts/cc-analysis.py dirty-tree",
+ "final_rows": 1284,
+ "dirty_rows": 81,
+ "by_commit": {
+  "dev-17": {
+   "rows": 2,
+   "by_arm": {
+    "B": 2
+   },
+   "recovered_rows": 2,
+   "rows_came_from_bench": [
+    "full"
+   ],
+   "what": "rows written by `cc-bench recover` after the agent runs had finished (08:14 UTC) under a harness started from a clean dev-17; the uncommitted state at recovery held the recover/reuse/arm-D harness code and the --fuse-bm25 change to src/tuna/mcp.py, all committed at 08:19:53 as dev-18; those runs never used it",
+   "agent_runs_ran_in_dirty_tree": false
+  },
+  "dev-19": {
+   "rows": 4,
+   "by_arm": {
+    "C": 2,
+    "B": 1,
+    "A": 1
+   },
+   "recovered_rows": 4,
+   "rows_came_from_bench": [
+    "issues"
+   ],
+   "what": "rows written by `cc-bench recover` after the agent runs had finished (08:34-08:35 UTC) under a harness started from a clean dev-19; the uncommitted state at recovery held harness failure-classification, run-order and report code (scripts/cc-bench.py, tests), committed at 08:37:50 as dev-23",
+   "agent_runs_ran_in_dirty_tree": false
+  },
+  "dev-14": {
+   "rows": 75,
+   "by_arm": {
+    "C": 25,
+    "A": 25,
+    "B": 25
+   },
+   "recovered_rows": 0,
+   "rows_came_from_bench": [
+    "pilot"
+   ],
+   "what": "the pilot's runs (07:46-07:54 UTC) ran with one uncommitted edit: the harness stop guard (--max-utilization), committed at 07:54:25 as dev-15 (scripts/cc-bench.py only, 8+/2-)",
+   "agent_runs_ran_in_dirty_tree": true
+  }
+ },
+ "prompt_and_command": "the PROMPT template and the claude command builder are identical at every commit (see armA-setup.json); none of the uncommitted edits touched them"
+}

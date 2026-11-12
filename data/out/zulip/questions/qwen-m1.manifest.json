@@ -1,0 +1,39 @@
+{
+ "repo": "zulip",
+ "name": "qwen-m1",
+ "seed": 20261111,
+ "prompt_version": "question-v1",
+ "prompt_sha256": "9b607cebedb0a929de78b2ba383d2c399bb8f7e2ca4622ce713d9b8c018c961a",
+ "n": 100,
+ "max_attempts": 3,
+ "guards": {
+  "timeout_s": 90,
+  "max_tool_calls": 40
+ },
+ "writer": [
+  "qwen3.6-35b-a3b"
+ ],
+ "finished": true,
+ "accepted": 100,
+ "files_tried": 104,
+ "files_exhausted": 4,
+ "files_eligible": 596,
+ "attempts": 144,
+ "rejections": {
+  "unparseable": 29,
+  "leaks_identifier": 12,
+  "pi_runaway": 3
+ },
+ "median_attempt_of_accepted": 1.0,
+ "median_seconds_per_accepted": 3.6,
+ "median_seconds_per_attempt": 3.3,
+ "writer_seconds_total": 577.3,
+ "accepted_without_reading_target": 0,
+ "updated": "2026-11-11T15:49:32+00:00",
+ "reject_share": 0.3056,
+ "filter_reject_share": 0.0833,
+ "writer_failure_share": 0.2222,
+ "empty_at_cap_share": 0.0,
+ "empty_other_share": 0.0,
+ "prose_before_json_share": 0.2014
+}

@@ -1,0 +1,29 @@
+{
+ "repo": "zulip",
+ "tag": "lfm25-ft-lora-bug",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/zulip/models/lfm25-ft-lora-bug",
+ "device": "cuda",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 8457,
+ "symbols": 6836,
+ "dim": 1024,
+ "index_bytes": 34674781,
+ "query_ms": {
+  "p50": 9.0,
+  "p95": 18.02,
+  "mean": 11.78
+ },
+ "encode_ms": {
+  "p50": 6.13,
+  "p95": 12.89,
+  "mean": 8.11
+ },
+ "search_ms": {
+  "p50": 3.14,
+  "p95": 6.06,
+  "mean": 3.67
+ }
+}

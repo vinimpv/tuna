@@ -1,0 +1,532 @@
+{
+ "set": "claude-m3",
+ "tuned": {
+  "LFM2.5-350M": "lfm25-ft-lora",
+  "jina-0.5B": "jina-0.5b-ft-lora",
+  "Qwen3-0.6B": "qwen3-0.6b-ft-lora"
+ },
+ "rows": [
+  {
+   "repo": "saleor",
+   "model": "LFM2.5-350M",
+   "kind": "stock",
+   "tag": "lfm25-emb",
+   "mrr@10": 0.2466,
+   "hit@10": 0.4625,
+   "index_minutes": 0.73,
+   "index_wh": null,
+   "query_p50_ms_cuda": 6.24,
+   "query_p50_ms_cpu": 101.4,
+   "cold_minutes": 0.73,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     0.73,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "saleor",
+   "model": "LFM2.5-350M",
+   "kind": "tuned",
+   "tag": "lfm25-ft-lora",
+   "mrr@10": 0.6269,
+   "hit@10": 0.885,
+   "index_minutes": 0.68,
+   "index_wh": 2.63,
+   "query_p50_ms_cuda": 6.04,
+   "query_p50_ms_cpu": 101.56,
+   "cold_parts": {
+    "questions": [
+     51.78,
+     330.66
+    ],
+    "judge": [
+     0.05,
+     0.07
+    ],
+    "mine": [
+     0.02,
+     0.0
+    ],
+    "train": [
+     10.1,
+     91.54
+    ],
+    "index": [
+     0.68,
+     2.63
+    ]
+   },
+   "cold_minutes": 62.63,
+   "cold_wh": 424.91,
+   "cold_min_coverage": 0.75,
+   "cold_missing": []
+  },
+  {
+   "repo": "saleor",
+   "model": "jina-0.5B",
+   "kind": "stock",
+   "tag": "jina-0.5b",
+   "mrr@10": 0.5102,
+   "hit@10": 0.7875,
+   "index_minutes": 0.5,
+   "index_wh": null,
+   "query_p50_ms_cuda": 8.96,
+   "query_p50_ms_cpu": 116.71,
+   "cold_minutes": 0.5,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     0.5,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "saleor",
+   "model": "jina-0.5B",
+   "kind": "tuned",
+   "tag": "jina-0.5b-ft-lora",
+   "mrr@10": 0.7348,
+   "hit@10": 0.9425,
+   "index_minutes": 0.45,
+   "index_wh": 2.86,
+   "query_p50_ms_cuda": 9.06,
+   "query_p50_ms_cpu": 115.62,
+   "cold_parts": {
+    "questions": [
+     51.78,
+     330.66
+    ],
+    "judge": [
+     0.05,
+     0.07
+    ],
+    "mine": [
+     0.02,
+     0.0
+    ],
+    "train": [
+     17.35,
+     160.98
+    ],
+    "index": [
+     0.45,
+     2.86
+    ]
+   },
+   "cold_minutes": 69.65,
+   "cold_wh": 494.58,
+   "cold_min_coverage": 0.75,
+   "cold_missing": []
+  },
+  {
+   "repo": "saleor",
+   "model": "Qwen3-0.6B",
+   "kind": "stock",
+   "tag": "qwen3-0.6b",
+   "mrr@10": 0.5945,
+   "hit@10": 0.88,
+   "index_minutes": 0.75,
+   "index_wh": null,
+   "query_p50_ms_cuda": 12.56,
+   "query_p50_ms_cpu": 137.0,
+   "cold_minutes": 0.75,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     0.75,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "saleor",
+   "model": "Qwen3-0.6B",
+   "kind": "tuned",
+   "tag": "qwen3-0.6b-ft-lora",
+   "mrr@10": 0.7839,
+   "hit@10": 0.96,
+   "index_minutes": 0.74,
+   "index_wh": 5.41,
+   "query_p50_ms_cuda": 12.69,
+   "query_p50_ms_cpu": 135.96,
+   "cold_parts": {
+    "questions": [
+     51.78,
+     330.66
+    ],
+    "judge": [
+     0.05,
+     0.07
+    ],
+    "mine": [
+     0.03,
+     0.06
+    ],
+    "train": [
+     33.86,
+     300.72
+    ],
+    "index": [
+     0.74,
+     5.41
+    ]
+   },
+   "cold_minutes": 86.46,
+   "cold_wh": 636.93,
+   "cold_min_coverage": 0.75,
+   "cold_missing": []
+  },
+  {
+   "repo": "zulip",
+   "model": "LFM2.5-350M",
+   "kind": "stock",
+   "tag": "lfm25-emb",
+   "mrr@10": 0.3014,
+   "hit@10": 0.54,
+   "index_minutes": 0.52,
+   "index_wh": null,
+   "query_p50_ms_cuda": 6.01,
+   "query_p50_ms_cpu": 102.38,
+   "cold_minutes": 0.52,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     0.52,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "zulip",
+   "model": "LFM2.5-350M",
+   "kind": "tuned",
+   "tag": "lfm25-ft-lora",
+   "mrr@10": 0.62,
+   "hit@10": 0.895,
+   "index_minutes": 0.58,
+   "index_wh": 1.96,
+   "query_p50_ms_cuda": 5.89,
+   "query_p50_ms_cpu": 101.37,
+   "cold_parts": {
+    "questions": [
+     28.87,
+     262.53
+    ],
+    "judge": [
+     0.07,
+     0.09
+    ],
+    "mine": [
+     0.01,
+     0.0
+    ],
+    "train": [
+     5.74,
+     51.88
+    ],
+    "index": [
+     0.58,
+     1.96
+    ]
+   },
+   "cold_minutes": 35.27,
+   "cold_wh": 316.46,
+   "cold_min_coverage": 0.97,
+   "cold_missing": []
+  },
+  {
+   "repo": "zulip",
+   "model": "jina-0.5B",
+   "kind": "stock",
+   "tag": "jina-0.5b",
+   "mrr@10": 0.5465,
+   "hit@10": 0.8125,
+   "index_minutes": 0.38,
+   "index_wh": null,
+   "query_p50_ms_cuda": 8.8,
+   "query_p50_ms_cpu": 117.72,
+   "cold_minutes": 0.38,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     0.38,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "zulip",
+   "model": "jina-0.5B",
+   "kind": "tuned",
+   "tag": "jina-0.5b-ft-lora",
+   "mrr@10": 0.7306,
+   "hit@10": 0.94,
+   "index_minutes": 0.38,
+   "index_wh": 2.27,
+   "query_p50_ms_cuda": 8.75,
+   "query_p50_ms_cpu": 116.99,
+   "cold_parts": {
+    "questions": [
+     28.87,
+     262.53
+    ],
+    "judge": [
+     0.07,
+     0.09
+    ],
+    "mine": [
+     0.01,
+     0.0
+    ],
+    "train": [
+     11.89,
+     110.98
+    ],
+    "index": [
+     0.38,
+     2.27
+    ]
+   },
+   "cold_minutes": 41.22,
+   "cold_wh": 375.87,
+   "cold_min_coverage": 0.93,
+   "cold_missing": []
+  },
+  {
+   "repo": "zulip",
+   "model": "Qwen3-0.6B",
+   "kind": "stock",
+   "tag": "qwen3-0.6b",
+   "mrr@10": 0.6188,
+   "hit@10": 0.88,
+   "index_minutes": 0.63,
+   "index_wh": null,
+   "query_p50_ms_cuda": 12.46,
+   "query_p50_ms_cpu": 136.8,
+   "cold_minutes": 0.63,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     0.63,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "zulip",
+   "model": "Qwen3-0.6B",
+   "kind": "tuned",
+   "tag": "qwen3-0.6b-ft-lora",
+   "mrr@10": 0.7985,
+   "hit@10": 0.9625,
+   "index_minutes": 0.7,
+   "index_wh": 4.52,
+   "query_p50_ms_cuda": 12.09,
+   "query_p50_ms_cpu": 135.98,
+   "cold_parts": {
+    "questions": [
+     28.87,
+     262.53
+    ],
+    "judge": [
+     0.07,
+     0.09
+    ],
+    "mine": [
+     0.02,
+     0.07
+    ],
+    "train": [
+     15.71,
+     139.63
+    ],
+    "index": [
+     0.7,
+     4.52
+    ]
+   },
+   "cold_minutes": 45.36,
+   "cold_wh": 406.84,
+   "cold_min_coverage": 0.98,
+   "cold_missing": []
+  },
+  {
+   "repo": "posthog",
+   "model": "LFM2.5-350M",
+   "kind": "stock",
+   "tag": "lfm25-emb",
+   "mrr@10": 0.3282,
+   "hit@10": 0.565,
+   "index_minutes": 2.43,
+   "index_wh": null,
+   "query_p50_ms_cuda": 11.98,
+   "query_p50_ms_cpu": 105.61,
+   "cold_minutes": 2.43,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     2.43,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "posthog",
+   "model": "LFM2.5-350M",
+   "kind": "tuned",
+   "tag": "lfm25-ft-lora",
+   "mrr@10": 0.5381,
+   "hit@10": 0.795,
+   "index_minutes": 2.5,
+   "index_wh": 8.79,
+   "query_p50_ms_cuda": 10.46,
+   "query_p50_ms_cpu": 105.31,
+   "cold_parts": {
+    "questions": [
+     61.11,
+     544.91
+    ],
+    "judge": [
+     0.12,
+     0.14
+    ],
+    "mine": [
+     0.04,
+     0.03
+    ],
+    "train": [
+     18.44,
+     167.81
+    ],
+    "index": [
+     2.5,
+     8.79
+    ]
+   },
+   "cold_minutes": 82.2,
+   "cold_wh": 721.68,
+   "cold_min_coverage": 0.99,
+   "cold_missing": []
+  },
+  {
+   "repo": "posthog",
+   "model": "jina-0.5B",
+   "kind": "stock",
+   "tag": "jina-0.5b",
+   "mrr@10": 0.5233,
+   "hit@10": 0.7625,
+   "index_minutes": 3.18,
+   "index_wh": null,
+   "query_p50_ms_cuda": 11.44,
+   "query_p50_ms_cpu": 119.79,
+   "cold_minutes": 3.18,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     3.18,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "posthog",
+   "model": "jina-0.5B",
+   "kind": "tuned",
+   "tag": "jina-0.5b-ft-lora",
+   "mrr@10": 0.6907,
+   "hit@10": 0.895,
+   "index_minutes": 3.1,
+   "index_wh": 11.4,
+   "query_p50_ms_cuda": 11.51,
+   "query_p50_ms_cpu": 118.37,
+   "cold_parts": {
+    "questions": [
+     61.11,
+     544.91
+    ],
+    "judge": [
+     0.12,
+     0.14
+    ],
+    "mine": [
+     0.03,
+     0.0
+    ],
+    "train": [
+     19.7,
+     183.33
+    ],
+    "index": [
+     3.1,
+     11.4
+    ]
+   },
+   "cold_minutes": 84.06,
+   "cold_wh": 739.78,
+   "cold_min_coverage": 0.99,
+   "cold_missing": []
+  },
+  {
+   "repo": "posthog",
+   "model": "Qwen3-0.6B",
+   "kind": "stock",
+   "tag": "qwen3-0.6b",
+   "mrr@10": 0.5418,
+   "hit@10": 0.7775,
+   "index_minutes": 4.2,
+   "index_wh": null,
+   "query_p50_ms_cuda": 15.26,
+   "query_p50_ms_cpu": 137.35,
+   "cold_minutes": 4.2,
+   "cold_wh": null,
+   "cold_parts": {
+    "index": [
+     4.2,
+     null
+    ]
+   }
+  },
+  {
+   "repo": "posthog",
+   "model": "Qwen3-0.6B",
+   "kind": "tuned",
+   "tag": "qwen3-0.6b-ft-lora",
+   "mrr@10": 0.7346,
+   "hit@10": 0.9225,
+   "index_minutes": 4.23,
+   "index_wh": 21.55,
+   "query_p50_ms_cuda": 15.5,
+   "query_p50_ms_cpu": 136.96,
+   "cold_parts": {
+    "questions": [
+     61.11,
+     544.91
+    ],
+    "judge": [
+     0.12,
+     0.14
+    ],
+    "mine": [
+     0.04,
+     0.06
+    ],
+    "train": [
+     56.42,
+     499.61
+    ],
+    "index": [
+     4.23,
+     21.55
+    ]
+   },
+   "cold_minutes": 121.92,
+   "cold_wh": 1066.27,
+   "cold_min_coverage": 1.0,
+   "cold_missing": []
+  }
+ ]
+}

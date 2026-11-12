@@ -1,0 +1,623 @@
+{
+ "label": "dollars = cost the client reports at API list prices",
+ "disagreeing_cards_by_gold_symbol": {
+  "H-tuned card has gold symbol, H-stock card lacks it": {
+   "issues": 45,
+   "H-tuned": {
+    "file_hit": 0.7333,
+    "symbol_hit": 0.6
+   },
+   "H-stock": {
+    "file_hit": 0.7111,
+    "symbol_hit": 0.5556
+   },
+   "A": {
+    "file_hit": 0.6667,
+    "symbol_hit": 0.4889
+   },
+   "diff": {
+    "H-tuned-H-stock": {
+     "file_hit": [
+      0.0222,
+      -0.0444,
+      0.093
+     ],
+     "symbol_hit": [
+      0.0444,
+      -0.05,
+      0.1429
+     ]
+    }
+   }
+  },
+  "H-stock card has gold symbol, H-tuned card lacks it": {
+   "issues": 23,
+   "H-stock": {
+    "file_hit": 0.5652,
+    "symbol_hit": 0.3913
+   },
+   "H-tuned": {
+    "file_hit": 0.5652,
+    "symbol_hit": 0.3913
+   },
+   "A": {
+    "file_hit": 0.6087,
+    "symbol_hit": 0.4348
+   },
+   "diff": {
+    "H-stock-H-tuned": {
+     "file_hit": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "symbol_hit": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  "H-fused card has gold symbol, H-tuned card lacks it": {
+   "issues": 23,
+   "H-fused": {
+    "file_hit": 0.6087,
+    "symbol_hit": 0.5217
+   },
+   "H-tuned": {
+    "file_hit": 0.5217,
+    "symbol_hit": 0.4348
+   },
+   "A": {
+    "file_hit": 0.6087,
+    "symbol_hit": 0.5217
+   },
+   "diff": {
+    "H-fused-H-tuned": {
+     "file_hit": [
+      0.087,
+      0.0,
+      0.2083
+     ],
+     "symbol_hit": [
+      0.087,
+      0.0,
+      0.2083
+     ]
+    }
+   }
+  },
+  "H-tuned card has gold symbol, H-fused card lacks it": {
+   "issues": 18,
+   "H-tuned": {
+    "file_hit": 0.5556,
+    "symbol_hit": 0.4444
+   },
+   "H-fused": {
+    "file_hit": 0.5556,
+    "symbol_hit": 0.4444
+   },
+   "A": {
+    "file_hit": 0.5556,
+    "symbol_hit": 0.4444
+   },
+   "diff": {
+    "H-tuned-H-fused": {
+     "file_hit": [
+      0.0,
+      -0.1667,
+      0.1667
+     ],
+     "symbol_hit": [
+      0.0,
+      -0.2222,
+      0.2222
+     ]
+    }
+   }
+  }
+ },
+ "card_arm_minus_A_by_card_gold_file": {
+  "H-stock: card held gold file": {
+   "issues": 230,
+   "file_hit": {
+    "arm": 0.8174,
+    "A": 0.7913,
+    "diff": [
+     0.0261,
+     -0.0086,
+     0.061
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.6913,
+    "A": 0.6652,
+    "diff": [
+     0.0261,
+     -0.0088,
+     0.0628
+    ]
+   },
+   "api_calls": {
+    "arm": 3.4043,
+    "A": 4.0783,
+    "diff": [
+     -0.6739,
+     -0.8509,
+     -0.4955
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 3.113,
+    "A": 3.8435,
+    "diff": [
+     -0.7304,
+     -0.9831,
+     -0.4872
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0442,
+    "A": 0.0448,
+    "diff": [
+     -0.0006,
+     -0.0021,
+     0.0008
+    ]
+   }
+  },
+  "H-stock: card lacked gold file": {
+   "issues": 91,
+   "file_hit": {
+    "arm": 0.2637,
+    "A": 0.2747,
+    "diff": [
+     -0.011,
+     -0.0737,
+     0.0543
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.2308,
+    "A": 0.2088,
+    "diff": [
+     0.022,
+     -0.0455,
+     0.0889
+    ]
+   },
+   "api_calls": {
+    "arm": 5.0549,
+    "A": 5.1538,
+    "diff": [
+     -0.0989,
+     -0.5604,
+     0.3615
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 5.5824,
+    "A": 5.5824,
+    "diff": [
+     0.0,
+     -0.6526,
+     0.6597
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0615,
+    "A": 0.0567,
+    "diff": [
+     0.0049,
+     0.0003,
+     0.0096
+    ]
+   }
+  },
+  "H-tuned: card held gold file": {
+   "issues": 240,
+   "file_hit": {
+    "arm": 0.8083,
+    "A": 0.7833,
+    "diff": [
+     0.025,
+     -0.0122,
+     0.0622
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.7125,
+    "A": 0.6625,
+    "diff": [
+     0.05,
+     0.0079,
+     0.0934
+    ]
+   },
+   "api_calls": {
+    "arm": 3.3292,
+    "A": 4.0833,
+    "diff": [
+     -0.7542,
+     -0.9071,
+     -0.6074
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 3.0708,
+    "A": 3.8458,
+    "diff": [
+     -0.775,
+     -0.9735,
+     -0.5764
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0438,
+    "A": 0.0448,
+    "diff": [
+     -0.001,
+     -0.0022,
+     0.0003
+    ]
+   }
+  },
+  "H-tuned: card lacked gold file": {
+   "issues": 81,
+   "file_hit": {
+    "arm": 0.1975,
+    "A": 0.2346,
+    "diff": [
+     -0.037,
+     -0.0909,
+     0.0127
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.1235,
+    "A": 0.1605,
+    "diff": [
+     -0.037,
+     -0.0921,
+     0.0125
+    ]
+   },
+   "api_calls": {
+    "arm": 5.0494,
+    "A": 5.2716,
+    "diff": [
+     -0.2222,
+     -0.8095,
+     0.4359
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 5.5802,
+    "A": 5.7901,
+    "diff": [
+     -0.2099,
+     -1.0362,
+     0.6941
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0628,
+    "A": 0.0582,
+    "diff": [
+     0.0046,
+     -0.0016,
+     0.0118
+    ]
+   }
+  },
+  "H-bm25: card held gold file": {
+   "issues": 239,
+   "file_hit": {
+    "arm": 0.7866,
+    "A": 0.7824,
+    "diff": [
+     0.0042,
+     -0.037,
+     0.0458
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.6736,
+    "A": 0.6444,
+    "diff": [
+     0.0293,
+     -0.0156,
+     0.0734
+    ]
+   },
+   "api_calls": {
+    "arm": 3.4184,
+    "A": 4.2469,
+    "diff": [
+     -0.8285,
+     -1.0085,
+     -0.6617
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 3.1674,
+    "A": 4.0335,
+    "diff": [
+     -0.8661,
+     -1.0909,
+     -0.6473
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.045,
+    "A": 0.0465,
+    "diff": [
+     -0.0014,
+     -0.0031,
+     0.0002
+    ]
+   }
+  },
+  "H-bm25: card lacked gold file": {
+   "issues": 82,
+   "file_hit": {
+    "arm": 0.2195,
+    "A": 0.2439,
+    "diff": [
+     -0.0244,
+     -0.0741,
+     0.0235
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.1951,
+    "A": 0.2195,
+    "diff": [
+     -0.0244,
+     -0.0741,
+     0.0235
+    ]
+   },
+   "api_calls": {
+    "arm": 4.6707,
+    "A": 4.7805,
+    "diff": [
+     -0.1098,
+     -0.5119,
+     0.3296
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 5.3171,
+    "A": 5.2195,
+    "diff": [
+     0.0976,
+     -0.5625,
+     0.7927
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0578,
+    "A": 0.0531,
+    "diff": [
+     0.0047,
+     -0.0003,
+     0.0105
+    ]
+   }
+  },
+  "H-fused: card held gold file": {
+   "issues": 246,
+   "file_hit": {
+    "arm": 0.7967,
+    "A": 0.7764,
+    "diff": [
+     0.0203,
+     -0.0162,
+     0.0576
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.6748,
+    "A": 0.6423,
+    "diff": [
+     0.0325,
+     -0.0041,
+     0.07
+    ]
+   },
+   "api_calls": {
+    "arm": 3.4715,
+    "A": 4.3089,
+    "diff": [
+     -0.8374,
+     -1.0,
+     -0.668
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 3.1829,
+    "A": 4.1463,
+    "diff": [
+     -0.9634,
+     -1.183,
+     -0.7426
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0457,
+    "A": 0.0474,
+    "diff": [
+     -0.0017,
+     -0.0033,
+     -0.0001
+    ]
+   }
+  },
+  "H-fused: card lacked gold file": {
+   "issues": 75,
+   "file_hit": {
+    "arm": 0.24,
+    "A": 0.2133,
+    "diff": [
+     0.0267,
+     -0.026,
+     0.08
+    ]
+   },
+   "symbol_hit": {
+    "arm": 0.2133,
+    "A": 0.1867,
+    "diff": [
+     0.0267,
+     -0.026,
+     0.08
+    ]
+   },
+   "api_calls": {
+    "arm": 4.7333,
+    "A": 4.6267,
+    "diff": [
+     0.1067,
+     -0.4286,
+     0.7532
+    ]
+   },
+   "tool_calls_total": {
+    "arm": 5.3333,
+    "A": 4.96,
+    "diff": [
+     0.3733,
+     -0.4459,
+     1.3462
+    ]
+   },
+   "total_cost_alone_usd": {
+    "arm": 0.0584,
+    "A": 0.0508,
+    "diff": [
+     0.0076,
+     0.0026,
+     0.0136
+    ]
+   }
+  }
+ },
+ "tool_lists_hint_full": {
+  "A": {
+   "[\"Glob\", \"Grep\", \"Read\"]": 321
+  },
+  "H-bm25": {
+   "[\"Glob\", \"Grep\", \"Read\"]": 321
+  },
+  "H-fused": {
+   "[\"Glob\", \"Grep\", \"Read\"]": 321
+  },
+  "H-stock": {
+   "[\"Glob\", \"Grep\", \"Read\"]": 321
+  },
+  "H-tuned": {
+   "[\"Glob\", \"Grep\", \"Read\"]": 321
+  }
+ },
+ "first_run_search_share": {
+  "B": {
+   "issues_with_search": 59,
+   "issues": 321,
+   "share": 0.1838
+  },
+  "C": {
+   "issues_with_search": 55,
+   "issues": 321,
+   "share": 0.1713
+  },
+  "D": {
+   "issues_with_search": 55,
+   "issues": 321,
+   "share": 0.1713
+  }
+ },
+ "A_hint_run_minus_first_run": {
+  "issues": 321,
+  "file_hit": {
+   "hint_run": 0.6449,
+   "first_run": 0.6231,
+   "diff_hint_minus_first": [
+    0.0218,
+    0.0,
+    0.0461
+   ],
+   "disagree": 0.053,
+   "hit_only_in_hint_run": 12,
+   "hit_only_in_first_run": 5
+  },
+  "symbol_hit": {
+   "hint_run": 0.5358,
+   "first_run": 0.5296,
+   "diff_hint_minus_first": [
+    0.0062,
+    -0.019,
+    0.0326
+   ],
+   "disagree": 0.0748,
+   "hit_only_in_hint_run": 13,
+   "hit_only_in_first_run": 11
+  },
+  "first_run_batches": {
+   "interleaved": 191,
+   "shuffled": 102,
+   "pilot": 25,
+   "full-shuffled": 3
+  }
+ },
+ "card_tuned_minus_bm25": {
+  "card_gold_symbol": [
+   0.0249,
+   -0.0258,
+   0.0772
+  ],
+  "card_gold_file": [
+   0.0031,
+   -0.037,
+   0.0449
+  ]
+ },
+ "query_counts": {
+  "basis": "full hint run only (no pilot), one record per issue, identical in all four card arms",
+  "saleor": {
+   "issues": 106,
+   "written_by_haiku": 402,
+   "dropped_invented_identifier": 14,
+   "cut_by_cap_of_4": 15,
+   "literal_query_added": 18,
+   "searched": 391
+  },
+  "zulip": {
+   "issues": 150,
+   "written_by_haiku": 583,
+   "dropped_invented_identifier": 12,
+   "cut_by_cap_of_4": 23,
+   "literal_query_added": 10,
+   "searched": 558
+  },
+  "posthog": {
+   "issues": 65,
+   "written_by_haiku": 254,
+   "dropped_invented_identifier": 11,
+   "cut_by_cap_of_4": 8,
+   "literal_query_added": 10,
+   "searched": 245
+  },
+  "total": {
+   "issues": 321,
+   "written_by_haiku": 1239,
+   "dropped_invented_identifier": 37,
+   "cut_by_cap_of_4": 46,
+   "literal_query_added": 38,
+   "searched": 1194
+  },
+  "per_issue_written": 3.86,
+  "per_issue_searched": 3.72
+ }
+}

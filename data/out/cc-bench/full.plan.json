@@ -1,0 +1,76 @@
+{
+ "bench": "full",
+ "written_utc": "2026-11-12T08:13:08+00:00",
+ "written_before_first_run": true,
+ "model": "claude-sonnet-5-5",
+ "arms": {
+  "A": "Read,Grep,Glob",
+  "B": "A + search over lfm25-emb (stock)",
+  "C": "A + search over lfm25-ft-lora (tuned)"
+ },
+ "seed": 20261112,
+ "workers": 4,
+ "max_utilization": 0.985,
+ "search_device": "cpu (CUDA_VISIBLE_DEVICES empty)",
+ "split_summary": {
+  "saleor": {
+   "issues-v1": 70,
+   "claude-m3": 30
+  },
+  "zulip": {
+   "issues-v1": 70,
+   "claude-m3": 30
+  },
+  "posthog": {
+   "issues-v1": 65,
+   "claude-m3": 35
+  },
+  "total": {
+   "issues-v1": 205,
+   "claude-m3": 95,
+   "questions": 300,
+   "runs": 900
+  }
+ },
+ "split": {
+  "saleor": {
+   "repo": "saleor",
+   "commit": "28a1227b9a2db153c22ed6165b0987d0c96f80f8",
+   "take": [
+    "issues-v1:70",
+    "claude-m3:30"
+   ],
+   "seed": 20261112,
+   "questions": 100,
+   "distinct_gold_files": 114,
+   "max_per_file": 1,
+   "sha256": "3d67a49c81dd99875d261e3c4ccb5e41177bb38ca75c780eede6fc7ea117da0a"
+  },
+  "zulip": {
+   "repo": "zulip",
+   "commit": "b31982251ff82d0b02e59f63ad21f19204e37aea",
+   "take": [
+    "issues-v1:70",
+    "claude-m3:30"
+   ],
+   "seed": 20261112,
+   "questions": 100,
+   "distinct_gold_files": 116,
+   "max_per_file": 1,
+   "sha256": "868d662e651acedc048f8f5fe426e98d2c46cc6c1cf1aa917af1d19d2291c682"
+  },
+  "posthog": {
+   "repo": "posthog",
+   "commit": "df9b6d3f99d8a41e428bf7c20b3860e322a738d7",
+   "take": [
+    "issues-v1:65",
+    "claude-m3:35"
+   ],
+   "seed": 20261112,
+   "questions": 100,
+   "distinct_gold_files": 88,
+   "max_per_file": 5,
+   "sha256": "721409d6ccd6c0fec1e25685cfb4887fa13ed8b9d52243901d2b403d6236fd1f"
+  }
+ }
+}

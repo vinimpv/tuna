@@ -1,0 +1,53 @@
+{
+ "repo": "zulip",
+ "name": "issues-v1",
+ "kind": "github-issues",
+ "commit": "b31982251ff82d0b02e59f63ad21f19204e37aea",
+ "tag": "12.3",
+ "github": "zulip/zulip",
+ "seed": 20261111,
+ "n": 150,
+ "max_gold": 3,
+ "min_words": 15,
+ "max_log_lines": 20,
+ "stages": {
+  "issues_linked": 5129,
+  "single_issue_commits": 4996,
+  "after_no_in_scope_change": 1449,
+  "after_mostly_out_of_scope": 1229,
+  "after_no_function_changed": 1109,
+  "after_too_many_functions": 813,
+  "after_gold_gone_at_pin": 538,
+  "with_gold": 538,
+  "closed_issue_by_human": 529,
+  "english": 528,
+  "min_15_words": 513,
+  "sampled": 150
+ },
+ "pr_search": {
+  "no_commit_at_pin": 2357,
+  "no_closing_keyword_in_body": 201,
+  "mapped": 5,
+  "searched": 2563
+ },
+ "commits_to_pin": 70745,
+ "reverts_skipped": 299,
+ "accepted": 150,
+ "leak_flagged": 24,
+ "noleak": 126,
+ "gold_per_item": {
+  "1": 92,
+  "2": 29,
+  "3": 29
+ },
+ "link_source": {
+  "commit_message": 150
+ },
+ "github_requests_this_run": {
+  "core": 0,
+  "search": 0
+ },
+ "github_responses_used": 150,
+ "symbols_sha256": "42a4a0473113a0c0e67edf0c67dfa663152405f8e2e1027d3165d3dfe2e6c63d",
+ "updated": "2026-11-11T18:12:25+00:00"
+}

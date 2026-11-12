@@ -1,0 +1,5 @@
+{"id": "saleor-smoke-1", "question": "How long can an anonymous shopping cart sit untouched before a background job removes it?", "gold_fqns": ["saleor.checkout.tasks.delete_expired_checkouts"]}
+{"id": "saleor-smoke-2", "question": "When an order is placed and several warehouses hold the product, how does the shop decide which stock the ordered items are reserved from?", "gold_fqns": ["saleor.warehouse.management.allocate_stocks"]}
+{"id": "saleor-smoke-3", "question": "What happens to a single-use discount code after a customer redeems it?", "gold_fqns": ["saleor.discount.utils.voucher.increase_voucher_usage", "saleor.discount.utils.voucher.deactivate_voucher_code"]}
+{"id": "saleor-smoke-4", "question": "Which scheduled job turns off prepaid store cards whose validity date has passed?", "gold_fqns": ["saleor.giftcard.tasks.deactivate_expired_cards_task"]}
+{"id": "saleor-smoke-5", "question": "How is a customer notified after asking to reset a forgotten login password?", "gold_fqns": ["saleor.account.notifications.send_password_reset_notification"]}

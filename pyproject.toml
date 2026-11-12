@@ -1,0 +1,37 @@
+[project]
+name = "tuna"
+version = "0.1.0"
+description = "Tune code search for your repo: extract symbols, run baselines, fine-tune an embedder, measure."
+readme = "README.md"
+authors = [{ name = "Vinicius Pedrini", email = "viniciusvmp@poli.ufrj.br" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<3.13"
+# Exact pins. Every version here was uploaded to PyPI at least 30 days before
+# 2026-11-11; uv.lock pins the transitive set under the same cutoff.
+dependencies = [
+  "numpy==2.5.3",                   # 2026-09-06
+  "torch==2.14.1",                  # 2026-09-30, CUDA 13 build, includes sm_120 (RTX 50xx)
+  "transformers==5.19.0",           # 2026-10-06
+  "sentence-transformers==6.1.0",   # 2026-09-18
+  "tree-sitter==0.25.2",            # 2025-09-25; 0.26.0 segfaults on Point access (fixed in 0.26.1)
+  "tree-sitter-python==0.25.0",     # 2025-09-11
+]
+
+[project.urls]
+Repository = "https://github.com/vinimpv/tuna"
+
+[project.scripts]
+tuna = "tuna.__main__:main"
+
+[build-system]
+requires = ["uv_build==0.12.24"]    # 2026-10-08
+build-backend = "uv_build"
+
+[tool.uv]
+# Supply-chain floor: nothing uploaded in the last 30 days (run date 2026-11-11).
+exclude-newer = "2026-10-12T00:00:00Z"
+# Wheels only: never run a package's build backend or setup.py.
+no-build = true
+python-preference = "only-system"
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]

@@ -1,0 +1,28 @@
+{
+ "repo": "zulip",
+ "tag": "lfm25-ft-full",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/zulip/models/lfm25-ft-full",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 8457,
+ "symbols": 6836,
+ "dim": 1024,
+ "index_bytes": 34674773,
+ "query_ms": {
+  "p50": 6.18,
+  "p95": 9.82,
+  "mean": 7.13
+ },
+ "encode_ms": {
+  "p50": 5.86,
+  "p95": 6.33,
+  "mean": 5.95
+ },
+ "search_ms": {
+  "p50": 0.23,
+  "p95": 3.37,
+  "mean": 1.19
+ }
+}

@@ -1,0 +1,23 @@
+You are helping build a code-search benchmark for this repository.
+
+Read the file {{FILE}}. You may look at other files if you need them to understand it, but the answer must be defined in {{FILE}}.
+
+Choose ONE function, method or class defined in {{FILE}}. Imagine that it misbehaves. Write the bug report that a user or developer of this product would file about it without having seen the code: what they observed (the symptom), what they were doing (the steps or context), and what they expected instead. The single best place to look for the cause must be that symbol.
+
+Keep your reasoning brief. Do this in order: read the file, pick one symbol whose behaviour a user could notice, think of one realistic way it could go wrong, then write the report. Do not survey every symbol, do not weigh many possible bugs, and do not draft several reports.
+
+Form of the report:
+- A short title line, then 1 to 4 sentences of body. Vary the length: some reports are terse, some give more context.
+- Write as someone reporting a problem, in plain words.
+- No code names of any kind. No identifiers: nothing in snake_case, CamelCase or with dots, and no names of functions, classes, methods, fields, parameters, variables, settings, signals or events. Nothing in backticks, no stack traces, no error codes copied from code. Do not mention the file name or path.
+- Product and framework words are fine: GraphQL, Django, Celery, Stripe, webhook, checkout, and the like.
+- Make it specific enough that this symbol is the one best place to fix it, not one of several.
+
+The style, shown on a made-up forum app (not this repository):
+- "Unread badge never clears\nI read all my notifications, but the counter in the header still shows 3 after a page reload."
+- "Image limit ignored when editing\nWhen I edit an existing post I can attach more than ten images, although a new post stops at ten. I expected the same limit when editing."
+
+Give the answer as the symbol's fully qualified name (FQN): the module path {{MODULE}} followed by the symbol's name, for example {{MODULE}}.some_function for a function, {{MODULE}}.SomeClass for a class, or {{MODULE}}.SomeClass.some_method for a method. A definition nested inside another one continues the dots: {{MODULE}}.outer_function.inner_function.
+
+Reply with exactly one JSON object on a single line, and nothing else: no explanation before or after it, no code fence. Put the title and the body in "question", separated by the two characters \n (a JSON newline escape).
+{"question": "...", "gold_fqn": "..."}

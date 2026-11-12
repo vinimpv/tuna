@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+# Ask the pi coding agent a question about a checked-out repo, read-only.
+#
+#   scripts/pi-ask [--model-id ID] [--events FILE] [--] PROMPT...   # run from inside the repo to inspect
+#
+# pi only gets the read, grep, find and ls tools: no bash, edit or write, no
+# MCP, no extensions, no context files, no session file, no network at startup.
+# The answer is printed on stdout.
+#
+# --events FILE runs pi in json mode with the same flags and saves its full
+# event log (every model turn, its reasoning, every tool call and result) to
+# FILE; stdout still carries only the final answer.
+#
+# Model: the first model of provider `local` in $PI_CODING_AGENT_DIR/models.json,
+# unless --model-id or $PI_MODEL is given. models.json reads the key from
+# $TUNA_WRITER_API_KEY (default "none"). PI_BIN: the pi binary (default `pi` on PATH).
+set -euo pipefail
+
+PI_BIN=${PI_BIN:-pi}
+: "${PI_CODING_AGENT_DIR:?set it to your pi config dir}"
+export PI_CODING_AGENT_DIR
+export PI_OFFLINE=1 PI_TELEMETRY=0
+export TUNA_WRITER_API_KEY=${TUNA_WRITER_API_KEY:-none}
+
+model_id=${PI_MODEL:-}
+events=""
+while [ $# -gt 0 ]; do
+  case $1 in
+    --model-id) model_id=$2; shift 2 ;;
+    --events) events=$2; shift 2 ;;
+    --) shift; break ;;
+    *) break ;;
+  esac
+done
+[ $# -gt 0 ] || { echo "usage: pi-ask [--model-id ID] [--events FILE] [--] PROMPT..." >&2; exit 2; }
+
+if [ -z "$model_id" ]; then
+  model_id=$(python3 -I -c '
+import json, sys
+cfg = json.load(open(sys.argv[1]))
+print(cfg["providers"]["local"]["models"][0]["id"])' "$PI_CODING_AGENT_DIR/models.json")
+fi
+case $model_id in
+  PLACEHOLDER*) echo "pi-ask: models.json still has the placeholder model id; set it from your server's /v1/models" >&2; exit 3 ;;
+esac
+
+flags=(-p --offline --no-approve -nc -ne --no-mcp --no-session --tools read,grep,find,ls --model "local/$model_id")
+
+# The model thinks; if its reasoning reaches stdout, only the text after the
+# last </think> is kept.
+strip_think='
+import sys
+text = sys.stdin.read()
+if "</think>" in text:
+    text = text.rsplit("</think>", 1)[1].lstrip("\n")
+sys.stdout.write(text)'
+
+# stdin is closed: in -p mode pi appends piped stdin to the prompt and would
+# otherwise wait for EOF.
+if [ -n "$events" ]; then
+  "$PI_BIN" "${flags[@]}" --mode json -- "$@" </dev/null >"$events"
+  python3 -I -c '
+import json, sys
+final = ""
+for line in open(sys.argv[1], encoding="utf-8"):
+    if not line.strip():
+        continue
+    e = json.loads(line)
+    m = e.get("message") or {}
+    if e.get("type") == "message_end" and m.get("role") == "assistant":
+        final = "".join(b.get("text", "") for b in m.get("content") or [] if b.get("type") == "text")
+sys.stdout.write(final)' "$events" | python3 -I -c "$strip_think"
+else
+  "$PI_BIN" "${flags[@]}" -- "$@" </dev/null | python3 -I -c "$strip_think"
+fi

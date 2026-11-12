@@ -1,0 +1,40 @@
+{
+ "repo": "posthog",
+ "tag": "jina-0.5b-ft-lora",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": "$TUNA_OUT/posthog/models/jina-0.5b-ft-lora",
+ "device": "cpu",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 29681,
+ "symbols": 29679,
+ "dim": 896,
+ "index_bytes": 106496499,
+ "query_ms": {
+  "p50": 118.37,
+  "p95": 128.45,
+  "mean": 118.34
+ },
+ "encode_ms": {
+  "p50": 112.65,
+  "p95": 121.9,
+  "mean": 112.21
+ },
+ "search_ms": {
+  "p50": 6.02,
+  "p95": 7.43,
+  "mean": 6.13
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 32,
+  "sample_documents": 32,
+  "sample_seconds": 33.41,
+  "documents_per_s": 0.96,
+  "estimated_full_rebuild_s": 30989.9,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16
+ }
+}

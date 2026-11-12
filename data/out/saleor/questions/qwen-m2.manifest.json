@@ -1,0 +1,66 @@
+{
+ "repo": "saleor",
+ "name": "qwen-m2",
+ "seed": 20261111,
+ "prompt_version": "question-v2",
+ "prompt_sha256": "27cfcbd67ddc5ceb94e87d16ba3dc6c7461616349b23c6fe2e1a8d022d2a55b1",
+ "n": 100,
+ "max_attempts": 3,
+ "filter": "v2",
+ "guards": {
+  "timeout_s": 90,
+  "max_tool_calls": 40
+ },
+ "runs": [
+  {
+   "started": "2026-11-11T17:09:59+00:00",
+   "workers": 8,
+   "wall_seconds": 174.4,
+   "files": 110,
+   "accepted": 106
+  }
+ ],
+ "surplus_accepted": [
+  "saleor/graphql/translations/mutations/attribute_value_translate.py",
+  "saleor/payment/model_helpers.py",
+  "saleor/graphql/shop/types.py",
+  "saleor/graphql/product/mutations/product_variant/product_variant_create.py",
+  "saleor/page/search.py",
+  "saleor/graphql/warehouse/types.py"
+ ],
+ "writer": [
+  "qwen3.6-35b-a3b"
+ ],
+ "finished": true,
+ "accepted": 100,
+ "files_tried": 110,
+ "files_exhausted": 4,
+ "files_eligible": 1010,
+ "attempts": 129,
+ "rejections": {
+  "id_file_word": 10,
+  "id_mixed_case": 5,
+  "leaks_identifier": 4,
+  "unparseable": 2,
+  "id_underscore": 1,
+  "gold_not_in_file": 1
+ },
+ "median_attempt_of_accepted": 1.0,
+ "median_seconds_per_accepted": 9.4,
+ "median_seconds_per_attempt": 8.9,
+ "writer_seconds_total": 1308.7,
+ "accepted_without_reading_target": 0,
+ "questions_per_minute": [
+  {
+   "workers": 8,
+   "qpm": 36.5
+  }
+ ],
+ "updated": "2026-11-11T17:12:53+00:00",
+ "reject_share": 0.1783,
+ "filter_reject_share": 0.155,
+ "writer_failure_share": 0.0233,
+ "empty_at_cap_share": 0.0,
+ "empty_other_share": 0.0,
+ "prose_before_json_share": 0.0155
+}

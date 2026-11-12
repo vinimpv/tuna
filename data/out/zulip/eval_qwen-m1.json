@@ -1,0 +1,20 @@
+{
+ "repo": "zulip",
+ "questions": "$TUNA_OUT/zulip/questions/qwen-m1.jsonl",
+ "n": 100,
+ "unreachable_gold": [],
+ "missing_gold": {},
+ "results": {
+  "bm25_qwen-m1": {
+   "hit@1": 0.6,
+   "hit@3": 0.73,
+   "hit@5": 0.81,
+   "hit@10": 0.88,
+   "hit@20": 0.9,
+   "mrr": 0.6919,
+   "mrr@10": 0.6888,
+   "recall@200": 0.97,
+   "n": 100
+  }
+ }
+}

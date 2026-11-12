@@ -1,0 +1,8206 @@
+{
+ "bench": "hint-pilot",
+ "repos": [
+  "saleor",
+  "zulip",
+  "posthog"
+ ],
+ "analysis_plan": {
+  "primary": "file_hit",
+  "primary_pairs": [
+   "H-tuned-H-stock"
+  ],
+  "secondary": [
+   "H-bm25-A",
+   "H-fused-A",
+   "H-stock-A",
+   "H-tuned-A"
+  ],
+  "bootstrap": "10000 replicates, gold-file clusters resampled within repo",
+  "failures": "agent failure = miss at its cost; service failures rerun",
+  "pilot_questions_excluded_in": "without_pilot"
+ },
+ "pilot_questions": 3,
+ "service_failure_reruns": {
+  "saleor": {},
+  "zulip": {},
+  "posthog": {}
+ },
+ "pooled": {
+  "all": {
+   "arms": [
+    "A",
+    "H-stock",
+    "H-tuned"
+   ],
+   "questions": 60,
+   "per_arm": {
+    "A": {
+     "cost_usd": [
+      0.0301,
+      0.0256,
+      0.0352
+     ],
+     "file_hit": [
+      0.7333,
+      0.6167,
+      0.8333
+     ],
+     "symbol_hit": [
+      0.6167,
+      0.5,
+      0.7333
+     ],
+     "symbol_tail_hit": [
+      0.6167,
+      0.5,
+      0.7333
+     ],
+     "tool_calls_total": [
+      3.8333,
+      3.1833,
+      4.6
+     ],
+     "wall_s": [
+      9.2342,
+      7.9288,
+      10.816
+     ],
+     "wall_s_net": [
+      9.2342,
+      7.9288,
+      10.816
+     ],
+     "output_tokens": [
+      962.5833,
+      807.8475,
+      1148.335
+     ],
+     "input_tokens": [
+      8.0,
+      7.1667,
+      8.9667
+     ],
+     "cache_creation_tokens": [
+      4524.9,
+      3824.8579,
+      5272.7508
+     ],
+     "cache_read_tokens": [
+      23551.4167,
+      19385.5654,
+      28562.7825
+     ],
+     "total_input_tokens": [
+      28084.3167,
+      23378.9958,
+      33738.7092
+     ],
+     "num_turns": [
+      4.8333,
+      4.1833,
+      5.6
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      2.5667,
+      2.05,
+      3.1667
+     ],
+     "read_calls": [
+      1.1833,
+      0.9833,
+      1.4
+     ],
+     "glob_calls": [
+      0.0833,
+      0.0167,
+      0.15
+     ],
+     "api_calls": [
+      4.0,
+      3.5833,
+      4.4833
+     ],
+     "input_side_tokens": [
+      28084.3167,
+      23378.9958,
+      33738.7092
+     ],
+     "total_cost_usd": [
+      0.0301,
+      0.0256,
+      0.0352
+     ],
+     "hook_cost_usd": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hook_latency_s": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "cost_alone_usd": [
+      0.0454,
+      0.0411,
+      0.0504
+     ],
+     "total_cost_alone_usd": [
+      0.0454,
+      0.0411,
+      0.0504
+     ],
+     "first_cache_read": [
+      3930.5167,
+      3826.2,
+      4043.9679
+     ],
+     "wall_s_median": 7.5,
+     "wall_s_max": 38.1,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.81,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "interleaved": 60
+     },
+     "tool_calls_by_name_mean": {
+      "Glob": 0.08,
+      "Grep": 2.57,
+      "Read": 1.18
+     }
+    },
+    "H-stock": {
+     "cost_usd": [
+      0.0256,
+      0.0212,
+      0.0311
+     ],
+     "file_hit": [
+      0.7,
+      0.5833,
+      0.8
+     ],
+     "symbol_hit": [
+      0.6333,
+      0.5167,
+      0.75
+     ],
+     "symbol_tail_hit": [
+      0.6333,
+      0.5167,
+      0.75
+     ],
+     "tool_calls_total": [
+      2.9,
+      2.35,
+      3.65
+     ],
+     "wall_s": [
+      17.0138,
+      15.7263,
+      18.84
+     ],
+     "wall_s_net": [
+      17.0138,
+      15.7263,
+      18.84
+     ],
+     "output_tokens": [
+      867.1833,
+      719.7083,
+      1072.7871
+     ],
+     "input_tokens": [
+      6.6,
+      5.8,
+      7.6333
+     ],
+     "cache_creation_tokens": [
+      3717.4667,
+      3077.8646,
+      4482.5063
+     ],
+     "cache_read_tokens": [
+      20551.4,
+      15598.5596,
+      27734.9258
+     ],
+     "total_input_tokens": [
+      24275.4667,
+      18747.1838,
+      32133.5683
+     ],
+     "num_turns": [
+      3.9,
+      3.35,
+      4.65
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      1.85,
+      1.3667,
+      2.55
+     ],
+     "read_calls": [
+      1.0333,
+      0.8667,
+      1.2
+     ],
+     "glob_calls": [
+      0.0167,
+      0.0,
+      0.05
+     ],
+     "api_calls": [
+      3.3,
+      2.9,
+      3.8167
+     ],
+     "input_side_tokens": [
+      24275.4667,
+      18747.1838,
+      32133.5683
+     ],
+     "total_cost_usd": [
+      0.027,
+      0.0226,
+      0.0325
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      7.8268,
+      7.5825,
+      8.064
+     ],
+     "cost_alone_usd": [
+      0.0426,
+      0.0381,
+      0.0482
+     ],
+     "total_cost_alone_usd": [
+      0.044,
+      0.0395,
+      0.0496
+     ],
+     "first_cache_read": [
+      4343.75,
+      4253.9133,
+      4431.9846
+     ],
+     "wall_s_median": 16.2,
+     "wall_s_max": 59.4,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.54,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "interleaved": 60
+     },
+     "tool_calls_by_name_mean": {
+      "Glob": 0.02,
+      "Grep": 1.85,
+      "Read": 1.03
+     }
+    },
+    "H-tuned": {
+     "cost_usd": [
+      0.0276,
+      0.0232,
+      0.0336
+     ],
+     "file_hit": [
+      0.7167,
+      0.6,
+      0.8167
+     ],
+     "symbol_hit": [
+      0.65,
+      0.5333,
+      0.7667
+     ],
+     "symbol_tail_hit": [
+      0.65,
+      0.5333,
+      0.7667
+     ],
+     "tool_calls_total": [
+      3.3833,
+      2.7,
+      4.3167
+     ],
+     "wall_s": [
+      18.3273,
+      16.8047,
+      20.5455
+     ],
+     "wall_s_net": [
+      18.3273,
+      16.8047,
+      20.5455
+     ],
+     "output_tokens": [
+      978.8667,
+      807.4979,
+      1228.7746
+     ],
+     "input_tokens": [
+      7.1,
+      6.1333,
+      8.4333
+     ],
+     "cache_creation_tokens": [
+      3881.3667,
+      3319.1171,
+      4573.5696
+     ],
+     "cache_read_tokens": [
+      22511.7333,
+      16851.8771,
+      31691.93
+     ],
+     "total_input_tokens": [
+      26400.2,
+      20215.3438,
+      36318.0975
+     ],
+     "num_turns": [
+      4.3833,
+      3.7,
+      5.3167
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      1.9833,
+      1.4,
+      2.8333
+     ],
+     "read_calls": [
+      1.3833,
+      1.1667,
+      1.6167
+     ],
+     "glob_calls": [
+      0.0167,
+      0.0,
+      0.05
+     ],
+     "api_calls": [
+      3.55,
+      3.0667,
+      4.2167
+     ],
+     "input_side_tokens": [
+      26400.2,
+      20215.3438,
+      36318.0975
+     ],
+     "total_cost_usd": [
+      0.029,
+      0.0246,
+      0.035
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      8.3495,
+      8.111,
+      8.5827
+     ],
+     "cost_alone_usd": [
+      0.0445,
+      0.0401,
+      0.0507
+     ],
+     "total_cost_alone_usd": [
+      0.0459,
+      0.0415,
+      0.0521
+     ],
+     "first_cache_read": [
+      4344.9333,
+      4266.0308,
+      4428.4508
+     ],
+     "wall_s_median": 17.1,
+     "wall_s_max": 71.3,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.65,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "interleaved": 60
+     },
+     "tool_calls_by_name_mean": {
+      "Glob": 0.02,
+      "Grep": 1.98,
+      "Read": 1.38
+     }
+    }
+   },
+   "paired_diff": {
+    "H-tuned-H-stock": {
+     "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+     "cost_usd": [
+      0.002,
+      -0.0005,
+      0.0043
+     ],
+     "file_hit": [
+      0.0167,
+      -0.0333,
+      0.0833
+     ],
+     "symbol_hit": [
+      0.0167,
+      -0.0333,
+      0.0833
+     ],
+     "symbol_tail_hit": [
+      0.0167,
+      -0.0333,
+      0.0833
+     ],
+     "tool_calls_total": [
+      0.4833,
+      0.1833,
+      0.8
+     ],
+     "wall_s": [
+      1.3135,
+      0.6337,
+      2.0557
+     ],
+     "wall_s_net": [
+      1.3135,
+      0.6337,
+      2.0557
+     ],
+     "output_tokens": [
+      111.6833,
+      40.1333,
+      189.9842
+     ],
+     "input_tokens": [
+      0.5,
+      0.0325,
+      1.0333
+     ],
+     "cache_creation_tokens": [
+      163.9,
+      -254.3013,
+      540.0625
+     ],
+     "cache_read_tokens": [
+      1960.3333,
+      -1072.6525,
+      5242.4246
+     ],
+     "total_input_tokens": [
+      2124.7333,
+      -1246.7204,
+      5665.6296
+     ],
+     "num_turns": [
+      0.4833,
+      0.1833,
+      0.8
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      0.1333,
+      -0.1333,
+      0.4167
+     ],
+     "read_calls": [
+      0.35,
+      0.1333,
+      0.5667
+     ],
+     "glob_calls": [
+      0.0,
+      -0.05,
+      0.05
+     ],
+     "api_calls": [
+      0.25,
+      0.0163,
+      0.5167
+     ],
+     "input_side_tokens": [
+      2124.7333,
+      -1246.7204,
+      5665.6296
+     ],
+     "total_cost_usd": [
+      0.002,
+      -0.0005,
+      0.0043
+     ],
+     "hook_cost_usd": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "hook_latency_s": [
+      0.5227,
+      0.2338,
+      0.8143
+     ],
+     "cost_alone_usd": [
+      0.002,
+      -0.0005,
+      0.0043
+     ],
+     "total_cost_alone_usd": [
+      0.002,
+      -0.0005,
+      0.0043
+     ],
+     "first_cache_read": [
+      1.1833,
+      -78.3858,
+      73.9175
+     ]
+    },
+    "H-stock-A": {
+     "role": "secondary (card arm - A)",
+     "cost_usd": [
+      -0.0045,
+      -0.0089,
+      -0.0003
+     ],
+     "file_hit": [
+      -0.0333,
+      -0.1,
+      0.0333
+     ],
+     "symbol_hit": [
+      0.0167,
+      -0.0667,
+      0.1
+     ],
+     "symbol_tail_hit": [
+      0.0167,
+      -0.0667,
+      0.1
+     ],
+     "tool_calls_total": [
+      -0.9333,
+      -1.55,
+      -0.4167
+     ],
+     "wall_s": [
+      7.7797,
+      6.6563,
+      8.7903
+     ],
+     "wall_s_net": [
+      7.7797,
+      6.6563,
+      8.7903
+     ],
+     "output_tokens": [
+      -95.4,
+      -233.4671,
+      28.0204
+     ],
+     "input_tokens": [
+      -1.4,
+      -2.1667,
+      -0.7
+     ],
+     "cache_creation_tokens": [
+      -807.4333,
+      -1547.8208,
+      -91.3679
+     ],
+     "cache_read_tokens": [
+      -3000.0167,
+      -7729.7288,
+      1702.8171
+     ],
+     "total_input_tokens": [
+      -3808.85,
+      -9132.8429,
+      1450.1704
+     ],
+     "num_turns": [
+      -0.9333,
+      -1.55,
+      -0.4167
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      -0.7167,
+      -1.2333,
+      -0.25
+     ],
+     "read_calls": [
+      -0.15,
+      -0.35,
+      0.0333
+     ],
+     "glob_calls": [
+      -0.0667,
+      -0.15,
+      0.0
+     ],
+     "api_calls": [
+      -0.7,
+      -1.0833,
+      -0.35
+     ],
+     "input_side_tokens": [
+      -3808.85,
+      -9132.8429,
+      1450.1704
+     ],
+     "total_cost_usd": [
+      -0.0031,
+      -0.0075,
+      0.0011
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      7.8268,
+      7.5825,
+      8.064
+     ],
+     "cost_alone_usd": [
+      -0.0029,
+      -0.0072,
+      0.0013
+     ],
+     "total_cost_alone_usd": [
+      -0.0015,
+      -0.0058,
+      0.0027
+     ],
+     "first_cache_read": [
+      413.2333,
+      282.5321,
+      539.6521
+     ]
+    },
+    "H-tuned-A": {
+     "role": "secondary (card arm - A)",
+     "cost_usd": [
+      -0.0025,
+      -0.0062,
+      0.0012
+     ],
+     "file_hit": [
+      -0.0167,
+      -0.0667,
+      0.0333
+     ],
+     "symbol_hit": [
+      0.0333,
+      -0.05,
+      0.1167
+     ],
+     "symbol_tail_hit": [
+      0.0333,
+      -0.05,
+      0.1167
+     ],
+     "tool_calls_total": [
+      -0.45,
+      -1.0167,
+      0.1333
+     ],
+     "wall_s": [
+      9.0932,
+      8.0107,
+      10.2978
+     ],
+     "wall_s_net": [
+      9.0932,
+      8.0107,
+      10.2978
+     ],
+     "output_tokens": [
+      16.2833,
+      -111.9692,
+      157.9533
+     ],
+     "input_tokens": [
+      -0.9,
+      -1.7,
+      -0.0667
+     ],
+     "cache_creation_tokens": [
+      -643.5333,
+      -1239.3871,
+      -74.0492
+     ],
+     "cache_read_tokens": [
+      -1039.6833,
+      -5821.1871,
+      5209.0417
+     ],
+     "total_input_tokens": [
+      -1684.1167,
+      -6919.7142,
+      4826.3258
+     ],
+     "num_turns": [
+      -0.45,
+      -1.0167,
+      0.1333
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      -0.5833,
+      -1.1333,
+      -0.0167
+     ],
+     "read_calls": [
+      0.2,
+      -0.0333,
+      0.4333
+     ],
+     "glob_calls": [
+      -0.0667,
+      -0.1333,
+      -0.0167
+     ],
+     "api_calls": [
+      -0.45,
+      -0.85,
+      -0.0333
+     ],
+     "input_side_tokens": [
+      -1684.1167,
+      -6919.7142,
+      4826.3258
+     ],
+     "total_cost_usd": [
+      -0.0011,
+      -0.0048,
+      0.0026
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      8.3495,
+      8.111,
+      8.5827
+     ],
+     "cost_alone_usd": [
+      -0.0009,
+      -0.0046,
+      0.0029
+     ],
+     "total_cost_alone_usd": [
+      0.0005,
+      -0.0032,
+      0.0043
+     ],
+     "first_cache_read": [
+      414.4167,
+      276.23,
+      547.2833
+     ]
+    }
+   },
+   "clusters": {
+    "posthog": 20,
+    "saleor": 20,
+    "zulip": 20
+   }
+  },
+  "without_pilot": {
+   "arms": [
+    "A",
+    "H-stock",
+    "H-tuned"
+   ],
+   "questions": 57,
+   "per_arm": {
+    "A": {
+     "cost_usd": [
+      0.0306,
+      0.026,
+      0.036
+     ],
+     "file_hit": [
+      0.7544,
+      0.6316,
+      0.8596
+     ],
+     "symbol_hit": [
+      0.6316,
+      0.5088,
+      0.7544
+     ],
+     "symbol_tail_hit": [
+      0.6316,
+      0.5088,
+      0.7544
+     ],
+     "tool_calls_total": [
+      3.8947,
+      3.2105,
+      4.7018
+     ],
+     "wall_s": [
+      9.3544,
+      7.9875,
+      11.023
+     ],
+     "wall_s_net": [
+      9.3544,
+      7.9875,
+      11.023
+     ],
+     "output_tokens": [
+      980.5789,
+      817.6768,
+      1175.2825
+     ],
+     "input_tokens": [
+      8.0702,
+      7.193,
+      9.0877
+     ],
+     "cache_creation_tokens": [
+      4601.1228,
+      3881.7566,
+      5373.5557
+     ],
+     "cache_read_tokens": [
+      23948.7193,
+      19581.0684,
+      29229.6048
+     ],
+     "total_input_tokens": [
+      28557.9123,
+      23589.5978,
+      34530.1772
+     ],
+     "num_turns": [
+      4.8947,
+      4.2105,
+      5.7018
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      2.614,
+      2.0877,
+      3.2456
+     ],
+     "read_calls": [
+      1.193,
+      0.9825,
+      1.4211
+     ],
+     "glob_calls": [
+      0.0877,
+      0.0175,
+      0.1579
+     ],
+     "api_calls": [
+      4.0351,
+      3.5965,
+      4.5439
+     ],
+     "input_side_tokens": [
+      28557.9123,
+      23589.5978,
+      34530.1772
+     ],
+     "total_cost_usd": [
+      0.0306,
+      0.026,
+      0.036
+     ],
+     "hook_cost_usd": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "hook_latency_s": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "cost_alone_usd": [
+      0.046,
+      0.0414,
+      0.0512
+     ],
+     "total_cost_alone_usd": [
+      0.046,
+      0.0414,
+      0.0512
+     ],
+     "first_cache_read": [
+      3934.5263,
+      3825.3154,
+      4055.039
+     ],
+     "wall_s_median": 7.5,
+     "wall_s_max": 38.1,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.75,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "interleaved": 57
+     },
+     "tool_calls_by_name_mean": {
+      "Glob": 0.09,
+      "Grep": 2.61,
+      "Read": 1.19
+     }
+    },
+    "H-stock": {
+     "cost_usd": [
+      0.0256,
+      0.021,
+      0.0314
+     ],
+     "file_hit": [
+      0.7193,
+      0.5965,
+      0.8246
+     ],
+     "symbol_hit": [
+      0.6491,
+      0.5263,
+      0.7719
+     ],
+     "symbol_tail_hit": [
+      0.6491,
+      0.5263,
+      0.7719
+     ],
+     "tool_calls_total": [
+      2.9123,
+      2.3333,
+      3.7018
+     ],
+     "wall_s": [
+      17.0137,
+      15.6563,
+      18.8898
+     ],
+     "wall_s_net": [
+      17.0137,
+      15.6563,
+      18.8898
+     ],
+     "output_tokens": [
+      863.4561,
+      707.5605,
+      1080.9145
+     ],
+     "input_tokens": [
+      6.5965,
+      5.7544,
+      7.6842
+     ],
+     "cache_creation_tokens": [
+      3708.193,
+      3049.8711,
+      4509.6868
+     ],
+     "cache_read_tokens": [
+      20726.386,
+      15514.889,
+      28294.9412
+     ],
+     "total_input_tokens": [
+      24441.1754,
+      18629.0439,
+      32710.4171
+     ],
+     "num_turns": [
+      3.9123,
+      3.3333,
+      4.7018
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      1.8596,
+      1.3333,
+      2.5789
+     ],
+     "read_calls": [
+      1.0351,
+      0.8596,
+      1.2105
+     ],
+     "glob_calls": [
+      0.0175,
+      0.0,
+      0.0526
+     ],
+     "api_calls": [
+      3.2982,
+      2.8772,
+      3.8421
+     ],
+     "input_side_tokens": [
+      24441.1754,
+      18629.0439,
+      32710.4171
+     ],
+     "total_cost_usd": [
+      0.027,
+      0.0224,
+      0.0328
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      7.8579,
+      7.6156,
+      8.0975
+     ],
+     "cost_alone_usd": [
+      0.0425,
+      0.0379,
+      0.0485
+     ],
+     "total_cost_alone_usd": [
+      0.044,
+      0.0394,
+      0.0499
+     ],
+     "first_cache_read": [
+      4354.2632,
+      4264.9114,
+      4446.0184
+     ],
+     "wall_s_median": 15.8,
+     "wall_s_max": 59.4,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.46,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "interleaved": 57
+     },
+     "tool_calls_by_name_mean": {
+      "Glob": 0.02,
+      "Grep": 1.86,
+      "Read": 1.04
+     }
+    },
+    "H-tuned": {
+     "cost_usd": [
+      0.0277,
+      0.0231,
+      0.0341
+     ],
+     "file_hit": [
+      0.7368,
+      0.614,
+      0.8421
+     ],
+     "symbol_hit": [
+      0.6667,
+      0.5439,
+      0.7895
+     ],
+     "symbol_tail_hit": [
+      0.6667,
+      0.5439,
+      0.7895
+     ],
+     "tool_calls_total": [
+      3.4386,
+      2.7193,
+      4.4211
+     ],
+     "wall_s": [
+      18.3746,
+      16.7696,
+      20.7134
+     ],
+     "wall_s_net": [
+      18.3746,
+      16.7696,
+      20.7134
+     ],
+     "output_tokens": [
+      982.9474,
+      801.6136,
+      1246.7982
+     ],
+     "input_tokens": [
+      7.1579,
+      6.1404,
+      8.5614
+     ],
+     "cache_creation_tokens": [
+      3900.7368,
+      3316.4,
+      4627.686
+     ],
+     "cache_read_tokens": [
+      22868.2982,
+      16908.7132,
+      32511.7
+     ],
+     "total_input_tokens": [
+      26776.193,
+      20282.8553,
+      37174.4513
+     ],
+     "num_turns": [
+      4.4386,
+      3.7193,
+      5.4211
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      2.0175,
+      1.4035,
+      2.8947
+     ],
+     "read_calls": [
+      1.4035,
+      1.1579,
+      1.6491
+     ],
+     "glob_calls": [
+      0.0175,
+      0.0,
+      0.0526
+     ],
+     "api_calls": [
+      3.5789,
+      3.0702,
+      4.2807
+     ],
+     "input_side_tokens": [
+      26776.193,
+      20282.8553,
+      37174.4513
+     ],
+     "total_cost_usd": [
+      0.0292,
+      0.0246,
+      0.0355
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      8.3582,
+      8.1121,
+      8.5986
+     ],
+     "cost_alone_usd": [
+      0.0447,
+      0.0401,
+      0.0512
+     ],
+     "total_cost_alone_usd": [
+      0.0461,
+      0.0415,
+      0.0526
+     ],
+     "first_cache_read": [
+      4346.9649,
+      4263.6482,
+      4432.4219
+     ],
+     "wall_s_median": 17.1,
+     "wall_s_max": 71.3,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.58,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "interleaved": 57
+     },
+     "tool_calls_by_name_mean": {
+      "Glob": 0.02,
+      "Grep": 2.02,
+      "Read": 1.4
+     }
+    }
+   },
+   "paired_diff": {
+    "H-tuned-H-stock": {
+     "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+     "cost_usd": [
+      0.0022,
+      -0.0004,
+      0.0046
+     ],
+     "file_hit": [
+      0.0175,
+      -0.0351,
+      0.0702
+     ],
+     "symbol_hit": [
+      0.0175,
+      -0.0351,
+      0.0702
+     ],
+     "symbol_tail_hit": [
+      0.0175,
+      -0.0351,
+      0.0702
+     ],
+     "tool_calls_total": [
+      0.5263,
+      0.2105,
+      0.8596
+     ],
+     "wall_s": [
+      1.3609,
+      0.6426,
+      2.1086
+     ],
+     "wall_s_net": [
+      1.3609,
+      0.6426,
+      2.1086
+     ],
+     "output_tokens": [
+      119.4912,
+      44.3333,
+      200.4561
+     ],
+     "input_tokens": [
+      0.5614,
+      0.0702,
+      1.0877
+     ],
+     "cache_creation_tokens": [
+      192.5439,
+      -238.8614,
+      576.4838
+     ],
+     "cache_read_tokens": [
+      2141.9123,
+      -1049.0443,
+      5558.1886
+     ],
+     "total_input_tokens": [
+      2335.0175,
+      -1217.1991,
+      6024.6018
+     ],
+     "num_turns": [
+      0.5263,
+      0.2105,
+      0.8596
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      0.1579,
+      -0.1228,
+      0.4561
+     ],
+     "read_calls": [
+      0.3684,
+      0.1404,
+      0.5965
+     ],
+     "glob_calls": [
+      0.0,
+      -0.0526,
+      0.0526
+     ],
+     "api_calls": [
+      0.2807,
+      0.0351,
+      0.5439
+     ],
+     "input_side_tokens": [
+      2335.0175,
+      -1217.1991,
+      6024.6018
+     ],
+     "total_cost_usd": [
+      0.0022,
+      -0.0004,
+      0.0046
+     ],
+     "hook_cost_usd": [
+      0.0,
+      -0.0,
+      0.0
+     ],
+     "hook_latency_s": [
+      0.5004,
+      0.2275,
+      0.7772
+     ],
+     "cost_alone_usd": [
+      0.0022,
+      -0.0004,
+      0.0046
+     ],
+     "total_cost_alone_usd": [
+      0.0022,
+      -0.0004,
+      0.0046
+     ],
+     "first_cache_read": [
+      -7.2982,
+      -91.2833,
+      67.6316
+     ]
+    },
+    "H-stock-A": {
+     "role": "secondary (card arm - A)",
+     "cost_usd": [
+      -0.0051,
+      -0.0097,
+      -0.0008
+     ],
+     "file_hit": [
+      -0.0351,
+      -0.1053,
+      0.0351
+     ],
+     "symbol_hit": [
+      0.0175,
+      -0.0702,
+      0.1053
+     ],
+     "symbol_tail_hit": [
+      0.0175,
+      -0.0702,
+      0.1053
+     ],
+     "tool_calls_total": [
+      -0.9825,
+      -1.6316,
+      -0.4386
+     ],
+     "wall_s": [
+      7.6593,
+      6.4805,
+      8.7325
+     ],
+     "wall_s_net": [
+      7.6593,
+      6.4805,
+      8.7325
+     ],
+     "output_tokens": [
+      -117.1228,
+      -259.5478,
+      9.1596
+     ],
+     "input_tokens": [
+      -1.4737,
+      -2.2807,
+      -0.7368
+     ],
+     "cache_creation_tokens": [
+      -892.9298,
+      -1643.3579,
+      -168.1053
+     ],
+     "cache_read_tokens": [
+      -3222.3333,
+      -8192.5895,
+      1697.2
+     ],
+     "total_input_tokens": [
+      -4116.7368,
+      -9754.0026,
+      1345.0715
+     ],
+     "num_turns": [
+      -0.9825,
+      -1.6316,
+      -0.4386
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      -0.7544,
+      -1.2982,
+      -0.2456
+     ],
+     "read_calls": [
+      -0.1579,
+      -0.3684,
+      0.0351
+     ],
+     "glob_calls": [
+      -0.0702,
+      -0.1579,
+      0.0
+     ],
+     "api_calls": [
+      -0.7368,
+      -1.1404,
+      -0.3684
+     ],
+     "input_side_tokens": [
+      -4116.7368,
+      -9754.0026,
+      1345.0715
+     ],
+     "total_cost_usd": [
+      -0.0037,
+      -0.0083,
+      0.0006
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      7.8579,
+      7.6156,
+      8.0975
+     ],
+     "cost_alone_usd": [
+      -0.0034,
+      -0.008,
+      0.0008
+     ],
+     "total_cost_alone_usd": [
+      -0.002,
+      -0.0066,
+      0.0022
+     ],
+     "first_cache_read": [
+      419.7368,
+      287.5434,
+      550.0535
+     ]
+    },
+    "H-tuned-A": {
+     "role": "secondary (card arm - A)",
+     "cost_usd": [
+      -0.0029,
+      -0.0068,
+      0.0011
+     ],
+     "file_hit": [
+      -0.0175,
+      -0.0877,
+      0.0351
+     ],
+     "symbol_hit": [
+      0.0351,
+      -0.0526,
+      0.1228
+     ],
+     "symbol_tail_hit": [
+      0.0351,
+      -0.0526,
+      0.1228
+     ],
+     "tool_calls_total": [
+      -0.4561,
+      -1.0526,
+      0.1404
+     ],
+     "wall_s": [
+      9.0202,
+      7.8949,
+      10.2883
+     ],
+     "wall_s_net": [
+      9.0202,
+      7.8949,
+      10.2883
+     ],
+     "output_tokens": [
+      2.3684,
+      -132.2461,
+      153.2162
+     ],
+     "input_tokens": [
+      -0.9123,
+      -1.7193,
+      0.0
+     ],
+     "cache_creation_tokens": [
+      -700.386,
+      -1309.3465,
+      -108.6618
+     ],
+     "cache_read_tokens": [
+      -1080.4211,
+      -6123.4057,
+      5478.9026
+     ],
+     "total_input_tokens": [
+      -1781.7193,
+      -7219.064,
+      5102.7412
+     ],
+     "num_turns": [
+      -0.4561,
+      -1.0526,
+      0.1404
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "grep_calls": [
+      -0.5965,
+      -1.1754,
+      0.0
+     ],
+     "read_calls": [
+      0.2105,
+      -0.0351,
+      0.4561
+     ],
+     "glob_calls": [
+      -0.0702,
+      -0.1404,
+      -0.0175
+     ],
+     "api_calls": [
+      -0.4561,
+      -0.8596,
+      0.0
+     ],
+     "input_side_tokens": [
+      -1781.7193,
+      -7219.064,
+      5102.7412
+     ],
+     "total_cost_usd": [
+      -0.0015,
+      -0.0054,
+      0.0025
+     ],
+     "hook_cost_usd": [
+      0.0014,
+      0.0014,
+      0.0015
+     ],
+     "hook_latency_s": [
+      8.3582,
+      8.1121,
+      8.5986
+     ],
+     "cost_alone_usd": [
+      -0.0013,
+      -0.0051,
+      0.0028
+     ],
+     "total_cost_alone_usd": [
+      0.0001,
+      -0.0037,
+      0.0042
+     ],
+     "first_cache_read": [
+      412.4386,
+      265.2627,
+      547.2842
+     ]
+    }
+   },
+   "clusters": {
+    "posthog": 20,
+    "saleor": 17,
+    "zulip": 20
+   }
+  }
+ },
+ "per_repo": {
+  "saleor": {
+   "all": {
+    "arms": [
+     "A",
+     "H-stock",
+     "H-tuned"
+    ],
+    "questions": 20,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0305,
+       0.0237,
+       0.0397
+      ],
+      "file_hit": [
+       0.7,
+       0.5,
+       0.9
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       3.75,
+       2.85,
+       5.15
+      ],
+      "wall_s": [
+       9.1725,
+       7.4355,
+       11.9175
+      ],
+      "wall_s_net": [
+       9.1725,
+       7.4355,
+       11.9175
+      ],
+      "output_tokens": [
+       958.0,
+       746.9475,
+       1284.2662
+      ],
+      "input_tokens": [
+       8.1,
+       6.9,
+       9.9
+      ],
+      "cache_creation_tokens": [
+       4669.15,
+       3539.8463,
+       6028.4912
+      ],
+      "cache_read_tokens": [
+       22719.15,
+       17092.5363,
+       31693.2012
+      ],
+      "total_input_tokens": [
+       27396.4,
+       20906.6813,
+       37544.3037
+      ],
+      "num_turns": [
+       4.75,
+       3.85,
+       6.15
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       2.45,
+       1.7,
+       3.55
+      ],
+      "read_calls": [
+       1.3,
+       1.0,
+       1.7
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       4.05,
+       3.45,
+       4.95
+      ],
+      "input_side_tokens": [
+       27396.4,
+       20906.6813,
+       37544.3037
+      ],
+      "total_cost_usd": [
+       0.0305,
+       0.0237,
+       0.0397
+      ],
+      "hook_cost_usd": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "cost_alone_usd": [
+       0.0454,
+       0.0388,
+       0.0545
+      ],
+      "total_cost_alone_usd": [
+       0.0454,
+       0.0388,
+       0.0545
+      ],
+      "first_cache_read": [
+       3816.75,
+       3716.35,
+       3938.565
+      ],
+      "wall_s_median": 8.6,
+      "wall_s_max": 31.1,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.61,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 2.45,
+       "Read": 1.3
+      }
+     },
+     "H-stock": {
+      "cost_usd": [
+       0.0251,
+       0.0217,
+       0.0286
+      ],
+      "file_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_hit": [
+       0.5,
+       0.3,
+       0.7
+      ],
+      "symbol_tail_hit": [
+       0.5,
+       0.3,
+       0.7
+      ],
+      "tool_calls_total": [
+       2.8,
+       2.2,
+       3.4
+      ],
+      "wall_s": [
+       16.794,
+       15.704,
+       17.9575
+      ],
+      "wall_s_net": [
+       16.794,
+       15.704,
+       17.9575
+      ],
+      "output_tokens": [
+       871.4,
+       736.45,
+       1010.2513
+      ],
+      "input_tokens": [
+       6.5,
+       5.7,
+       7.3
+      ],
+      "cache_creation_tokens": [
+       3665.4,
+       3093.2438,
+       4304.0638
+      ],
+      "cache_read_tokens": [
+       17273.85,
+       14822.5813,
+       19764.0562
+      ],
+      "total_input_tokens": [
+       20945.75,
+       18195.1688,
+       23749.165
+      ],
+      "num_turns": [
+       3.8,
+       3.2,
+       4.4
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.6,
+       1.15,
+       2.1
+      ],
+      "read_calls": [
+       1.2,
+       0.95,
+       1.45
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       3.25,
+       2.85,
+       3.65
+      ],
+      "input_side_tokens": [
+       20945.75,
+       18195.1688,
+       23749.165
+      ],
+      "total_cost_usd": [
+       0.0265,
+       0.0231,
+       0.0299
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.706,
+       7.2545,
+       8.1465
+      ],
+      "cost_alone_usd": [
+       0.0416,
+       0.0383,
+       0.0451
+      ],
+      "total_cost_alone_usd": [
+       0.043,
+       0.0396,
+       0.0464
+      ],
+      "first_cache_read": [
+       4239.2,
+       4139.85,
+       4323.45
+      ],
+      "wall_s_median": 17.0,
+      "wall_s_max": 22.9,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.5,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.6,
+       "Read": 1.2
+      }
+     },
+     "H-tuned": {
+      "cost_usd": [
+       0.028,
+       0.0236,
+       0.033
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.55,
+       0.35,
+       0.75
+      ],
+      "symbol_tail_hit": [
+       0.55,
+       0.35,
+       0.75
+      ],
+      "tool_calls_total": [
+       3.5,
+       2.7,
+       4.4
+      ],
+      "wall_s": [
+       18.519,
+       16.794,
+       20.4526
+      ],
+      "wall_s_net": [
+       18.519,
+       16.794,
+       20.4526
+      ],
+      "output_tokens": [
+       1033.25,
+       839.4987,
+       1247.455
+      ],
+      "input_tokens": [
+       7.4,
+       6.2,
+       8.6
+      ],
+      "cache_creation_tokens": [
+       3873.3,
+       3290.74,
+       4513.5187
+      ],
+      "cache_read_tokens": [
+       21184.85,
+       16558.265,
+       26419.525
+      ],
+      "total_input_tokens": [
+       25065.55,
+       19978.2188,
+       30913.5737
+      ],
+      "num_turns": [
+       4.5,
+       3.7,
+       5.4
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.75,
+       1.2,
+       2.4
+      ],
+      "read_calls": [
+       1.75,
+       1.35,
+       2.2
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       3.7,
+       3.1,
+       4.3
+      ],
+      "input_side_tokens": [
+       25065.55,
+       19978.2188,
+       30913.5737
+      ],
+      "total_cost_usd": [
+       0.0293,
+       0.0249,
+       0.0343
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.193,
+       7.784,
+       8.611
+      ],
+      "cost_alone_usd": [
+       0.0444,
+       0.0399,
+       0.0495
+      ],
+      "total_cost_alone_usd": [
+       0.0457,
+       0.0412,
+       0.0509
+      ],
+      "first_cache_read": [
+       4217.85,
+       4121.8463,
+       4298.5
+      ],
+      "wall_s_median": 18.0,
+      "wall_s_max": 29.8,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.56,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.75,
+       "Read": 1.75
+      }
+     }
+    },
+    "paired_diff": {
+     "H-tuned-H-stock": {
+      "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+      "cost_usd": [
+       0.0028,
+       -0.0005,
+       0.0063
+      ],
+      "file_hit": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "symbol_hit": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "tool_calls_total": [
+       0.7,
+       0.15,
+       1.3
+      ],
+      "wall_s": [
+       1.725,
+       0.54,
+       3.008
+      ],
+      "wall_s_net": [
+       1.725,
+       0.54,
+       3.008
+      ],
+      "output_tokens": [
+       161.85,
+       44.2975,
+       287.3537
+      ],
+      "input_tokens": [
+       0.9,
+       0.0,
+       1.8
+      ],
+      "cache_creation_tokens": [
+       207.9,
+       -337.8062,
+       759.32
+      ],
+      "cache_read_tokens": [
+       3911.0,
+       340.2812,
+       7888.9862
+      ],
+      "total_input_tokens": [
+       4119.8,
+       232.5375,
+       8489.905
+      ],
+      "num_turns": [
+       0.7,
+       0.15,
+       1.3
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       0.15,
+       -0.35,
+       0.6
+      ],
+      "read_calls": [
+       0.55,
+       0.15,
+       0.95
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       0.45,
+       0.0,
+       0.9
+      ],
+      "input_side_tokens": [
+       4119.8,
+       232.5375,
+       8489.905
+      ],
+      "total_cost_usd": [
+       0.0028,
+       -0.0005,
+       0.0063
+      ],
+      "hook_cost_usd": [
+       -0.0,
+       -0.0001,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.487,
+       -0.094,
+       1.074
+      ],
+      "cost_alone_usd": [
+       0.0028,
+       -0.0005,
+       0.0062
+      ],
+      "total_cost_alone_usd": [
+       0.0027,
+       -0.0005,
+       0.0062
+      ],
+      "first_cache_read": [
+       -21.35,
+       -149.75,
+       97.4
+      ]
+     },
+     "H-stock-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0054,
+       -0.0131,
+       0.0006
+      ],
+      "file_hit": [
+       -0.1,
+       -0.25,
+       0.0
+      ],
+      "symbol_hit": [
+       -0.1,
+       -0.25,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       -0.1,
+       -0.25,
+       0.0
+      ],
+      "tool_calls_total": [
+       -0.95,
+       -2.05,
+       -0.1
+      ],
+      "wall_s": [
+       7.6215,
+       5.465,
+       9.2876
+      ],
+      "wall_s_net": [
+       7.6215,
+       5.465,
+       9.2876
+      ],
+      "output_tokens": [
+       -86.6,
+       -348.1762,
+       111.2025
+      ],
+      "input_tokens": [
+       -1.6,
+       -3.0,
+       -0.5
+      ],
+      "cache_creation_tokens": [
+       -1003.75,
+       -2205.9075,
+       48.105
+      ],
+      "cache_read_tokens": [
+       -5445.3,
+       -13198.9137,
+       -171.4013
+      ],
+      "total_input_tokens": [
+       -6450.65,
+       -15178.1,
+       -436.26
+      ],
+      "num_turns": [
+       -0.95,
+       -2.05,
+       -0.1
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.85,
+       -1.7,
+       -0.2
+      ],
+      "read_calls": [
+       -0.1,
+       -0.4,
+       0.15
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       -0.8,
+       -1.5,
+       -0.25
+      ],
+      "input_side_tokens": [
+       -6450.65,
+       -15178.1,
+       -436.26
+      ],
+      "total_cost_usd": [
+       -0.0041,
+       -0.0118,
+       0.002
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.706,
+       7.2545,
+       8.1465
+      ],
+      "cost_alone_usd": [
+       -0.0038,
+       -0.0112,
+       0.0021
+      ],
+      "total_cost_alone_usd": [
+       -0.0024,
+       -0.0099,
+       0.0034
+      ],
+      "first_cache_read": [
+       422.45,
+       244.0962,
+       567.8587
+      ]
+     },
+     "H-tuned-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0026,
+       -0.0081,
+       0.0018
+      ],
+      "file_hit": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "symbol_hit": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "tool_calls_total": [
+       -0.25,
+       -1.25,
+       0.65
+      ],
+      "wall_s": [
+       9.3465,
+       7.6374,
+       10.8715
+      ],
+      "wall_s_net": [
+       9.3465,
+       7.6374,
+       10.8715
+      ],
+      "output_tokens": [
+       75.25,
+       -148.1525,
+       267.4012
+      ],
+      "input_tokens": [
+       -0.7,
+       -2.0,
+       0.4025
+      ],
+      "cache_creation_tokens": [
+       -795.85,
+       -1697.5538,
+       9.73
+      ],
+      "cache_read_tokens": [
+       -1534.3,
+       -7106.8888,
+       2949.9925
+      ],
+      "total_input_tokens": [
+       -2330.85,
+       -8566.8425,
+       2519.9587
+      ],
+      "num_turns": [
+       -0.25,
+       -1.25,
+       0.65
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.7,
+       -1.4,
+       -0.05
+      ],
+      "read_calls": [
+       0.45,
+       -0.05,
+       0.95
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       -0.35,
+       -1.0,
+       0.2012
+      ],
+      "input_side_tokens": [
+       -2330.85,
+       -8566.8425,
+       2519.9587
+      ],
+      "total_cost_usd": [
+       -0.0013,
+       -0.0068,
+       0.0032
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.193,
+       7.784,
+       8.611
+      ],
+      "cost_alone_usd": [
+       -0.001,
+       -0.0066,
+       0.0034
+      ],
+      "total_cost_alone_usd": [
+       0.0003,
+       -0.0052,
+       0.0047
+      ],
+      "first_cache_read": [
+       401.1,
+       195.7363,
+       566.3012
+      ]
+     }
+    },
+    "clusters": {
+     "saleor": 20
+    }
+   },
+   "without_pilot": {
+    "arms": [
+     "A",
+     "H-stock",
+     "H-tuned"
+    ],
+    "questions": 17,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0324,
+       0.0245,
+       0.0429
+      ],
+      "file_hit": [
+       0.7647,
+       0.5294,
+       0.9412
+      ],
+      "symbol_hit": [
+       0.6471,
+       0.4118,
+       0.8824
+      ],
+      "symbol_tail_hit": [
+       0.6471,
+       0.4118,
+       0.8824
+      ],
+      "tool_calls_total": [
+       3.9412,
+       2.8824,
+       5.5882
+      ],
+      "wall_s": [
+       9.5647,
+       7.5764,
+       12.7253
+      ],
+      "wall_s_net": [
+       9.5647,
+       7.5764,
+       12.7253
+      ],
+      "output_tokens": [
+       1017.5294,
+       775.5265,
+       1392.3926
+      ],
+      "input_tokens": [
+       8.3529,
+       6.9412,
+       10.4706
+      ],
+      "cache_creation_tokens": [
+       4950.1765,
+       3638.8618,
+       6517.2029
+      ],
+      "cache_read_tokens": [
+       23904.4118,
+       17395.4441,
+       34213.5353
+      ],
+      "total_input_tokens": [
+       28862.9412,
+       21316.1735,
+       40428.5765
+      ],
+      "num_turns": [
+       4.9412,
+       3.8824,
+       6.5882
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       2.5882,
+       1.7059,
+       3.8824
+      ],
+      "read_calls": [
+       1.3529,
+       1.0,
+       1.8235
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       4.1765,
+       3.4706,
+       5.2353
+      ],
+      "input_side_tokens": [
+       28862.9412,
+       21316.1735,
+       40428.5765
+      ],
+      "total_cost_usd": [
+       0.0324,
+       0.0245,
+       0.0429
+      ],
+      "hook_cost_usd": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "cost_alone_usd": [
+       0.0472,
+       0.0395,
+       0.0577
+      ],
+      "total_cost_alone_usd": [
+       0.0472,
+       0.0395,
+       0.0577
+      ],
+      "first_cache_read": [
+       3810.1176,
+       3692.0,
+       3945.4706
+      ],
+      "wall_s_median": 8.9,
+      "wall_s_max": 31.1,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.55,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 17
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 2.59,
+       "Read": 1.35
+      }
+     },
+     "H-stock": {
+      "cost_usd": [
+       0.0248,
+       0.0212,
+       0.0286
+      ],
+      "file_hit": [
+       0.6471,
+       0.4118,
+       0.8824
+      ],
+      "symbol_hit": [
+       0.5294,
+       0.2941,
+       0.7647
+      ],
+      "symbol_tail_hit": [
+       0.5294,
+       0.2941,
+       0.7647
+      ],
+      "tool_calls_total": [
+       2.8235,
+       2.1765,
+       3.5294
+      ],
+      "wall_s": [
+       16.7547,
+       15.5365,
+       18.0924
+      ],
+      "wall_s_net": [
+       16.7547,
+       15.5365,
+       18.0924
+      ],
+      "output_tokens": [
+       859.6471,
+       709.175,
+       1015.4735
+      ],
+      "input_tokens": [
+       6.4706,
+       5.6471,
+       7.4118
+      ],
+      "cache_creation_tokens": [
+       3625.1176,
+       3046.7382,
+       4238.7735
+      ],
+      "cache_read_tokens": [
+       17282.1765,
+       14541.8147,
+       20123.2471
+      ],
+      "total_input_tokens": [
+       20913.7647,
+       17855.2618,
+       24144.3103
+      ],
+      "num_turns": [
+       3.8235,
+       3.1765,
+       4.5294
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.5882,
+       1.0588,
+       2.1765
+      ],
+      "read_calls": [
+       1.2353,
+       0.9412,
+       1.5294
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       3.2353,
+       2.8235,
+       3.7059
+      ],
+      "input_side_tokens": [
+       20913.7647,
+       17855.2618,
+       24144.3103
+      ],
+      "total_cost_usd": [
+       0.0262,
+       0.0226,
+       0.0299
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.7888,
+       7.3535,
+       8.2335
+      ],
+      "cost_alone_usd": [
+       0.0414,
+       0.0378,
+       0.0452
+      ],
+      "total_cost_alone_usd": [
+       0.0428,
+       0.0391,
+       0.0465
+      ],
+      "first_cache_read": [
+       4256.0,
+       4165.8824,
+       4326.8235
+      ],
+      "wall_s_median": 16.6,
+      "wall_s_max": 22.9,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.42,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 17
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.59,
+       "Read": 1.24
+      }
+     },
+     "H-tuned": {
+      "cost_usd": [
+       0.0285,
+       0.0234,
+       0.0344
+      ],
+      "file_hit": [
+       0.7059,
+       0.4706,
+       0.8824
+      ],
+      "symbol_hit": [
+       0.5882,
+       0.3529,
+       0.8235
+      ],
+      "symbol_tail_hit": [
+       0.5882,
+       0.3529,
+       0.8235
+      ],
+      "tool_calls_total": [
+       3.7059,
+       2.7647,
+       4.7647
+      ],
+      "wall_s": [
+       18.7112,
+       16.7553,
+       20.8565
+      ],
+      "wall_s_net": [
+       18.7112,
+       16.7553,
+       20.8565
+      ],
+      "output_tokens": [
+       1056.5294,
+       835.2324,
+       1301.5353
+      ],
+      "input_tokens": [
+       7.6471,
+       6.3529,
+       9.0588
+      ],
+      "cache_creation_tokens": [
+       3936.8235,
+       3265.9382,
+       4693.2015
+      ],
+      "cache_read_tokens": [
+       22146.2353,
+       16838.5471,
+       28162.2441
+      ],
+      "total_input_tokens": [
+       26090.7059,
+       20250.25,
+       32796.7015
+      ],
+      "num_turns": [
+       4.7059,
+       3.7647,
+       5.7647
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.8235,
+       1.1765,
+       2.5882
+      ],
+      "read_calls": [
+       1.8824,
+       1.4118,
+       2.3529
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       3.8235,
+       3.1765,
+       4.5294
+      ],
+      "input_side_tokens": [
+       26090.7059,
+       20250.25,
+       32796.7015
+      ],
+      "total_cost_usd": [
+       0.0299,
+       0.0247,
+       0.0357
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.1947,
+       7.7424,
+       8.6718
+      ],
+      "cost_alone_usd": [
+       0.0449,
+       0.0397,
+       0.0508
+      ],
+      "total_cost_alone_usd": [
+       0.0462,
+       0.041,
+       0.0522
+      ],
+      "first_cache_read": [
+       4202.2353,
+       4096.6471,
+       4287.1191
+      ],
+      "wall_s_median": 18.0,
+      "wall_s_max": 29.8,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.49,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 17
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.82,
+       "Read": 1.88
+      }
+     }
+    },
+    "paired_diff": {
+     "H-tuned-H-stock": {
+      "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+      "cost_usd": [
+       0.0037,
+       0.0001,
+       0.0076
+      ],
+      "file_hit": [
+       0.0588,
+       0.0,
+       0.1765
+      ],
+      "symbol_hit": [
+       0.0588,
+       0.0,
+       0.1765
+      ],
+      "symbol_tail_hit": [
+       0.0588,
+       0.0,
+       0.1765
+      ],
+      "tool_calls_total": [
+       0.8824,
+       0.2941,
+       1.5294
+      ],
+      "wall_s": [
+       1.9565,
+       0.6506,
+       3.3877
+      ],
+      "wall_s_net": [
+       1.9565,
+       0.6506,
+       3.3877
+      ],
+      "output_tokens": [
+       196.8824,
+       65.4706,
+       337.7074
+      ],
+      "input_tokens": [
+       1.1765,
+       0.2353,
+       2.1176
+      ],
+      "cache_creation_tokens": [
+       311.7059,
+       -262.7662,
+       899.8824
+      ],
+      "cache_read_tokens": [
+       4864.0588,
+       832.3471,
+       9346.9985
+      ],
+      "total_input_tokens": [
+       5176.9412,
+       717.4824,
+       10078.3956
+      ],
+      "num_turns": [
+       0.8824,
+       0.2941,
+       1.5294
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       0.2353,
+       -0.2941,
+       0.7647
+      ],
+      "read_calls": [
+       0.6471,
+       0.1765,
+       1.1176
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       0.5882,
+       0.1176,
+       1.0588
+      ],
+      "input_side_tokens": [
+       5176.9412,
+       717.4824,
+       10078.3956
+      ],
+      "total_cost_usd": [
+       0.0037,
+       0.0,
+       0.0076
+      ],
+      "hook_cost_usd": [
+       -0.0,
+       -0.0001,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.4059,
+       -0.1041,
+       0.9124
+      ],
+      "cost_alone_usd": [
+       0.0035,
+       -0.0002,
+       0.0074
+      ],
+      "total_cost_alone_usd": [
+       0.0035,
+       -0.0002,
+       0.0074
+      ],
+      "first_cache_read": [
+       -53.7647,
+       -189.1176,
+       64.3529
+      ]
+     },
+     "H-stock-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0075,
+       -0.016,
+       -0.0013
+      ],
+      "file_hit": [
+       -0.1176,
+       -0.2941,
+       0.0
+      ],
+      "symbol_hit": [
+       -0.1176,
+       -0.2941,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       -0.1176,
+       -0.2941,
+       0.0
+      ],
+      "tool_calls_total": [
+       -1.1176,
+       -2.3529,
+       -0.1765
+      ],
+      "wall_s": [
+       7.19,
+       4.6758,
+       9.0688
+      ],
+      "wall_s_net": [
+       7.19,
+       4.6758,
+       9.0688
+      ],
+      "output_tokens": [
+       -157.8824,
+       -453.0706,
+       57.4132
+      ],
+      "input_tokens": [
+       -1.8824,
+       -3.5294,
+       -0.5882
+      ],
+      "cache_creation_tokens": [
+       -1325.0588,
+       -2619.4103,
+       -262.0397
+      ],
+      "cache_read_tokens": [
+       -6622.2353,
+       -15424.6088,
+       -461.2794
+      ],
+      "total_input_tokens": [
+       -7949.1765,
+       -17955.0721,
+       -1027.4309
+      ],
+      "num_turns": [
+       -1.1176,
+       -2.3529,
+       -0.1765
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -1.0,
+       -2.0,
+       -0.2353
+      ],
+      "read_calls": [
+       -0.1176,
+       -0.4706,
+       0.1765
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       -0.9412,
+       -1.7647,
+       -0.2941
+      ],
+      "input_side_tokens": [
+       -7949.1765,
+       -17955.0721,
+       -1027.4309
+      ],
+      "total_cost_usd": [
+       -0.0062,
+       -0.0147,
+       0.0001
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.7888,
+       7.3535,
+       8.2335
+      ],
+      "cost_alone_usd": [
+       -0.0058,
+       -0.0141,
+       0.0004
+      ],
+      "total_cost_alone_usd": [
+       -0.0045,
+       -0.0128,
+       0.0018
+      ],
+      "first_cache_read": [
+       445.8824,
+       275.3441,
+       579.4735
+      ]
+     },
+     "H-tuned-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0038,
+       -0.0099,
+       0.001
+      ],
+      "file_hit": [
+       -0.0588,
+       -0.1765,
+       0.0
+      ],
+      "symbol_hit": [
+       -0.0588,
+       -0.1765,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       -0.0588,
+       -0.1765,
+       0.0
+      ],
+      "tool_calls_total": [
+       -0.2353,
+       -1.4706,
+       0.7647
+      ],
+      "wall_s": [
+       9.1465,
+       7.1958,
+       10.8994
+      ],
+      "wall_s_net": [
+       9.1465,
+       7.1958,
+       10.8994
+      ],
+      "output_tokens": [
+       39.0,
+       -215.2956,
+       258.2412
+      ],
+      "input_tokens": [
+       -0.7059,
+       -2.1176,
+       0.5882
+      ],
+      "cache_creation_tokens": [
+       -1013.3529,
+       -1998.7074,
+       -132.6441
+      ],
+      "cache_read_tokens": [
+       -1758.1765,
+       -8162.3926,
+       3460.9132
+      ],
+      "total_input_tokens": [
+       -2772.2353,
+       -9923.3147,
+       2851.6647
+      ],
+      "num_turns": [
+       -0.2353,
+       -1.4706,
+       0.7647
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.7647,
+       -1.5882,
+       -0.0588
+      ],
+      "read_calls": [
+       0.5294,
+       -0.0588,
+       1.1176
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       -0.3529,
+       -1.0588,
+       0.2941
+      ],
+      "input_side_tokens": [
+       -2772.2353,
+       -9923.3147,
+       2851.6647
+      ],
+      "total_cost_usd": [
+       -0.0025,
+       -0.0087,
+       0.0024
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.1947,
+       7.7424,
+       8.6718
+      ],
+      "cost_alone_usd": [
+       -0.0023,
+       -0.0084,
+       0.0027
+      ],
+      "total_cost_alone_usd": [
+       -0.001,
+       -0.0071,
+       0.004
+      ],
+      "first_cache_read": [
+       392.1176,
+       158.9176,
+       576.5338
+      ]
+     }
+    },
+    "clusters": {
+     "saleor": 17
+    }
+   }
+  },
+  "zulip": {
+   "all": {
+    "arms": [
+     "A",
+     "H-stock",
+     "H-tuned"
+    ],
+    "questions": 20,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0193,
+       0.0171,
+       0.0216
+      ],
+      "file_hit": [
+       0.85,
+       0.7,
+       1.0
+      ],
+      "symbol_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_tail_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "tool_calls_total": [
+       2.5,
+       2.05,
+       3.0
+      ],
+      "wall_s": [
+       6.2975,
+       5.762,
+       6.812
+      ],
+      "wall_s_net": [
+       6.2975,
+       5.762,
+       6.812
+      ],
+      "output_tokens": [
+       607.0,
+       534.9987,
+       680.2013
+      ],
+      "input_tokens": [
+       5.9,
+       5.4,
+       6.4
+      ],
+      "cache_creation_tokens": [
+       2962.3,
+       2527.2638,
+       3428.2537
+      ],
+      "cache_read_tokens": [
+       13672.3,
+       12140.91,
+       15268.255
+      ],
+      "total_input_tokens": [
+       16640.5,
+       14862.38,
+       18460.3725
+      ],
+      "num_turns": [
+       3.5,
+       3.05,
+       4.0
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.55,
+       1.25,
+       1.9
+      ],
+      "read_calls": [
+       0.85,
+       0.6,
+       1.1
+      ],
+      "glob_calls": [
+       0.1,
+       0.0,
+       0.25
+      ],
+      "api_calls": [
+       2.95,
+       2.7,
+       3.2
+      ],
+      "input_side_tokens": [
+       16640.5,
+       14862.38,
+       18460.3725
+      ],
+      "total_cost_usd": [
+       0.0193,
+       0.0171,
+       0.0216
+      ],
+      "hook_cost_usd": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "cost_alone_usd": [
+       0.034,
+       0.0318,
+       0.0364
+      ],
+      "total_cost_alone_usd": [
+       0.034,
+       0.0318,
+       0.0364
+      ],
+      "first_cache_read": [
+       3777.55,
+       3692.0,
+       3874.4
+      ],
+      "wall_s_median": 6.4,
+      "wall_s_max": 8.0,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.39,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.1,
+       "Grep": 1.55,
+       "Read": 0.85
+      }
+     },
+     "H-stock": {
+      "cost_usd": [
+       0.0166,
+       0.0143,
+       0.0195
+      ],
+      "file_hit": [
+       0.85,
+       0.7,
+       1.0
+      ],
+      "symbol_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "symbol_tail_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "tool_calls_total": [
+       1.95,
+       1.5,
+       2.45
+      ],
+      "wall_s": [
+       14.371,
+       13.5665,
+       15.2175
+      ],
+      "wall_s_net": [
+       14.371,
+       13.5665,
+       15.2175
+      ],
+      "output_tokens": [
+       556.25,
+       464.1,
+       660.2025
+      ],
+      "input_tokens": [
+       5.2,
+       4.6,
+       6.0
+      ],
+      "cache_creation_tokens": [
+       2430.0,
+       2033.9975,
+       2921.76
+      ],
+      "cache_read_tokens": [
+       12959.2,
+       10853.8263,
+       15746.7925
+      ],
+      "total_input_tokens": [
+       15394.4,
+       13048.7,
+       18585.6237
+      ],
+      "num_turns": [
+       2.95,
+       2.5,
+       3.45
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.05,
+       0.7,
+       1.45
+      ],
+      "read_calls": [
+       0.9,
+       0.65,
+       1.2
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       2.6,
+       2.3,
+       3.0
+      ],
+      "input_side_tokens": [
+       15394.4,
+       13048.7,
+       18585.6237
+      ],
+      "total_cost_usd": [
+       0.0179,
+       0.0156,
+       0.0208
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.5985,
+       7.217,
+       7.9575
+      ],
+      "cost_alone_usd": [
+       0.0333,
+       0.031,
+       0.0361
+      ],
+      "total_cost_alone_usd": [
+       0.0346,
+       0.0323,
+       0.0375
+      ],
+      "first_cache_read": [
+       4272.55,
+       4127.7475,
+       4432.95
+      ],
+      "wall_s_median": 13.8,
+      "wall_s_max": 18.3,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.33,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.05,
+       "Read": 0.9
+      }
+     },
+     "H-tuned": {
+      "cost_usd": [
+       0.0177,
+       0.0153,
+       0.0206
+      ],
+      "file_hit": [
+       0.85,
+       0.7,
+       1.0
+      ],
+      "symbol_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "symbol_tail_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "tool_calls_total": [
+       2.15,
+       1.65,
+       2.75
+      ],
+      "wall_s": [
+       15.1765,
+       14.2145,
+       16.1925
+      ],
+      "wall_s_net": [
+       15.1765,
+       14.2145,
+       16.1925
+      ],
+      "output_tokens": [
+       619.3,
+       518.1437,
+       729.8025
+      ],
+      "input_tokens": [
+       5.4,
+       4.7,
+       6.3
+      ],
+      "cache_creation_tokens": [
+       2527.35,
+       2115.3713,
+       2990.8187
+      ],
+      "cache_read_tokens": [
+       13766.7,
+       11279.0275,
+       17153.5562
+      ],
+      "total_input_tokens": [
+       16299.45,
+       13591.54,
+       20058.0088
+      ],
+      "num_turns": [
+       3.15,
+       2.65,
+       3.75
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.3,
+       0.85,
+       1.8
+      ],
+      "read_calls": [
+       0.8,
+       0.5,
+       1.1
+      ],
+      "glob_calls": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "api_calls": [
+       2.7,
+       2.35,
+       3.15
+      ],
+      "input_side_tokens": [
+       16299.45,
+       13591.54,
+       20058.0088
+      ],
+      "total_cost_usd": [
+       0.019,
+       0.0166,
+       0.0219
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.079,
+       7.697,
+       8.451
+      ],
+      "cost_alone_usd": [
+       0.0345,
+       0.0322,
+       0.0373
+      ],
+      "total_cost_alone_usd": [
+       0.0358,
+       0.0335,
+       0.0386
+      ],
+      "first_cache_read": [
+       4302.85,
+       4169.5963,
+       4449.8525
+      ],
+      "wall_s_median": 14.6,
+      "wall_s_max": 19.6,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.35,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.05,
+       "Grep": 1.3,
+       "Read": 0.8
+      }
+     }
+    },
+    "paired_diff": {
+     "H-tuned-H-stock": {
+      "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+      "cost_usd": [
+       0.0011,
+       -0.0006,
+       0.0028
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "tool_calls_total": [
+       0.2,
+       -0.1,
+       0.5
+      ],
+      "wall_s": [
+       0.8055,
+       0.015,
+       1.5815
+      ],
+      "wall_s_net": [
+       0.8055,
+       0.015,
+       1.5815
+      ],
+      "output_tokens": [
+       63.05,
+       -12.15,
+       141.4012
+      ],
+      "input_tokens": [
+       0.2,
+       -0.3,
+       0.7
+      ],
+      "cache_creation_tokens": [
+       97.35,
+       -196.0012,
+       360.4712
+      ],
+      "cache_read_tokens": [
+       807.5,
+       -578.8525,
+       2167.8987
+      ],
+      "total_input_tokens": [
+       905.05,
+       -656.575,
+       2363.5613
+      ],
+      "num_turns": [
+       0.2,
+       -0.1,
+       0.5
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       0.25,
+       -0.05,
+       0.6
+      ],
+      "read_calls": [
+       -0.1,
+       -0.4,
+       0.15
+      ],
+      "glob_calls": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "api_calls": [
+       0.1,
+       -0.15,
+       0.35
+      ],
+      "input_side_tokens": [
+       905.05,
+       -656.575,
+       2363.5613
+      ],
+      "total_cost_usd": [
+       0.0011,
+       -0.0006,
+       0.0028
+      ],
+      "hook_cost_usd": [
+       0.0,
+       -0.0,
+       0.0001
+      ],
+      "hook_latency_s": [
+       0.4805,
+       0.0685,
+       0.882
+      ],
+      "cost_alone_usd": [
+       0.0012,
+       -0.0004,
+       0.0028
+      ],
+      "total_cost_alone_usd": [
+       0.0012,
+       -0.0004,
+       0.0028
+      ],
+      "first_cache_read": [
+       30.3,
+       -46.1,
+       112.6
+      ]
+     },
+     "H-stock-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0027,
+       -0.0054,
+       -0.0001
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "symbol_tail_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "tool_calls_total": [
+       -0.55,
+       -1.1,
+       -0.05
+      ],
+      "wall_s": [
+       8.0735,
+       7.2605,
+       8.81
+      ],
+      "wall_s_net": [
+       8.0735,
+       7.2605,
+       8.81
+      ],
+      "output_tokens": [
+       -50.75,
+       -127.8525,
+       27.6062
+      ],
+      "input_tokens": [
+       -0.7,
+       -1.3,
+       -0.1
+      ],
+      "cache_creation_tokens": [
+       -532.3,
+       -1084.105,
+       -3.39
+      ],
+      "cache_read_tokens": [
+       -713.1,
+       -2712.5062,
+       1504.7875
+      ],
+      "total_input_tokens": [
+       -1246.1,
+       -3629.695,
+       1356.8675
+      ],
+      "num_turns": [
+       -0.55,
+       -1.1,
+       -0.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.5,
+       -0.85,
+       -0.15
+      ],
+      "read_calls": [
+       0.05,
+       -0.25,
+       0.35
+      ],
+      "glob_calls": [
+       -0.1,
+       -0.25,
+       0.0
+      ],
+      "api_calls": [
+       -0.35,
+       -0.65,
+       -0.05
+      ],
+      "input_side_tokens": [
+       -1246.1,
+       -3629.695,
+       1356.8675
+      ],
+      "total_cost_usd": [
+       -0.0014,
+       -0.0041,
+       0.0012
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.5985,
+       7.217,
+       7.9575
+      ],
+      "cost_alone_usd": [
+       -0.0008,
+       -0.0034,
+       0.0019
+      ],
+      "total_cost_alone_usd": [
+       0.0005,
+       -0.0021,
+       0.0032
+      ],
+      "first_cache_read": [
+       495.0,
+       278.3487,
+       704.8025
+      ]
+     },
+     "H-tuned-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0016,
+       -0.0044,
+       0.0011
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "symbol_tail_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "tool_calls_total": [
+       -0.35,
+       -0.8,
+       0.05
+      ],
+      "wall_s": [
+       8.879,
+       8.0425,
+       9.7155
+      ],
+      "wall_s_net": [
+       8.879,
+       8.0425,
+       9.7155
+      ],
+      "output_tokens": [
+       12.3,
+       -63.2037,
+       88.6512
+      ],
+      "input_tokens": [
+       -0.5,
+       -1.1,
+       0.2
+      ],
+      "cache_creation_tokens": [
+       -434.95,
+       -967.8537,
+       68.4525
+      ],
+      "cache_read_tokens": [
+       94.4,
+       -2104.565,
+       2857.6512
+      ],
+      "total_input_tokens": [
+       -341.05,
+       -2805.66,
+       2645.4012
+      ],
+      "num_turns": [
+       -0.35,
+       -0.8,
+       0.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.25,
+       -0.65,
+       0.25
+      ],
+      "read_calls": [
+       -0.05,
+       -0.4,
+       0.3
+      ],
+      "glob_calls": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "api_calls": [
+       -0.25,
+       -0.55,
+       0.1
+      ],
+      "input_side_tokens": [
+       -341.05,
+       -2805.66,
+       2645.4012
+      ],
+      "total_cost_usd": [
+       -0.0003,
+       -0.0031,
+       0.0024
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.079,
+       7.697,
+       8.451
+      ],
+      "cost_alone_usd": [
+       0.0004,
+       -0.0023,
+       0.003
+      ],
+      "total_cost_alone_usd": [
+       0.0018,
+       -0.001,
+       0.0043
+      ],
+      "first_cache_read": [
+       525.3,
+       310.4912,
+       725.1037
+      ]
+     }
+    },
+    "clusters": {
+     "zulip": 20
+    }
+   },
+   "without_pilot": {
+    "arms": [
+     "A",
+     "H-stock",
+     "H-tuned"
+    ],
+    "questions": 20,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0193,
+       0.0171,
+       0.0216
+      ],
+      "file_hit": [
+       0.85,
+       0.7,
+       1.0
+      ],
+      "symbol_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_tail_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "tool_calls_total": [
+       2.5,
+       2.05,
+       3.0
+      ],
+      "wall_s": [
+       6.2975,
+       5.762,
+       6.812
+      ],
+      "wall_s_net": [
+       6.2975,
+       5.762,
+       6.812
+      ],
+      "output_tokens": [
+       607.0,
+       534.9987,
+       680.2013
+      ],
+      "input_tokens": [
+       5.9,
+       5.4,
+       6.4
+      ],
+      "cache_creation_tokens": [
+       2962.3,
+       2527.2638,
+       3428.2537
+      ],
+      "cache_read_tokens": [
+       13672.3,
+       12140.91,
+       15268.255
+      ],
+      "total_input_tokens": [
+       16640.5,
+       14862.38,
+       18460.3725
+      ],
+      "num_turns": [
+       3.5,
+       3.05,
+       4.0
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.55,
+       1.25,
+       1.9
+      ],
+      "read_calls": [
+       0.85,
+       0.6,
+       1.1
+      ],
+      "glob_calls": [
+       0.1,
+       0.0,
+       0.25
+      ],
+      "api_calls": [
+       2.95,
+       2.7,
+       3.2
+      ],
+      "input_side_tokens": [
+       16640.5,
+       14862.38,
+       18460.3725
+      ],
+      "total_cost_usd": [
+       0.0193,
+       0.0171,
+       0.0216
+      ],
+      "hook_cost_usd": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "cost_alone_usd": [
+       0.034,
+       0.0318,
+       0.0364
+      ],
+      "total_cost_alone_usd": [
+       0.034,
+       0.0318,
+       0.0364
+      ],
+      "first_cache_read": [
+       3777.55,
+       3692.0,
+       3874.4
+      ],
+      "wall_s_median": 6.4,
+      "wall_s_max": 8.0,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.39,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.1,
+       "Grep": 1.55,
+       "Read": 0.85
+      }
+     },
+     "H-stock": {
+      "cost_usd": [
+       0.0166,
+       0.0143,
+       0.0195
+      ],
+      "file_hit": [
+       0.85,
+       0.7,
+       1.0
+      ],
+      "symbol_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "symbol_tail_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "tool_calls_total": [
+       1.95,
+       1.5,
+       2.45
+      ],
+      "wall_s": [
+       14.371,
+       13.5665,
+       15.2175
+      ],
+      "wall_s_net": [
+       14.371,
+       13.5665,
+       15.2175
+      ],
+      "output_tokens": [
+       556.25,
+       464.1,
+       660.2025
+      ],
+      "input_tokens": [
+       5.2,
+       4.6,
+       6.0
+      ],
+      "cache_creation_tokens": [
+       2430.0,
+       2033.9975,
+       2921.76
+      ],
+      "cache_read_tokens": [
+       12959.2,
+       10853.8263,
+       15746.7925
+      ],
+      "total_input_tokens": [
+       15394.4,
+       13048.7,
+       18585.6237
+      ],
+      "num_turns": [
+       2.95,
+       2.5,
+       3.45
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.05,
+       0.7,
+       1.45
+      ],
+      "read_calls": [
+       0.9,
+       0.65,
+       1.2
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       2.6,
+       2.3,
+       3.0
+      ],
+      "input_side_tokens": [
+       15394.4,
+       13048.7,
+       18585.6237
+      ],
+      "total_cost_usd": [
+       0.0179,
+       0.0156,
+       0.0208
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.5985,
+       7.217,
+       7.9575
+      ],
+      "cost_alone_usd": [
+       0.0333,
+       0.031,
+       0.0361
+      ],
+      "total_cost_alone_usd": [
+       0.0346,
+       0.0323,
+       0.0375
+      ],
+      "first_cache_read": [
+       4272.55,
+       4127.7475,
+       4432.95
+      ],
+      "wall_s_median": 13.8,
+      "wall_s_max": 18.3,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.33,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.05,
+       "Read": 0.9
+      }
+     },
+     "H-tuned": {
+      "cost_usd": [
+       0.0177,
+       0.0153,
+       0.0206
+      ],
+      "file_hit": [
+       0.85,
+       0.7,
+       1.0
+      ],
+      "symbol_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "symbol_tail_hit": [
+       0.8,
+       0.6,
+       0.95
+      ],
+      "tool_calls_total": [
+       2.15,
+       1.65,
+       2.75
+      ],
+      "wall_s": [
+       15.1765,
+       14.2145,
+       16.1925
+      ],
+      "wall_s_net": [
+       15.1765,
+       14.2145,
+       16.1925
+      ],
+      "output_tokens": [
+       619.3,
+       518.1437,
+       729.8025
+      ],
+      "input_tokens": [
+       5.4,
+       4.7,
+       6.3
+      ],
+      "cache_creation_tokens": [
+       2527.35,
+       2115.3713,
+       2990.8187
+      ],
+      "cache_read_tokens": [
+       13766.7,
+       11279.0275,
+       17153.5562
+      ],
+      "total_input_tokens": [
+       16299.45,
+       13591.54,
+       20058.0088
+      ],
+      "num_turns": [
+       3.15,
+       2.65,
+       3.75
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       1.3,
+       0.85,
+       1.8
+      ],
+      "read_calls": [
+       0.8,
+       0.5,
+       1.1
+      ],
+      "glob_calls": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "api_calls": [
+       2.7,
+       2.35,
+       3.15
+      ],
+      "input_side_tokens": [
+       16299.45,
+       13591.54,
+       20058.0088
+      ],
+      "total_cost_usd": [
+       0.019,
+       0.0166,
+       0.0219
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.079,
+       7.697,
+       8.451
+      ],
+      "cost_alone_usd": [
+       0.0345,
+       0.0322,
+       0.0373
+      ],
+      "total_cost_alone_usd": [
+       0.0358,
+       0.0335,
+       0.0386
+      ],
+      "first_cache_read": [
+       4302.85,
+       4169.5963,
+       4449.8525
+      ],
+      "wall_s_median": 14.6,
+      "wall_s_max": 19.6,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.35,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.05,
+       "Grep": 1.3,
+       "Read": 0.8
+      }
+     }
+    },
+    "paired_diff": {
+     "H-tuned-H-stock": {
+      "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+      "cost_usd": [
+       0.0011,
+       -0.0006,
+       0.0028
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "tool_calls_total": [
+       0.2,
+       -0.1,
+       0.5
+      ],
+      "wall_s": [
+       0.8055,
+       0.015,
+       1.5815
+      ],
+      "wall_s_net": [
+       0.8055,
+       0.015,
+       1.5815
+      ],
+      "output_tokens": [
+       63.05,
+       -12.15,
+       141.4012
+      ],
+      "input_tokens": [
+       0.2,
+       -0.3,
+       0.7
+      ],
+      "cache_creation_tokens": [
+       97.35,
+       -196.0012,
+       360.4712
+      ],
+      "cache_read_tokens": [
+       807.5,
+       -578.8525,
+       2167.8987
+      ],
+      "total_input_tokens": [
+       905.05,
+       -656.575,
+       2363.5613
+      ],
+      "num_turns": [
+       0.2,
+       -0.1,
+       0.5
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       0.25,
+       -0.05,
+       0.6
+      ],
+      "read_calls": [
+       -0.1,
+       -0.4,
+       0.15
+      ],
+      "glob_calls": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "api_calls": [
+       0.1,
+       -0.15,
+       0.35
+      ],
+      "input_side_tokens": [
+       905.05,
+       -656.575,
+       2363.5613
+      ],
+      "total_cost_usd": [
+       0.0011,
+       -0.0006,
+       0.0028
+      ],
+      "hook_cost_usd": [
+       0.0,
+       -0.0,
+       0.0001
+      ],
+      "hook_latency_s": [
+       0.4805,
+       0.0685,
+       0.882
+      ],
+      "cost_alone_usd": [
+       0.0012,
+       -0.0004,
+       0.0028
+      ],
+      "total_cost_alone_usd": [
+       0.0012,
+       -0.0004,
+       0.0028
+      ],
+      "first_cache_read": [
+       30.3,
+       -46.1,
+       112.6
+      ]
+     },
+     "H-stock-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0027,
+       -0.0054,
+       -0.0001
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "symbol_tail_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "tool_calls_total": [
+       -0.55,
+       -1.1,
+       -0.05
+      ],
+      "wall_s": [
+       8.0735,
+       7.2605,
+       8.81
+      ],
+      "wall_s_net": [
+       8.0735,
+       7.2605,
+       8.81
+      ],
+      "output_tokens": [
+       -50.75,
+       -127.8525,
+       27.6062
+      ],
+      "input_tokens": [
+       -0.7,
+       -1.3,
+       -0.1
+      ],
+      "cache_creation_tokens": [
+       -532.3,
+       -1084.105,
+       -3.39
+      ],
+      "cache_read_tokens": [
+       -713.1,
+       -2712.5062,
+       1504.7875
+      ],
+      "total_input_tokens": [
+       -1246.1,
+       -3629.695,
+       1356.8675
+      ],
+      "num_turns": [
+       -0.55,
+       -1.1,
+       -0.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.5,
+       -0.85,
+       -0.15
+      ],
+      "read_calls": [
+       0.05,
+       -0.25,
+       0.35
+      ],
+      "glob_calls": [
+       -0.1,
+       -0.25,
+       0.0
+      ],
+      "api_calls": [
+       -0.35,
+       -0.65,
+       -0.05
+      ],
+      "input_side_tokens": [
+       -1246.1,
+       -3629.695,
+       1356.8675
+      ],
+      "total_cost_usd": [
+       -0.0014,
+       -0.0041,
+       0.0012
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0012,
+       0.0014
+      ],
+      "hook_latency_s": [
+       7.5985,
+       7.217,
+       7.9575
+      ],
+      "cost_alone_usd": [
+       -0.0008,
+       -0.0034,
+       0.0019
+      ],
+      "total_cost_alone_usd": [
+       0.0005,
+       -0.0021,
+       0.0032
+      ],
+      "first_cache_read": [
+       495.0,
+       278.3487,
+       704.8025
+      ]
+     },
+     "H-tuned-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0016,
+       -0.0044,
+       0.0011
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "symbol_tail_hit": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "tool_calls_total": [
+       -0.35,
+       -0.8,
+       0.05
+      ],
+      "wall_s": [
+       8.879,
+       8.0425,
+       9.7155
+      ],
+      "wall_s_net": [
+       8.879,
+       8.0425,
+       9.7155
+      ],
+      "output_tokens": [
+       12.3,
+       -63.2037,
+       88.6512
+      ],
+      "input_tokens": [
+       -0.5,
+       -1.1,
+       0.2
+      ],
+      "cache_creation_tokens": [
+       -434.95,
+       -967.8537,
+       68.4525
+      ],
+      "cache_read_tokens": [
+       94.4,
+       -2104.565,
+       2857.6512
+      ],
+      "total_input_tokens": [
+       -341.05,
+       -2805.66,
+       2645.4012
+      ],
+      "num_turns": [
+       -0.35,
+       -0.8,
+       0.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.25,
+       -0.65,
+       0.25
+      ],
+      "read_calls": [
+       -0.05,
+       -0.4,
+       0.3
+      ],
+      "glob_calls": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "api_calls": [
+       -0.25,
+       -0.55,
+       0.1
+      ],
+      "input_side_tokens": [
+       -341.05,
+       -2805.66,
+       2645.4012
+      ],
+      "total_cost_usd": [
+       -0.0003,
+       -0.0031,
+       0.0024
+      ],
+      "hook_cost_usd": [
+       0.0013,
+       0.0013,
+       0.0014
+      ],
+      "hook_latency_s": [
+       8.079,
+       7.697,
+       8.451
+      ],
+      "cost_alone_usd": [
+       0.0004,
+       -0.0023,
+       0.003
+      ],
+      "total_cost_alone_usd": [
+       0.0018,
+       -0.001,
+       0.0043
+      ],
+      "first_cache_read": [
+       525.3,
+       310.4912,
+       725.1037
+      ]
+     }
+    },
+    "clusters": {
+     "zulip": 20
+    }
+   }
+  },
+  "posthog": {
+   "all": {
+    "arms": [
+     "A",
+     "H-stock",
+     "H-tuned"
+    ],
+    "questions": 20,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0404,
+       0.0295,
+       0.0529
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       5.25,
+       3.75,
+       7.05
+      ],
+      "wall_s": [
+       12.2325,
+       8.9818,
+       16.1995
+      ],
+      "wall_s_net": [
+       12.2325,
+       8.9818,
+       16.1995
+      ],
+      "output_tokens": [
+       1322.75,
+       940.1988,
+       1785.0637
+      ],
+      "input_tokens": [
+       10.0,
+       8.0,
+       12.3
+      ],
+      "cache_creation_tokens": [
+       5943.25,
+       4303.1312,
+       7722.855
+      ],
+      "cache_read_tokens": [
+       34262.8,
+       24107.455,
+       46756.0137
+      ],
+      "total_input_tokens": [
+       40216.05,
+       28669.0987,
+       54237.3288
+      ],
+      "num_turns": [
+       6.25,
+       4.75,
+       8.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       3.7,
+       2.5,
+       5.2
+      ],
+      "read_calls": [
+       1.4,
+       0.95,
+       1.9
+      ],
+      "glob_calls": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "api_calls": [
+       5.0,
+       4.0,
+       6.15
+      ],
+      "input_side_tokens": [
+       40216.05,
+       28669.0987,
+       54237.3288
+      ],
+      "total_cost_usd": [
+       0.0404,
+       0.0295,
+       0.0529
+      ],
+      "hook_cost_usd": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "cost_alone_usd": [
+       0.0568,
+       0.0462,
+       0.0689
+      ],
+      "total_cost_alone_usd": [
+       0.0568,
+       0.0462,
+       0.0689
+      ],
+      "first_cache_read": [
+       4197.25,
+       3921.2563,
+       4507.52
+      ],
+      "wall_s_median": 9.5,
+      "wall_s_max": 38.1,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.81,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.15,
+       "Grep": 3.7,
+       "Read": 1.4
+      }
+     },
+     "H-stock": {
+      "cost_usd": [
+       0.0351,
+       0.0229,
+       0.0512
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       3.95,
+       2.55,
+       6.05
+      ],
+      "wall_s": [
+       19.8765,
+       16.4015,
+       25.034
+      ],
+      "wall_s_net": [
+       19.8765,
+       16.4015,
+       25.034
+      ],
+      "output_tokens": [
+       1173.9,
+       777.75,
+       1768.8562
+      ],
+      "input_tokens": [
+       8.1,
+       6.1,
+       11.1
+      ],
+      "cache_creation_tokens": [
+       5057.0,
+       3330.1712,
+       7237.2275
+      ],
+      "cache_read_tokens": [
+       31421.15,
+       17137.9275,
+       52653.7887
+      ],
+      "total_input_tokens": [
+       36486.25,
+       20511.1838,
+       59621.8925
+      ],
+      "num_turns": [
+       4.95,
+       3.55,
+       7.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       2.9,
+       1.65,
+       4.85
+      ],
+      "read_calls": [
+       1.0,
+       0.65,
+       1.35
+      ],
+      "glob_calls": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "api_calls": [
+       4.05,
+       3.05,
+       5.55
+      ],
+      "input_side_tokens": [
+       36486.25,
+       20511.1838,
+       59621.8925
+      ],
+      "total_cost_usd": [
+       0.0367,
+       0.0245,
+       0.0528
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.176,
+       7.732,
+       8.5945
+      ],
+      "cost_alone_usd": [
+       0.0528,
+       0.0403,
+       0.0689
+      ],
+      "total_cost_alone_usd": [
+       0.0543,
+       0.0419,
+       0.0705
+      ],
+      "first_cache_read": [
+       4519.5,
+       4324.1975,
+       4714.2513
+      ],
+      "wall_s_median": 17.6,
+      "wall_s_max": 59.4,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.7,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.05,
+       "Grep": 2.9,
+       "Read": 1.0
+      }
+     },
+     "H-tuned": {
+      "cost_usd": [
+       0.0371,
+       0.0256,
+       0.0545
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       4.5,
+       2.8,
+       7.1
+      ],
+      "wall_s": [
+       21.2865,
+       17.432,
+       27.4502
+      ],
+      "wall_s_net": [
+       21.2865,
+       17.432,
+       27.4502
+      ],
+      "output_tokens": [
+       1284.05,
+       851.7975,
+       1983.1525
+      ],
+      "input_tokens": [
+       8.5,
+       6.2,
+       12.1
+      ],
+      "cache_creation_tokens": [
+       5243.45,
+       3758.095,
+       7177.6625
+      ],
+      "cache_read_tokens": [
+       32583.65,
+       17682.8613,
+       58285.065
+      ],
+      "total_input_tokens": [
+       37835.6,
+       21531.0925,
+       65583.3975
+      ],
+      "num_turns": [
+       5.5,
+       3.8,
+       8.1
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       2.9,
+       1.45,
+       5.25
+      ],
+      "read_calls": [
+       1.6,
+       1.15,
+       2.1
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       4.25,
+       3.1,
+       6.05
+      ],
+      "input_side_tokens": [
+       37835.6,
+       21531.0925,
+       65583.3975
+      ],
+      "total_cost_usd": [
+       0.0387,
+       0.0272,
+       0.0561
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.7765,
+       8.325,
+       9.2045
+      ],
+      "cost_alone_usd": [
+       0.0547,
+       0.043,
+       0.0724
+      ],
+      "total_cost_alone_usd": [
+       0.0563,
+       0.0446,
+       0.074
+      ],
+      "first_cache_read": [
+       4514.1,
+       4345.5363,
+       4693.6013
+      ],
+      "wall_s_median": 19.5,
+      "wall_s_max": 71.3,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.74,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 2.9,
+       "Read": 1.6
+      }
+     }
+    },
+    "paired_diff": {
+     "H-tuned-H-stock": {
+      "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+      "cost_usd": [
+       0.002,
+       -0.0045,
+       0.0078
+      ],
+      "file_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "tool_calls_total": [
+       0.55,
+       -0.1,
+       1.3
+      ],
+      "wall_s": [
+       1.41,
+       -0.079,
+       3.0291
+      ],
+      "wall_s_net": [
+       1.41,
+       -0.079,
+       3.0291
+      ],
+      "output_tokens": [
+       110.15,
+       -55.1562,
+       294.2537
+      ],
+      "input_tokens": [
+       0.4,
+       -0.6,
+       1.6
+      ],
+      "cache_creation_tokens": [
+       186.45,
+       -898.5912,
+       1109.5162
+      ],
+      "cache_read_tokens": [
+       1162.5,
+       -7186.3525,
+       10104.6262
+      ],
+      "total_input_tokens": [
+       1349.35,
+       -7972.015,
+       10947.3025
+      ],
+      "num_turns": [
+       0.55,
+       -0.1,
+       1.3
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       0.0,
+       -0.55,
+       0.65
+      ],
+      "read_calls": [
+       0.6,
+       0.15,
+       1.05
+      ],
+      "glob_calls": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "api_calls": [
+       0.2,
+       -0.3,
+       0.8
+      ],
+      "input_side_tokens": [
+       1349.35,
+       -7972.015,
+       10947.3025
+      ],
+      "total_cost_usd": [
+       0.002,
+       -0.0045,
+       0.0078
+      ],
+      "hook_cost_usd": [
+       0.0,
+       -0.0,
+       0.0001
+      ],
+      "hook_latency_s": [
+       0.6005,
+       0.0965,
+       1.118
+      ],
+      "cost_alone_usd": [
+       0.0019,
+       -0.0046,
+       0.0077
+      ],
+      "total_cost_alone_usd": [
+       0.002,
+       -0.0046,
+       0.0077
+      ],
+      "first_cache_read": [
+       -5.4,
+       -198.3,
+       153.0
+      ]
+     },
+     "H-stock-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0053,
+       -0.0162,
+       0.0048
+      ],
+      "file_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "tool_calls_total": [
+       -1.3,
+       -2.7,
+       -0.15
+      ],
+      "wall_s": [
+       7.644,
+       5.093,
+       10.0175
+      ],
+      "wall_s_net": [
+       7.644,
+       5.093,
+       10.0175
+      ],
+      "output_tokens": [
+       -148.85,
+       -477.205,
+       142.7075
+      ],
+      "input_tokens": [
+       -1.9,
+       -3.7,
+       -0.3
+      ],
+      "cache_creation_tokens": [
+       -886.25,
+       -2671.3512,
+       875.0587
+      ],
+      "cache_read_tokens": [
+       -2841.65,
+       -14693.7037,
+       9733.0612
+      ],
+      "total_input_tokens": [
+       -3729.8,
+       -16998.16,
+       10226.2525
+      ],
+      "num_turns": [
+       -1.3,
+       -2.7,
+       -0.15
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.8,
+       -2.1,
+       0.4
+      ],
+      "read_calls": [
+       -0.4,
+       -0.8,
+       0.0
+      ],
+      "glob_calls": [
+       -0.1,
+       -0.3,
+       0.1
+      ],
+      "api_calls": [
+       -0.95,
+       -1.85,
+       -0.15
+      ],
+      "input_side_tokens": [
+       -3729.8,
+       -16998.16,
+       10226.2525
+      ],
+      "total_cost_usd": [
+       -0.0037,
+       -0.0146,
+       0.0064
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.176,
+       7.732,
+       8.5945
+      ],
+      "cost_alone_usd": [
+       -0.0041,
+       -0.0148,
+       0.0062
+      ],
+      "total_cost_alone_usd": [
+       -0.0025,
+       -0.0132,
+       0.0078
+      ],
+      "first_cache_read": [
+       322.25,
+       41.7488,
+       602.65
+      ]
+     },
+     "H-tuned-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0034,
+       -0.0127,
+       0.0066
+      ],
+      "file_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "tool_calls_total": [
+       -0.75,
+       -2.05,
+       0.65
+      ],
+      "wall_s": [
+       9.054,
+       6.4725,
+       12.2456
+      ],
+      "wall_s_net": [
+       9.054,
+       6.4725,
+       12.2456
+      ],
+      "output_tokens": [
+       -38.7,
+       -348.6538,
+       333.3575
+      ],
+      "input_tokens": [
+       -1.5,
+       -3.4,
+       0.7
+      ],
+      "cache_creation_tokens": [
+       -699.8,
+       -2169.59,
+       707.7675
+      ],
+      "cache_read_tokens": [
+       -1679.15,
+       -14549.225,
+       16059.6587
+      ],
+      "total_input_tokens": [
+       -2380.45,
+       -16326.8237,
+       16152.8462
+      ],
+      "num_turns": [
+       -0.75,
+       -2.05,
+       0.65
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.8,
+       -2.2,
+       0.75
+      ],
+      "read_calls": [
+       0.2,
+       -0.1,
+       0.5
+      ],
+      "glob_calls": [
+       -0.15,
+       -0.3,
+       0.0
+      ],
+      "api_calls": [
+       -0.75,
+       -1.7,
+       0.35
+      ],
+      "input_side_tokens": [
+       -2380.45,
+       -16326.8237,
+       16152.8462
+      ],
+      "total_cost_usd": [
+       -0.0018,
+       -0.0111,
+       0.0083
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.7765,
+       8.325,
+       9.2045
+      ],
+      "cost_alone_usd": [
+       -0.0021,
+       -0.0114,
+       0.0082
+      ],
+      "total_cost_alone_usd": [
+       -0.0005,
+       -0.0098,
+       0.0098
+      ],
+      "first_cache_read": [
+       316.85,
+       6.6988,
+       602.065
+      ]
+     }
+    },
+    "clusters": {
+     "posthog": 20
+    }
+   },
+   "without_pilot": {
+    "arms": [
+     "A",
+     "H-stock",
+     "H-tuned"
+    ],
+    "questions": 20,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0404,
+       0.0295,
+       0.0529
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       5.25,
+       3.75,
+       7.05
+      ],
+      "wall_s": [
+       12.2325,
+       8.9818,
+       16.1995
+      ],
+      "wall_s_net": [
+       12.2325,
+       8.9818,
+       16.1995
+      ],
+      "output_tokens": [
+       1322.75,
+       940.1988,
+       1785.0637
+      ],
+      "input_tokens": [
+       10.0,
+       8.0,
+       12.3
+      ],
+      "cache_creation_tokens": [
+       5943.25,
+       4303.1312,
+       7722.855
+      ],
+      "cache_read_tokens": [
+       34262.8,
+       24107.455,
+       46756.0137
+      ],
+      "total_input_tokens": [
+       40216.05,
+       28669.0987,
+       54237.3288
+      ],
+      "num_turns": [
+       6.25,
+       4.75,
+       8.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       3.7,
+       2.5,
+       5.2
+      ],
+      "read_calls": [
+       1.4,
+       0.95,
+       1.9
+      ],
+      "glob_calls": [
+       0.15,
+       0.0,
+       0.3
+      ],
+      "api_calls": [
+       5.0,
+       4.0,
+       6.15
+      ],
+      "input_side_tokens": [
+       40216.05,
+       28669.0987,
+       54237.3288
+      ],
+      "total_cost_usd": [
+       0.0404,
+       0.0295,
+       0.0529
+      ],
+      "hook_cost_usd": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "hook_latency_s": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "cost_alone_usd": [
+       0.0568,
+       0.0462,
+       0.0689
+      ],
+      "total_cost_alone_usd": [
+       0.0568,
+       0.0462,
+       0.0689
+      ],
+      "first_cache_read": [
+       4197.25,
+       3921.2563,
+       4507.52
+      ],
+      "wall_s_median": 9.5,
+      "wall_s_max": 38.1,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.81,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.15,
+       "Grep": 3.7,
+       "Read": 1.4
+      }
+     },
+     "H-stock": {
+      "cost_usd": [
+       0.0351,
+       0.0229,
+       0.0512
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       3.95,
+       2.55,
+       6.05
+      ],
+      "wall_s": [
+       19.8765,
+       16.4015,
+       25.034
+      ],
+      "wall_s_net": [
+       19.8765,
+       16.4015,
+       25.034
+      ],
+      "output_tokens": [
+       1173.9,
+       777.75,
+       1768.8562
+      ],
+      "input_tokens": [
+       8.1,
+       6.1,
+       11.1
+      ],
+      "cache_creation_tokens": [
+       5057.0,
+       3330.1712,
+       7237.2275
+      ],
+      "cache_read_tokens": [
+       31421.15,
+       17137.9275,
+       52653.7887
+      ],
+      "total_input_tokens": [
+       36486.25,
+       20511.1838,
+       59621.8925
+      ],
+      "num_turns": [
+       4.95,
+       3.55,
+       7.05
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       2.9,
+       1.65,
+       4.85
+      ],
+      "read_calls": [
+       1.0,
+       0.65,
+       1.35
+      ],
+      "glob_calls": [
+       0.05,
+       0.0,
+       0.15
+      ],
+      "api_calls": [
+       4.05,
+       3.05,
+       5.55
+      ],
+      "input_side_tokens": [
+       36486.25,
+       20511.1838,
+       59621.8925
+      ],
+      "total_cost_usd": [
+       0.0367,
+       0.0245,
+       0.0528
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.176,
+       7.732,
+       8.5945
+      ],
+      "cost_alone_usd": [
+       0.0528,
+       0.0403,
+       0.0689
+      ],
+      "total_cost_alone_usd": [
+       0.0543,
+       0.0419,
+       0.0705
+      ],
+      "first_cache_read": [
+       4519.5,
+       4324.1975,
+       4714.2513
+      ],
+      "wall_s_median": 17.6,
+      "wall_s_max": 59.4,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.7,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Glob": 0.05,
+       "Grep": 2.9,
+       "Read": 1.0
+      }
+     },
+     "H-tuned": {
+      "cost_usd": [
+       0.0371,
+       0.0256,
+       0.0545
+      ],
+      "file_hit": [
+       0.65,
+       0.45,
+       0.85
+      ],
+      "symbol_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "symbol_tail_hit": [
+       0.6,
+       0.4,
+       0.8
+      ],
+      "tool_calls_total": [
+       4.5,
+       2.8,
+       7.1
+      ],
+      "wall_s": [
+       21.2865,
+       17.432,
+       27.4502
+      ],
+      "wall_s_net": [
+       21.2865,
+       17.432,
+       27.4502
+      ],
+      "output_tokens": [
+       1284.05,
+       851.7975,
+       1983.1525
+      ],
+      "input_tokens": [
+       8.5,
+       6.2,
+       12.1
+      ],
+      "cache_creation_tokens": [
+       5243.45,
+       3758.095,
+       7177.6625
+      ],
+      "cache_read_tokens": [
+       32583.65,
+       17682.8613,
+       58285.065
+      ],
+      "total_input_tokens": [
+       37835.6,
+       21531.0925,
+       65583.3975
+      ],
+      "num_turns": [
+       5.5,
+       3.8,
+       8.1
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       2.9,
+       1.45,
+       5.25
+      ],
+      "read_calls": [
+       1.6,
+       1.15,
+       2.1
+      ],
+      "glob_calls": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "api_calls": [
+       4.25,
+       3.1,
+       6.05
+      ],
+      "input_side_tokens": [
+       37835.6,
+       21531.0925,
+       65583.3975
+      ],
+      "total_cost_usd": [
+       0.0387,
+       0.0272,
+       0.0561
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.7765,
+       8.325,
+       9.2045
+      ],
+      "cost_alone_usd": [
+       0.0547,
+       0.043,
+       0.0724
+      ],
+      "total_cost_alone_usd": [
+       0.0563,
+       0.0446,
+       0.074
+      ],
+      "first_cache_read": [
+       4514.1,
+       4345.5363,
+       4693.6013
+      ],
+      "wall_s_median": 19.5,
+      "wall_s_max": 71.3,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.74,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "interleaved": 20
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 2.9,
+       "Read": 1.6
+      }
+     }
+    },
+    "paired_diff": {
+     "H-tuned-H-stock": {
+      "role": "registered main outcome (gold file); second named outcome (gold symbol)",
+      "cost_usd": [
+       0.002,
+       -0.0045,
+       0.0078
+      ],
+      "file_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "tool_calls_total": [
+       0.55,
+       -0.1,
+       1.3
+      ],
+      "wall_s": [
+       1.41,
+       -0.079,
+       3.0291
+      ],
+      "wall_s_net": [
+       1.41,
+       -0.079,
+       3.0291
+      ],
+      "output_tokens": [
+       110.15,
+       -55.1562,
+       294.2537
+      ],
+      "input_tokens": [
+       0.4,
+       -0.6,
+       1.6
+      ],
+      "cache_creation_tokens": [
+       186.45,
+       -898.5912,
+       1109.5162
+      ],
+      "cache_read_tokens": [
+       1162.5,
+       -7186.3525,
+       10104.6262
+      ],
+      "total_input_tokens": [
+       1349.35,
+       -7972.015,
+       10947.3025
+      ],
+      "num_turns": [
+       0.55,
+       -0.1,
+       1.3
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       0.0,
+       -0.55,
+       0.65
+      ],
+      "read_calls": [
+       0.6,
+       0.15,
+       1.05
+      ],
+      "glob_calls": [
+       -0.05,
+       -0.15,
+       0.0
+      ],
+      "api_calls": [
+       0.2,
+       -0.3,
+       0.8
+      ],
+      "input_side_tokens": [
+       1349.35,
+       -7972.015,
+       10947.3025
+      ],
+      "total_cost_usd": [
+       0.002,
+       -0.0045,
+       0.0078
+      ],
+      "hook_cost_usd": [
+       0.0,
+       -0.0,
+       0.0001
+      ],
+      "hook_latency_s": [
+       0.6005,
+       0.0965,
+       1.118
+      ],
+      "cost_alone_usd": [
+       0.0019,
+       -0.0046,
+       0.0077
+      ],
+      "total_cost_alone_usd": [
+       0.002,
+       -0.0046,
+       0.0077
+      ],
+      "first_cache_read": [
+       -5.4,
+       -198.3,
+       153.0
+      ]
+     },
+     "H-stock-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0053,
+       -0.0162,
+       0.0048
+      ],
+      "file_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "tool_calls_total": [
+       -1.3,
+       -2.7,
+       -0.15
+      ],
+      "wall_s": [
+       7.644,
+       5.093,
+       10.0175
+      ],
+      "wall_s_net": [
+       7.644,
+       5.093,
+       10.0175
+      ],
+      "output_tokens": [
+       -148.85,
+       -477.205,
+       142.7075
+      ],
+      "input_tokens": [
+       -1.9,
+       -3.7,
+       -0.3
+      ],
+      "cache_creation_tokens": [
+       -886.25,
+       -2671.3512,
+       875.0587
+      ],
+      "cache_read_tokens": [
+       -2841.65,
+       -14693.7037,
+       9733.0612
+      ],
+      "total_input_tokens": [
+       -3729.8,
+       -16998.16,
+       10226.2525
+      ],
+      "num_turns": [
+       -1.3,
+       -2.7,
+       -0.15
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.8,
+       -2.1,
+       0.4
+      ],
+      "read_calls": [
+       -0.4,
+       -0.8,
+       0.0
+      ],
+      "glob_calls": [
+       -0.1,
+       -0.3,
+       0.1
+      ],
+      "api_calls": [
+       -0.95,
+       -1.85,
+       -0.15
+      ],
+      "input_side_tokens": [
+       -3729.8,
+       -16998.16,
+       10226.2525
+      ],
+      "total_cost_usd": [
+       -0.0037,
+       -0.0146,
+       0.0064
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.176,
+       7.732,
+       8.5945
+      ],
+      "cost_alone_usd": [
+       -0.0041,
+       -0.0148,
+       0.0062
+      ],
+      "total_cost_alone_usd": [
+       -0.0025,
+       -0.0132,
+       0.0078
+      ],
+      "first_cache_read": [
+       322.25,
+       41.7488,
+       602.65
+      ]
+     },
+     "H-tuned-A": {
+      "role": "secondary (card arm - A)",
+      "cost_usd": [
+       -0.0034,
+       -0.0127,
+       0.0066
+      ],
+      "file_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.15,
+       0.15
+      ],
+      "tool_calls_total": [
+       -0.75,
+       -2.05,
+       0.65
+      ],
+      "wall_s": [
+       9.054,
+       6.4725,
+       12.2456
+      ],
+      "wall_s_net": [
+       9.054,
+       6.4725,
+       12.2456
+      ],
+      "output_tokens": [
+       -38.7,
+       -348.6538,
+       333.3575
+      ],
+      "input_tokens": [
+       -1.5,
+       -3.4,
+       0.7
+      ],
+      "cache_creation_tokens": [
+       -699.8,
+       -2169.59,
+       707.7675
+      ],
+      "cache_read_tokens": [
+       -1679.15,
+       -14549.225,
+       16059.6587
+      ],
+      "total_input_tokens": [
+       -2380.45,
+       -16326.8237,
+       16152.8462
+      ],
+      "num_turns": [
+       -0.75,
+       -2.05,
+       0.65
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "grep_calls": [
+       -0.8,
+       -2.2,
+       0.75
+      ],
+      "read_calls": [
+       0.2,
+       -0.1,
+       0.5
+      ],
+      "glob_calls": [
+       -0.15,
+       -0.3,
+       0.0
+      ],
+      "api_calls": [
+       -0.75,
+       -1.7,
+       0.35
+      ],
+      "input_side_tokens": [
+       -2380.45,
+       -16326.8237,
+       16152.8462
+      ],
+      "total_cost_usd": [
+       -0.0018,
+       -0.0111,
+       0.0083
+      ],
+      "hook_cost_usd": [
+       0.0016,
+       0.0015,
+       0.0017
+      ],
+      "hook_latency_s": [
+       8.7765,
+       8.325,
+       9.2045
+      ],
+      "cost_alone_usd": [
+       -0.0021,
+       -0.0114,
+       0.0082
+      ],
+      "total_cost_alone_usd": [
+       -0.0005,
+       -0.0098,
+       0.0098
+      ],
+      "first_cache_read": [
+       316.85,
+       6.6988,
+       602.065
+      ]
+     }
+    },
+    "clusters": {
+     "posthog": 20
+    }
+   }
+  }
+ },
+ "search_use_observational": {
+  "all": {
+   "status": "descriptive only: split by the arm's own search use (a run searches when it is going badly)",
+   "pooled": {},
+   "saleor": {},
+   "zulip": {},
+   "posthog": {}
+  },
+  "without_pilot": {
+   "status": "descriptive only: split by the arm's own search use (a run searches when it is going badly)",
+   "pooled": {},
+   "saleor": {},
+   "zulip": {},
+   "posthog": {}
+  }
+ },
+ "hint": {
+  "all": {
+   "card": {
+    "H-stock": {
+     "retrieved": 0.0,
+     "retrieved_gold_file": 0.0,
+     "retrieved_gold_symbol": 0.0,
+     "hint_queries": 3.8,
+     "hint_passthrough": 0.0,
+     "hook_failed": 0.0,
+     "card_chars": 1007.85,
+     "card_tokens_approx": 251.9667,
+     "card_leads": 4.2167,
+     "card_gold_file": 0.8,
+     "card_gold_symbol": 0.65,
+     "answer_used_card": 0.8667,
+     "card_violations": 0.0,
+     "hook_cost_usd": 0.0014,
+     "hook_input_tokens": 4.0,
+     "hook_cache_creation_tokens": 5044.9167,
+     "hook_cache_read_tokens": 0.0,
+     "hook_output_tokens": 804.1333,
+     "hook_latency_s": 7.8268,
+     "hook_latency_net_s": 7.6408,
+     "query_lock_wait_s": 0.186,
+     "runs": 60,
+     "cards": 60,
+     "passthrough": 0,
+     "hook_failures": 0,
+     "violations_total": 0,
+     "card_gold_file_when_card": 0.8,
+     "used_card_when_card": 0.867,
+     "file_hit_when_card_has_gold": 0.833,
+     "file_hit_when_card_lacks_gold": 0.167
+    },
+    "H-tuned": {
+     "retrieved": 0.0,
+     "retrieved_gold_file": 0.0,
+     "retrieved_gold_symbol": 0.0,
+     "hint_queries": 3.8,
+     "hint_passthrough": 0.0,
+     "hook_failed": 0.0,
+     "card_chars": 1008.2833,
+     "card_tokens_approx": 252.0167,
+     "card_leads": 4.3167,
+     "card_gold_file": 0.8167,
+     "card_gold_symbol": 0.7667,
+     "answer_used_card": 0.85,
+     "card_violations": 0.0167,
+     "hook_cost_usd": 0.0014,
+     "hook_input_tokens": 4.0,
+     "hook_cache_creation_tokens": 4987.3667,
+     "hook_cache_read_tokens": 0.0,
+     "hook_output_tokens": 837.9833,
+     "hook_latency_s": 8.3495,
+     "hook_latency_net_s": 8.1503,
+     "query_lock_wait_s": 0.1992,
+     "runs": 60,
+     "cards": 60,
+     "passthrough": 0,
+     "hook_failures": 0,
+     "violations_total": 1,
+     "card_gold_file_when_card": 0.817,
+     "used_card_when_card": 0.85,
+     "file_hit_when_card_has_gold": 0.837,
+     "file_hit_when_card_lacks_gold": 0.182
+    }
+   },
+   "per_repo_card": {
+    "posthog": {
+     "H-stock": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.95,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 998.15,
+      "card_tokens_approx": 249.6,
+      "card_leads": 3.95,
+      "card_gold_file": 0.65,
+      "card_gold_symbol": 0.5,
+      "answer_used_card": 0.75,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0016,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 5794.2,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 852.45,
+      "hook_latency_s": 8.176,
+      "hook_latency_net_s": 8.1135,
+      "query_lock_wait_s": 0.0625,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.65,
+      "used_card_when_card": 0.75,
+      "file_hit_when_card_has_gold": 0.846,
+      "file_hit_when_card_lacks_gold": 0.286
+     },
+     "H-tuned": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.95,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 1025.1,
+      "card_tokens_approx": 256.3,
+      "card_leads": 4.3,
+      "card_gold_file": 0.65,
+      "card_gold_symbol": 0.65,
+      "answer_used_card": 0.7,
+      "card_violations": 0.05,
+      "hook_cost_usd": 0.0016,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 5656.75,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 933.6,
+      "hook_latency_s": 8.7765,
+      "hook_latency_net_s": 8.4755,
+      "query_lock_wait_s": 0.301,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 1,
+      "card_gold_file_when_card": 0.65,
+      "used_card_when_card": 0.7,
+      "file_hit_when_card_has_gold": 0.846,
+      "file_hit_when_card_lacks_gold": 0.286
+     }
+    },
+    "saleor": {
+     "H-stock": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.7,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 1026.3,
+      "card_tokens_approx": 256.65,
+      "card_leads": 4.15,
+      "card_gold_file": 0.8,
+      "card_gold_symbol": 0.6,
+      "answer_used_card": 0.95,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4746.3,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 786.25,
+      "hook_latency_s": 7.706,
+      "hook_latency_net_s": 7.5075,
+      "query_lock_wait_s": 0.1985,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.8,
+      "used_card_when_card": 0.95,
+      "file_hit_when_card_has_gold": 0.75,
+      "file_hit_when_card_lacks_gold": 0.0
+     },
+     "H-tuned": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.7,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 1036.65,
+      "card_tokens_approx": 259.15,
+      "card_leads": 4.25,
+      "card_gold_file": 0.9,
+      "card_gold_symbol": 0.8,
+      "answer_used_card": 0.95,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4638.1,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 793.95,
+      "hook_latency_s": 8.193,
+      "hook_latency_net_s": 7.9495,
+      "query_lock_wait_s": 0.2435,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.9,
+      "used_card_when_card": 0.95,
+      "file_hit_when_card_has_gold": 0.722,
+      "file_hit_when_card_lacks_gold": 0.0
+     }
+    },
+    "zulip": {
+     "H-stock": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.75,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 999.1,
+      "card_tokens_approx": 249.65,
+      "card_leads": 4.55,
+      "card_gold_file": 0.95,
+      "card_gold_symbol": 0.85,
+      "answer_used_card": 0.9,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4594.25,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 773.7,
+      "hook_latency_s": 7.5985,
+      "hook_latency_net_s": 7.3015,
+      "query_lock_wait_s": 0.297,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.95,
+      "used_card_when_card": 0.9,
+      "file_hit_when_card_has_gold": 0.895,
+      "file_hit_when_card_lacks_gold": 0.0
+     },
+     "H-tuned": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.75,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 963.1,
+      "card_tokens_approx": 240.6,
+      "card_leads": 4.4,
+      "card_gold_file": 0.9,
+      "card_gold_symbol": 0.85,
+      "answer_used_card": 0.9,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4667.25,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 786.4,
+      "hook_latency_s": 8.079,
+      "hook_latency_net_s": 8.026,
+      "query_lock_wait_s": 0.053,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.9,
+      "used_card_when_card": 0.9,
+      "file_hit_when_card_has_gold": 0.944,
+      "file_hit_when_card_lacks_gold": 0.0
+     }
+    }
+   },
+   "identical_queries": {
+    "issues": 60,
+    "identical_across_card_arms": 60
+   },
+   "card_table": {
+    "per_source": {
+     "H-stock": {
+      "retrieved_gold_file": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "retrieved_gold_symbol": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "card_gold_file": [
+       0.8,
+       0.7,
+       0.9
+      ],
+      "card_gold_symbol": [
+       0.65,
+       0.5333,
+       0.7667
+      ]
+     },
+     "H-tuned": {
+      "retrieved_gold_file": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "retrieved_gold_symbol": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "card_gold_file": [
+       0.8167,
+       0.7167,
+       0.9
+      ],
+      "card_gold_symbol": [
+       0.7667,
+       0.6667,
+       0.8667
+      ]
+     }
+    },
+    "paired": {
+     "H-stock-H-tuned": {
+      "retrieved_gold_file": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "retrieved_gold_symbol": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "card_gold_file": [
+       -0.0167,
+       -0.0833,
+       0.05
+      ],
+      "card_gold_symbol": [
+       -0.1167,
+       -0.2167,
+       -0.0167
+      ]
+     }
+    }
+   },
+   "card_arm_minus_A_by_card_gold": {
+    "H-stock: card held gold file": {
+     "issues": 48,
+     "file_hit": {
+      "arm": 0.8333,
+      "A": 0.8542,
+      "diff": [
+       -0.0208,
+       -0.1042,
+       0.0417
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.7708,
+      "A": 0.7292,
+      "diff": [
+       0.0417,
+       -0.0422,
+       0.1458
+      ]
+     },
+     "api_calls": {
+      "arm": 3.0,
+      "A": 3.6667,
+      "diff": [
+       -0.6667,
+       -1.0625,
+       -0.3333
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0396,
+      "A": 0.0414,
+      "diff": [
+       -0.0018,
+       -0.0056,
+       0.0015
+      ]
+     }
+    },
+    "H-stock: card lacked gold file": {
+     "issues": 12,
+     "file_hit": {
+      "arm": 0.1667,
+      "A": 0.25,
+      "diff": [
+       -0.0833,
+       -0.25,
+       0.0
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.0833,
+      "A": 0.1667,
+      "diff": [
+       -0.0833,
+       -0.25,
+       0.0
+      ]
+     },
+     "api_calls": {
+      "arm": 4.5,
+      "A": 5.3333,
+      "diff": [
+       -0.8333,
+       -1.8333,
+       0.1667
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0615,
+      "A": 0.0616,
+      "diff": [
+       -0.0002,
+       -0.015,
+       0.0143
+      ]
+     }
+    },
+    "H-tuned: card held gold file": {
+     "issues": 49,
+     "file_hit": {
+      "arm": 0.8367,
+      "A": 0.8776,
+      "diff": [
+       -0.0408,
+       -0.102,
+       0.0
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.7755,
+      "A": 0.7551,
+      "diff": [
+       0.0204,
+       -0.0612,
+       0.102
+      ]
+     },
+     "api_calls": {
+      "arm": 3.1224,
+      "A": 3.6122,
+      "diff": [
+       -0.4898,
+       -0.8571,
+       -0.1429
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0413,
+      "A": 0.041,
+      "diff": [
+       0.0003,
+       -0.0028,
+       0.0031
+      ]
+     }
+    },
+    "H-tuned: card lacked gold file": {
+     "issues": 11,
+     "file_hit": {
+      "arm": 0.1818,
+      "A": 0.0909,
+      "diff": [
+       0.0909,
+       0.0,
+       0.2727
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.0909,
+      "A": 0.0,
+      "diff": [
+       0.0909,
+       0.0,
+       0.2727
+      ]
+     },
+     "api_calls": {
+      "arm": 5.4545,
+      "A": 5.7273,
+      "diff": [
+       -0.2727,
+       -1.4545,
+       1.3636
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0666,
+      "A": 0.0652,
+      "diff": [
+       0.0015,
+       -0.0123,
+       0.0182
+      ]
+     }
+    }
+   },
+   "disagreeing_cards": {
+    "H-stock card has gold, H-tuned card lacks it": {
+     "issues": 2,
+     "H-stock_file_hit": 0.0,
+     "H-tuned_file_hit": 0.0,
+     "A_file_hit": 0.0
+    },
+    "H-tuned card has gold, H-stock card lacks it": {
+     "issues": 3,
+     "H-tuned_file_hit": 0.6667,
+     "H-stock_file_hit": 0.3333,
+     "A_file_hit": 0.6667
+    }
+   },
+   "queries_with_invented_identifier": {
+    "posthog": {
+     "model_queries": 0,
+     "with_identifier_absent_from_issue": 0,
+     "share": null,
+     "after_filter": 0
+    },
+    "saleor": {
+     "model_queries": 0,
+     "with_identifier_absent_from_issue": 0,
+     "share": null,
+     "after_filter": 0
+    },
+    "zulip": {
+     "model_queries": 0,
+     "with_identifier_absent_from_issue": 0,
+     "share": null,
+     "after_filter": 0
+    }
+   },
+   "cost_by_position": {
+    "A ran 1": {
+     "n": 17,
+     "cost_usd": 0.0336,
+     "cost_alone_usd": 0.048,
+     "cache_creation_tokens": 5349.3529,
+     "cache_read_tokens": 24370.2941
+    },
+    "A ran 2": {
+     "n": 22,
+     "cost_usd": 0.0315,
+     "cost_alone_usd": 0.0464,
+     "cache_creation_tokens": 4419.3636,
+     "cache_read_tokens": 27205.7727
+    },
+    "A ran 3": {
+     "n": 21,
+     "cost_usd": 0.0258,
+     "cost_alone_usd": 0.0423,
+     "cache_creation_tokens": 3968.0476,
+     "cache_read_tokens": 19060.1429
+    },
+    "H-stock ran 1": {
+     "n": 25,
+     "cost_usd": 0.0272,
+     "cost_alone_usd": 0.0437,
+     "cache_creation_tokens": 3826.28,
+     "cache_read_tokens": 23742.04
+    },
+    "H-stock ran 2": {
+     "n": 14,
+     "cost_usd": 0.0246,
+     "cost_alone_usd": 0.042,
+     "cache_creation_tokens": 3570.6429,
+     "cache_read_tokens": 19245.9286
+    },
+    "H-stock ran 3": {
+     "n": 21,
+     "cost_usd": 0.0244,
+     "cost_alone_usd": 0.0415,
+     "cache_creation_tokens": 3685.8095,
+     "cache_read_tokens": 17623.3333
+    },
+    "H-tuned ran 1": {
+     "n": 18,
+     "cost_usd": 0.0237,
+     "cost_alone_usd": 0.0404,
+     "cache_creation_tokens": 3271.6667,
+     "cache_read_tokens": 17794.3889
+    },
+    "H-tuned ran 2": {
+     "n": 24,
+     "cost_usd": 0.0252,
+     "cost_alone_usd": 0.0421,
+     "cache_creation_tokens": 3804.4583,
+     "cache_read_tokens": 18349.8333
+    },
+    "H-tuned ran 3": {
+     "n": 18,
+     "cost_usd": 0.0346,
+     "cost_alone_usd": 0.0518,
+     "cache_creation_tokens": 4593.6111,
+     "cache_read_tokens": 32778.2778
+    }
+   },
+   "projection": {
+    "issues": 321,
+    "workers": 4,
+    "arms": {
+     "A": {
+      "cost_usd": 9.7,
+      "hours": 0.21
+     },
+     "H-stock": {
+      "cost_usd": 8.7,
+      "hours": 0.38
+     },
+     "H-tuned": {
+      "cost_usd": 9.3,
+      "hours": 0.41
+     }
+    },
+    "total_cost_usd": 27.7,
+    "total_hours": 1.0,
+    "extra_arms_priced_not_built": {
+     "card from BM25 alone": {
+      "cost_usd": 9.3,
+      "hours": 0.41,
+      "basis": "H-tuned's measured agent + hook cost and wall time; no embedding model to load; BM25 index build ~2-13 s per hook start (about the LFM load it replaces)"
+     },
+     "card from BM25 + tuned Qwen3 (RRF)": {
+      "cost_usd": 9.3,
+      "hours": 0.59,
+      "basis": "H-tuned's measured agent + hook cost and wall time; Qwen3-0.6B CPU load plus the BM25 build add ~8 s per hook start on PostHog (measured 13 s against LFM's ~5 s)"
+     }
+    }
+   }
+  },
+  "without_pilot": {
+   "card": {
+    "H-stock": {
+     "retrieved": 0.0,
+     "retrieved_gold_file": 0.0,
+     "retrieved_gold_symbol": 0.0,
+     "hint_queries": 3.7895,
+     "hint_passthrough": 0.0,
+     "hook_failed": 0.0,
+     "card_chars": 1012.386,
+     "card_tokens_approx": 253.0877,
+     "card_leads": 4.2456,
+     "card_gold_file": 0.807,
+     "card_gold_symbol": 0.6667,
+     "answer_used_card": 0.8596,
+     "card_violations": 0.0,
+     "hook_cost_usd": 0.0014,
+     "hook_input_tokens": 4.0,
+     "hook_cache_creation_tokens": 5058.7895,
+     "hook_cache_read_tokens": 0.0,
+     "hook_output_tokens": 807.3333,
+     "hook_latency_s": 7.8579,
+     "hook_latency_net_s": 7.6621,
+     "query_lock_wait_s": 0.1958,
+     "runs": 57,
+     "cards": 57,
+     "passthrough": 0,
+     "hook_failures": 0,
+     "violations_total": 0,
+     "card_gold_file_when_card": 0.807,
+     "used_card_when_card": 0.86,
+     "file_hit_when_card_has_gold": 0.848,
+     "file_hit_when_card_lacks_gold": 0.182
+    },
+    "H-tuned": {
+     "retrieved": 0.0,
+     "retrieved_gold_file": 0.0,
+     "retrieved_gold_symbol": 0.0,
+     "hint_queries": 3.7895,
+     "hint_passthrough": 0.0,
+     "hook_failed": 0.0,
+     "card_chars": 1010.0877,
+     "card_tokens_approx": 252.4561,
+     "card_leads": 4.3333,
+     "card_gold_file": 0.8246,
+     "card_gold_symbol": 0.7719,
+     "answer_used_card": 0.8421,
+     "card_violations": 0.0175,
+     "hook_cost_usd": 0.0014,
+     "hook_input_tokens": 4.0,
+     "hook_cache_creation_tokens": 4998.3333,
+     "hook_cache_read_tokens": 0.0,
+     "hook_output_tokens": 836.8246,
+     "hook_latency_s": 8.3582,
+     "hook_latency_net_s": 8.1486,
+     "query_lock_wait_s": 0.2096,
+     "runs": 57,
+     "cards": 57,
+     "passthrough": 0,
+     "hook_failures": 0,
+     "violations_total": 1,
+     "card_gold_file_when_card": 0.825,
+     "used_card_when_card": 0.842,
+     "file_hit_when_card_has_gold": 0.851,
+     "file_hit_when_card_lacks_gold": 0.2
+    }
+   },
+   "per_repo_card": {
+    "posthog": {
+     "H-stock": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.95,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 998.15,
+      "card_tokens_approx": 249.6,
+      "card_leads": 3.95,
+      "card_gold_file": 0.65,
+      "card_gold_symbol": 0.5,
+      "answer_used_card": 0.75,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0016,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 5794.2,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 852.45,
+      "hook_latency_s": 8.176,
+      "hook_latency_net_s": 8.1135,
+      "query_lock_wait_s": 0.0625,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.65,
+      "used_card_when_card": 0.75,
+      "file_hit_when_card_has_gold": 0.846,
+      "file_hit_when_card_lacks_gold": 0.286
+     },
+     "H-tuned": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.95,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 1025.1,
+      "card_tokens_approx": 256.3,
+      "card_leads": 4.3,
+      "card_gold_file": 0.65,
+      "card_gold_symbol": 0.65,
+      "answer_used_card": 0.7,
+      "card_violations": 0.05,
+      "hook_cost_usd": 0.0016,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 5656.75,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 933.6,
+      "hook_latency_s": 8.7765,
+      "hook_latency_net_s": 8.4755,
+      "query_lock_wait_s": 0.301,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 1,
+      "card_gold_file_when_card": 0.65,
+      "used_card_when_card": 0.7,
+      "file_hit_when_card_has_gold": 0.846,
+      "file_hit_when_card_lacks_gold": 0.286
+     }
+    },
+    "saleor": {
+     "H-stock": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.6471,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 1044.7647,
+      "card_tokens_approx": 261.2353,
+      "card_leads": 4.2353,
+      "card_gold_file": 0.8235,
+      "card_gold_symbol": 0.6471,
+      "answer_used_card": 0.9412,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4740.1176,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 793.8235,
+      "hook_latency_s": 7.7888,
+      "hook_latency_net_s": 7.5553,
+      "query_lock_wait_s": 0.2335,
+      "runs": 17,
+      "cards": 17,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.824,
+      "used_card_when_card": 0.941,
+      "file_hit_when_card_has_gold": 0.786,
+      "file_hit_when_card_lacks_gold": 0.0
+     },
+     "H-tuned": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.6471,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 1047.7059,
+      "card_tokens_approx": 261.8824,
+      "card_leads": 4.2941,
+      "card_gold_file": 0.9412,
+      "card_gold_symbol": 0.8235,
+      "answer_used_card": 0.9412,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4613.2353,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 782.2941,
+      "hook_latency_s": 8.1947,
+      "hook_latency_net_s": 7.9082,
+      "query_lock_wait_s": 0.2865,
+      "runs": 17,
+      "cards": 17,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.941,
+      "used_card_when_card": 0.941,
+      "file_hit_when_card_has_gold": 0.75,
+      "file_hit_when_card_lacks_gold": 0.0
+     }
+    },
+    "zulip": {
+     "H-stock": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.75,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 999.1,
+      "card_tokens_approx": 249.65,
+      "card_leads": 4.55,
+      "card_gold_file": 0.95,
+      "card_gold_symbol": 0.85,
+      "answer_used_card": 0.9,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4594.25,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 773.7,
+      "hook_latency_s": 7.5985,
+      "hook_latency_net_s": 7.3015,
+      "query_lock_wait_s": 0.297,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.95,
+      "used_card_when_card": 0.9,
+      "file_hit_when_card_has_gold": 0.895,
+      "file_hit_when_card_lacks_gold": 0.0
+     },
+     "H-tuned": {
+      "retrieved": 0.0,
+      "retrieved_gold_file": 0.0,
+      "retrieved_gold_symbol": 0.0,
+      "hint_queries": 3.75,
+      "hint_passthrough": 0.0,
+      "hook_failed": 0.0,
+      "card_chars": 963.1,
+      "card_tokens_approx": 240.6,
+      "card_leads": 4.4,
+      "card_gold_file": 0.9,
+      "card_gold_symbol": 0.85,
+      "answer_used_card": 0.9,
+      "card_violations": 0.0,
+      "hook_cost_usd": 0.0013,
+      "hook_input_tokens": 4.0,
+      "hook_cache_creation_tokens": 4667.25,
+      "hook_cache_read_tokens": 0.0,
+      "hook_output_tokens": 786.4,
+      "hook_latency_s": 8.079,
+      "hook_latency_net_s": 8.026,
+      "query_lock_wait_s": 0.053,
+      "runs": 20,
+      "cards": 20,
+      "passthrough": 0,
+      "hook_failures": 0,
+      "violations_total": 0,
+      "card_gold_file_when_card": 0.9,
+      "used_card_when_card": 0.9,
+      "file_hit_when_card_has_gold": 0.944,
+      "file_hit_when_card_lacks_gold": 0.0
+     }
+    }
+   },
+   "identical_queries": {
+    "issues": 57,
+    "identical_across_card_arms": 57
+   },
+   "card_table": {
+    "per_source": {
+     "H-stock": {
+      "retrieved_gold_file": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "retrieved_gold_symbol": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "card_gold_file": [
+       0.807,
+       0.7018,
+       0.8947
+      ],
+      "card_gold_symbol": [
+       0.6667,
+       0.5439,
+       0.7719
+      ]
+     },
+     "H-tuned": {
+      "retrieved_gold_file": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "retrieved_gold_symbol": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "card_gold_file": [
+       0.8246,
+       0.7193,
+       0.9123
+      ],
+      "card_gold_symbol": [
+       0.7719,
+       0.6667,
+       0.8772
+      ]
+     }
+    },
+    "paired": {
+     "H-stock-H-tuned": {
+      "retrieved_gold_file": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "retrieved_gold_symbol": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "card_gold_file": [
+       -0.0175,
+       -0.0877,
+       0.0526
+      ],
+      "card_gold_symbol": [
+       -0.1053,
+       -0.2105,
+       0.0
+      ]
+     }
+    }
+   },
+   "card_arm_minus_A_by_card_gold": {
+    "H-stock: card held gold file": {
+     "issues": 46,
+     "file_hit": {
+      "arm": 0.8478,
+      "A": 0.8696,
+      "diff": [
+       -0.0217,
+       -0.087,
+       0.0435
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.7826,
+      "A": 0.7391,
+      "diff": [
+       0.0435,
+       -0.0652,
+       0.1522
+      ]
+     },
+     "api_calls": {
+      "arm": 2.9783,
+      "A": 3.6739,
+      "diff": [
+       -0.6957,
+       -1.087,
+       -0.3478
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0396,
+      "A": 0.0416,
+      "diff": [
+       -0.002,
+       -0.006,
+       0.0014
+      ]
+     }
+    },
+    "H-stock: card lacked gold file": {
+     "issues": 11,
+     "file_hit": {
+      "arm": 0.1818,
+      "A": 0.2727,
+      "diff": [
+       -0.0909,
+       -0.2727,
+       0.0
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.0909,
+      "A": 0.1818,
+      "diff": [
+       -0.0909,
+       -0.2727,
+       0.0
+      ]
+     },
+     "api_calls": {
+      "arm": 4.6364,
+      "A": 5.5455,
+      "diff": [
+       -0.9091,
+       -1.9091,
+       0.0909
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0623,
+      "A": 0.0643,
+      "diff": [
+       -0.002,
+       -0.017,
+       0.0125
+      ]
+     }
+    },
+    "H-tuned: card held gold file": {
+     "issues": 47,
+     "file_hit": {
+      "arm": 0.8511,
+      "A": 0.8936,
+      "diff": [
+       -0.0426,
+       -0.1064,
+       0.0
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.7872,
+      "A": 0.766,
+      "diff": [
+       0.0213,
+       -0.0638,
+       0.1064
+      ]
+     },
+     "api_calls": {
+      "arm": 3.1277,
+      "A": 3.617,
+      "diff": [
+       -0.4894,
+       -0.8723,
+       -0.1277
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0413,
+      "A": 0.0412,
+      "diff": [
+       0.0001,
+       -0.003,
+       0.003
+      ]
+     }
+    },
+    "H-tuned: card lacked gold file": {
+     "issues": 10,
+     "file_hit": {
+      "arm": 0.2,
+      "A": 0.1,
+      "diff": [
+       0.1,
+       0.0,
+       0.3
+      ]
+     },
+     "symbol_hit": {
+      "arm": 0.1,
+      "A": 0.0,
+      "diff": [
+       0.1,
+       0.0,
+       0.3
+      ]
+     },
+     "api_calls": {
+      "arm": 5.7,
+      "A": 6.0,
+      "diff": [
+       -0.3,
+       -1.3,
+       1.4
+      ]
+     },
+     "total_cost_alone_usd": {
+      "arm": 0.0687,
+      "A": 0.0685,
+      "diff": [
+       0.0002,
+       -0.0126,
+       0.0174
+      ]
+     }
+    }
+   },
+   "disagreeing_cards": {
+    "H-stock card has gold, H-tuned card lacks it": {
+     "issues": 2,
+     "H-stock_file_hit": 0.0,
+     "H-tuned_file_hit": 0.0,
+     "A_file_hit": 0.0
+    },
+    "H-tuned card has gold, H-stock card lacks it": {
+     "issues": 3,
+     "H-tuned_file_hit": 0.6667,
+     "H-stock_file_hit": 0.3333,
+     "A_file_hit": 0.6667
+    }
+   },
+   "queries_with_invented_identifier": {
+    "posthog": {
+     "model_queries": 0,
+     "with_identifier_absent_from_issue": 0,
+     "share": null,
+     "after_filter": 0
+    },
+    "saleor": {
+     "model_queries": 0,
+     "with_identifier_absent_from_issue": 0,
+     "share": null,
+     "after_filter": 0
+    },
+    "zulip": {
+     "model_queries": 0,
+     "with_identifier_absent_from_issue": 0,
+     "share": null,
+     "after_filter": 0
+    }
+   },
+   "cost_by_position": {
+    "A ran 1": {
+     "n": 17,
+     "cost_usd": 0.0336,
+     "cost_alone_usd": 0.048,
+     "cache_creation_tokens": 5349.3529,
+     "cache_read_tokens": 24370.2941
+    },
+    "A ran 2": {
+     "n": 20,
+     "cost_usd": 0.0324,
+     "cost_alone_usd": 0.0474,
+     "cache_creation_tokens": 4511.9,
+     "cache_read_tokens": 28191.7
+    },
+    "A ran 3": {
+     "n": 20,
+     "cost_usd": 0.0263,
+     "cost_alone_usd": 0.0428,
+     "cache_creation_tokens": 4054.35,
+     "cache_read_tokens": 19347.4
+    },
+    "H-stock ran 1": {
+     "n": 24,
+     "cost_usd": 0.0268,
+     "cost_alone_usd": 0.0434,
+     "cache_creation_tokens": 3720.0417,
+     "cache_read_tokens": 24093.0
+    },
+    "H-stock ran 2": {
+     "n": 14,
+     "cost_usd": 0.0246,
+     "cost_alone_usd": 0.042,
+     "cache_creation_tokens": 3570.6429,
+     "cache_read_tokens": 19245.9286
+    },
+    "H-stock ran 3": {
+     "n": 19,
+     "cost_usd": 0.0247,
+     "cost_alone_usd": 0.0418,
+     "cache_creation_tokens": 3794.5789,
+     "cache_read_tokens": 17564.6842
+    },
+    "H-tuned ran 1": {
+     "n": 16,
+     "cost_usd": 0.0238,
+     "cost_alone_usd": 0.0405,
+     "cache_creation_tokens": 3294.9375,
+     "cache_read_tokens": 18053.5
+    },
+    "H-tuned ran 2": {
+     "n": 23,
+     "cost_usd": 0.0251,
+     "cost_alone_usd": 0.042,
+     "cache_creation_tokens": 3779.913,
+     "cache_read_tokens": 18462.087
+    },
+    "H-tuned ran 3": {
+     "n": 18,
+     "cost_usd": 0.0346,
+     "cost_alone_usd": 0.0518,
+     "cache_creation_tokens": 4593.6111,
+     "cache_read_tokens": 32778.2778
+    }
+   },
+   "projection": {
+    "issues": 321,
+    "workers": 4,
+    "arms": {
+     "A": {
+      "cost_usd": 9.8,
+      "hours": 0.21
+     },
+     "H-stock": {
+      "cost_usd": 8.7,
+      "hours": 0.38
+     },
+     "H-tuned": {
+      "cost_usd": 9.4,
+      "hours": 0.41
+     }
+    },
+    "total_cost_usd": 27.9,
+    "total_hours": 1.0,
+    "extra_arms_priced_not_built": {
+     "card from BM25 alone": {
+      "cost_usd": 9.4,
+      "hours": 0.41,
+      "basis": "H-tuned's measured agent + hook cost and wall time; no embedding model to load; BM25 index build ~2-13 s per hook start (about the LFM load it replaces)"
+     },
+     "card from BM25 + tuned Qwen3 (RRF)": {
+      "cost_usd": 9.4,
+      "hours": 0.59,
+      "basis": "H-tuned's measured agent + hook cost and wall time; Qwen3-0.6B CPU load plus the BM25 build add ~8 s per hook start on PostHog (measured 13 s against LFM's ~5 s)"
+     }
+    }
+   }
+  }
+ },
+ "sensitivity": {}
+}

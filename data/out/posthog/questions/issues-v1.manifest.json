@@ -1,0 +1,55 @@
+{
+ "repo": "posthog",
+ "name": "issues-v1",
+ "kind": "github-issues",
+ "commit": "df9b6d3f99d8a41e428bf7c20b3860e322a738d7",
+ "tag": "hobby-20261010-183147",
+ "github": "PostHog/posthog",
+ "seed": 20261111,
+ "n": 150,
+ "max_gold": 3,
+ "min_words": 15,
+ "max_log_lines": 20,
+ "stages": {
+  "issues_linked": 2319,
+  "single_issue_commits": 2072,
+  "after_no_in_scope_change": 687,
+  "after_mostly_out_of_scope": 387,
+  "after_no_function_changed": 353,
+  "after_too_many_functions": 215,
+  "after_gold_gone_at_pin": 73,
+  "with_gold": 73,
+  "closed_issue_by_human": 68,
+  "english": 68,
+  "min_15_words": 65,
+  "sampled": 65
+ },
+ "pr_search": {
+  "mapped": 2081,
+  "no_closing_keyword_in_body": 195,
+  "no_commit_at_pin": 25,
+  "searched": 2301
+ },
+ "commits_to_pin": 66618,
+ "reverts_skipped": 528,
+ "accepted": 65,
+ "leak_flagged": 17,
+ "noleak": 48,
+ "gold_per_item": {
+  "2": 12,
+  "1": 50,
+  "3": 3
+ },
+ "link_source": {
+  "commit_message": 5,
+  "pr_body": 58,
+  "commit_message+pr_body": 2
+ },
+ "github_requests_this_run": {
+  "core": 0,
+  "search": 0
+ },
+ "github_responses_used": 133,
+ "symbols_sha256": "8c50116ff1115be6d9097067ce7bd847b4219c325cfa3919181d22bfbd9c1937",
+ "updated": "2026-11-11T18:13:08+00:00"
+}

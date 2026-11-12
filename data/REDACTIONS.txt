@@ -1,0 +1,20 @@
+Redactions applied before release to the 355 copied data files (69.3 MiB):
+  container host id: 589
+  home path: 58648
+  personal name: 12
+  private IPv4 address: 12
+  private host name: 12
+Rewritten for release (paths relative to $TUNA_OUT or $TUNA_DATA, neutral machine and commit labels):
+  arm A deny path -> placeholder: 3852
+  attempt-log path dropped: 47860
+  files_read path made repo-relative: 235
+  files_read path outside the pinned tree dropped: 814
+  home-directory path rewritten: 6588
+  internal key dropped: 12084
+  internal name: 2
+  ledger: GPU-switch records left out: 21
+  ledger: records of an unshipped smoke set left out: 1
+  local embedding URL removed: 159
+  machine label: 1354
+  private commit hash -> dev-NN label: 8732
+  writer engine label: 30

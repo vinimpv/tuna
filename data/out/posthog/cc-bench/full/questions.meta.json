@@ -1,0 +1,13 @@
+{
+ "repo": "posthog",
+ "commit": "df9b6d3f99d8a41e428bf7c20b3860e322a738d7",
+ "take": [
+  "issues-v1:65",
+  "claude-m3:35"
+ ],
+ "seed": 20261112,
+ "questions": 100,
+ "distinct_gold_files": 88,
+ "max_per_file": 5,
+ "sha256": "721409d6ccd6c0fec1e25685cfb4887fa13ed8b9d52243901d2b403d6236fd1f"
+}

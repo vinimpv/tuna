@@ -1,0 +1,28 @@
+{
+ "repo": "saleor",
+ "tag": "lfm25-ft-lora",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/saleor/models/lfm25-ft-lora",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 13509,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 55387948,
+ "query_ms": {
+  "p50": 6.04,
+  "p95": 6.29,
+  "mean": 6.52
+ },
+ "encode_ms": {
+  "p50": 5.82,
+  "p95": 5.92,
+  "mean": 6.15
+ },
+ "search_ms": {
+  "p50": 0.22,
+  "p95": 0.42,
+  "mean": 0.37
+ }
+}

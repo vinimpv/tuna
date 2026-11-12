@@ -1,0 +1,28 @@
+{
+ "repo": "posthog",
+ "tag": "qwen3-0.6b-ft-lora",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": "$TUNA_OUT/posthog/models/qwen3-0.6b-ft-lora",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 29681,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 121693267,
+ "query_ms": {
+  "p50": 15.5,
+  "p95": 17.29,
+  "mean": 15.7
+ },
+ "encode_ms": {
+  "p50": 13.1,
+  "p95": 14.06,
+  "mean": 13.22
+ },
+ "search_ms": {
+  "p50": 2.32,
+  "p95": 3.26,
+  "mean": 2.47
+ }
+}

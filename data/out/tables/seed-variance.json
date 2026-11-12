@@ -1,0 +1,270 @@
+{
+ "seed_level": {
+  "qwen3-0.6b": {
+   "seed_mean_diff": 0.0059,
+   "ci95": [
+    -0.0362,
+    0.0482
+   ],
+   "per_seed": [
+    {
+     "seed": "lfm25-ft-lora",
+     "diff": 0.0324,
+     "ci95_unrounded": [
+      -0.011247248291043916,
+      0.07673038766788773
+     ],
+     "inside_pm_0.05": false
+    },
+    {
+     "seed": "lfm25-ft-lora-s1",
+     "diff": -0.0172,
+     "ci95_unrounded": [
+      -0.062244361889751985,
+      0.027820062451209986
+     ],
+     "inside_pm_0.05": false
+    },
+    {
+     "seed": "lfm25-ft-lora-s2",
+     "diff": 0.0027,
+     "ci95_unrounded": [
+      -0.042564150012336564,
+      0.04918937271878449
+     ],
+     "inside_pm_0.05": true
+    }
+   ],
+   "n_inside": 1
+  },
+  "jina-1.5b": {
+   "seed_mean_diff": -0.0163,
+   "ci95": [
+    -0.0578,
+    0.0257
+   ],
+   "per_seed": [
+    {
+     "seed": "lfm25-ft-lora",
+     "diff": 0.0101,
+     "ci95_unrounded": [
+      -0.03338988095238094,
+      0.054445876288659774
+     ],
+     "inside_pm_0.05": false
+    },
+    {
+     "seed": "lfm25-ft-lora-s1",
+     "diff": -0.0395,
+     "ci95_unrounded": [
+      -0.08551970707767807,
+      0.007033984533984527
+     ],
+     "inside_pm_0.05": false
+    },
+    {
+     "seed": "lfm25-ft-lora-s2",
+     "diff": -0.0196,
+     "ci95_unrounded": [
+      -0.06484638405879455,
+      0.026083087874324968
+     ],
+     "inside_pm_0.05": false
+    }
+   ],
+   "n_inside": 0
+  }
+ },
+ "here_elsewhere_by_seed": {
+  "lfm25-ft-lora": {
+   "saleor_own_by_seed": {
+    "s0": 0.6269,
+    "s1": 0.5774,
+    "s2": 0.5972
+   },
+   "saleor_other_repo_adapters_seed0": {
+    "zulip": 0.5265,
+    "posthog": 0.5232
+   },
+   "saleor_adapters_on_other_repos": {
+    "zulip": {
+     "s0": 0.5897,
+     "s1": 0.5709,
+     "s2": 0.5969,
+     "tuned_here_s0": 0.62
+    },
+    "posthog": {
+     "s0": 0.5477,
+     "s1": 0.5135,
+     "s2": 0.517,
+     "tuned_here_s0": 0.5381
+    }
+   }
+  },
+  "jina-0.5b-ft-lora": {
+   "saleor_own_by_seed": {
+    "s0": 0.7348,
+    "s1": 0.7194,
+    "s2": 0.7238
+   },
+   "saleor_other_repo_adapters_seed0": {
+    "zulip": 0.6873,
+    "posthog": 0.6966
+   },
+   "saleor_adapters_on_other_repos": {
+    "zulip": {
+     "s0": 0.7277,
+     "s1": 0.6999,
+     "s2": 0.7146,
+     "tuned_here_s0": 0.7306
+    },
+    "posthog": {
+     "s0": 0.6717,
+     "s1": 0.6544,
+     "s2": 0.6541,
+     "tuned_here_s0": 0.6907
+    }
+   }
+  },
+  "qwen3-0.6b-ft-lora": {
+   "saleor_own_by_seed": {
+    "s0": 0.7839,
+    "s1": 0.7976,
+    "s2": 0.7838
+   },
+   "saleor_other_repo_adapters_seed0": {
+    "zulip": 0.7464,
+    "posthog": 0.7285
+   },
+   "saleor_adapters_on_other_repos": {
+    "zulip": {
+     "s0": 0.7637,
+     "s1": 0.7924,
+     "s2": 0.7842,
+     "tuned_here_s0": 0.7985
+    },
+    "posthog": {
+     "s0": 0.6975,
+     "s1": 0.7067,
+     "s2": 0.7248,
+     "tuned_here_s0": 0.7346
+    }
+   }
+  }
+ },
+ "seed_ranges": {
+  "lfm25-ft-lora claude-m3": {
+   "values": {
+    "lfm25-ft-lora": 0.6269,
+    "lfm25-ft-lora-s1": 0.5774,
+    "lfm25-ft-lora-s2": 0.5972
+   },
+   "range_all_runs": 0.0495,
+   "range_4090_runs": 0.0198
+  },
+  "lfm25-ft-lora issues-v1": {
+   "values": {
+    "lfm25-ft-lora": 0.2857,
+    "lfm25-ft-lora-s1": 0.2968,
+    "lfm25-ft-lora-s2": 0.3011
+   },
+   "range_all_runs": 0.0154,
+   "range_4090_runs": 0.0043
+  },
+  "lfm25-ft-lora qwen-m4-400": {
+   "values": {
+    "lfm25-ft-lora": 0.7442,
+    "lfm25-ft-lora-s1": 0.7221,
+    "lfm25-ft-lora-s2": 0.7303
+   },
+   "range_all_runs": 0.0221,
+   "range_4090_runs": 0.0082
+  },
+  "jina-0.5b-ft-lora claude-m3": {
+   "values": {
+    "jina-0.5b-ft-lora": 0.7348,
+    "jina-0.5b-ft-lora-s1": 0.7194,
+    "jina-0.5b-ft-lora-s2": 0.7238,
+    "jina-0.5b-ft-lora-4090": 0.7287
+   },
+   "range_all_runs": 0.0154,
+   "range_4090_runs": 0.0093
+  },
+  "jina-0.5b-ft-lora issues-v1": {
+   "values": {
+    "jina-0.5b-ft-lora": 0.3357,
+    "jina-0.5b-ft-lora-s1": 0.3389,
+    "jina-0.5b-ft-lora-s2": 0.3347
+   },
+   "range_all_runs": 0.0042,
+   "range_4090_runs": 0.0042
+  },
+  "jina-0.5b-ft-lora qwen-m4-400": {
+   "values": {
+    "jina-0.5b-ft-lora": 0.8401,
+    "jina-0.5b-ft-lora-s1": 0.8311,
+    "jina-0.5b-ft-lora-s2": 0.827
+   },
+   "range_all_runs": 0.0131,
+   "range_4090_runs": 0.0041
+  },
+  "qwen3-0.6b-ft-lora claude-m3": {
+   "values": {
+    "qwen3-0.6b-ft-lora": 0.7839,
+    "qwen3-0.6b-ft-lora-s1": 0.7976,
+    "qwen3-0.6b-ft-lora-s2": 0.7838,
+    "qwen3-0.6b-ft-lora-4090": 0.7706
+   },
+   "range_all_runs": 0.027,
+   "range_4090_runs": 0.027
+  },
+  "qwen3-0.6b-ft-lora issues-v1": {
+   "values": {
+    "qwen3-0.6b-ft-lora": 0.346,
+    "qwen3-0.6b-ft-lora-s1": 0.3517,
+    "qwen3-0.6b-ft-lora-s2": 0.3598
+   },
+   "range_all_runs": 0.0138,
+   "range_4090_runs": 0.0081
+  },
+  "qwen3-0.6b-ft-lora qwen-m4-400": {
+   "values": {
+    "qwen3-0.6b-ft-lora": 0.8516,
+    "qwen3-0.6b-ft-lora-s1": 0.8529,
+    "qwen3-0.6b-ft-lora-s2": 0.8479
+   },
+   "range_all_runs": 0.005,
+   "range_4090_runs": 0.005
+  }
+ },
+ "vs_qwen3_4b": {
+  "jina-0.5b-ft-lora - qwen3-4b claude-m3": {
+   "diff": 0.0687,
+   "ci95": [
+    0.0201,
+    0.1174
+   ]
+  },
+  "qwen3-0.6b-ft-lora - qwen3-4b claude-m3": {
+   "diff": 0.1178,
+   "ci95": [
+    0.0754,
+    0.1608
+   ]
+  },
+  "jina-0.5b-ft-lora - qwen3-4b issues-v1": {
+   "diff": 0.0371,
+   "ci95": [
+    -0.0245,
+    0.1027
+   ]
+  },
+  "qwen3-0.6b-ft-lora - qwen3-4b issues-v1": {
+   "diff": 0.0474,
+   "ci95": [
+    -0.0221,
+    0.1226
+   ]
+  }
+ }
+}

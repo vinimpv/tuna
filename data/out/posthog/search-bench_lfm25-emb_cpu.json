@@ -1,0 +1,40 @@
+{
+ "repo": "posthog",
+ "tag": "lfm25-emb",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": null,
+ "device": "cpu",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 38778,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 158990692,
+ "query_ms": {
+  "p50": 105.61,
+  "p95": 112.51,
+  "mean": 105.2
+ },
+ "encode_ms": {
+  "p50": 96.54,
+  "p95": 103.65,
+  "mean": 96.38
+ },
+ "search_ms": {
+  "p50": 8.12,
+  "p95": 10.84,
+  "mean": 8.82
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 32,
+  "sample_documents": 39,
+  "sample_seconds": 7.44,
+  "documents_per_s": 5.24,
+  "estimated_full_rebuild_s": 7399.9,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16
+ }
+}

@@ -1,0 +1,275 @@
+{
+ "note": "post-hoc check, added after the results (2026-11-12)",
+ "metric": "gold file",
+ "interval": "95% paired bootstrap, 10000 replicates, gold-file clusters within repository",
+ "instruction_lines": [
+  "Find where in this repository's code the following is answered or handled.",
+  "End your reply with exactly these two lines, naming the single most relevant place:",
+  "FILE: <path relative to the repository root>",
+  "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+ ],
+ "as_logged_any_searched_query": {
+  "definition": "any searched query is an instruction line (the logged definition)",
+  "issues_without": 313,
+  "issues_with": 8,
+  "without": {
+   "H-tuned-H-stock": [
+    -0.0032,
+    -0.0293,
+    0.0233
+   ],
+   "H-stock-A": [
+    0.0096,
+    -0.0204,
+    0.0402
+   ],
+   "H-tuned-A": [
+    0.0064,
+    -0.0241,
+    0.0382
+   ],
+   "H-bm25-A": [
+    -0.0064,
+    -0.0395,
+    0.028
+   ],
+   "H-fused-A": [
+    0.0192,
+    -0.0109,
+    0.0502
+   ]
+  },
+  "with": [
+   {
+    "issue": "posthog/posthog-issues-v1-013",
+    "repo": "posthog",
+    "query": [
+     "Find where in this repository's code the following is answered or handled."
+    ],
+    "added_by_literal_fallback": false,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "posthog/posthog-issues-v1-031",
+    "repo": "posthog",
+    "query": [
+     "Find where in this repository's code the following is answered or handled."
+    ],
+    "added_by_literal_fallback": false,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "posthog/posthog-issues-v1-060",
+    "repo": "posthog",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "posthog/posthog-issues-v1-065",
+    "repo": "posthog",
+    "query": [
+     "Find where in this repository's code the following is answered or handled."
+    ],
+    "added_by_literal_fallback": false,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "saleor/saleor-issues-v1-005",
+    "repo": "saleor",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": false,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "saleor/saleor-issues-v1-017",
+    "repo": "saleor",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "saleor/saleor-issues-v1-093",
+    "repo": "saleor",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": false,
+    "H-stock": true,
+    "H-tuned": false,
+    "H-bm25": false,
+    "H-fused": false
+   },
+   {
+    "issue": "zulip/zulip-issues-v1-136",
+    "repo": "zulip",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   }
+  ]
+ },
+ "literal_fallback_only": {
+  "definition": "the instruction line was added by the literal fallback (narrower)",
+  "issues_without": 316,
+  "issues_with": 5,
+  "without": {
+   "H-tuned-H-stock": [
+    -0.0032,
+    -0.0286,
+    0.023
+   ],
+   "H-stock-A": [
+    0.0095,
+    -0.0199,
+    0.0396
+   ],
+   "H-tuned-A": [
+    0.0063,
+    -0.0243,
+    0.0372
+   ],
+   "H-bm25-A": [
+    -0.0063,
+    -0.0393,
+    0.0267
+   ],
+   "H-fused-A": [
+    0.019,
+    -0.0099,
+    0.0506
+   ]
+  },
+  "with": [
+   {
+    "issue": "posthog/posthog-issues-v1-060",
+    "repo": "posthog",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "saleor/saleor-issues-v1-005",
+    "repo": "saleor",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": false,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "saleor/saleor-issues-v1-017",
+    "repo": "saleor",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   },
+   {
+    "issue": "saleor/saleor-issues-v1-093",
+    "repo": "saleor",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": false,
+    "H-stock": true,
+    "H-tuned": false,
+    "H-bm25": false,
+    "H-fused": false
+   },
+   {
+    "issue": "zulip/zulip-issues-v1-136",
+    "repo": "zulip",
+    "query": [
+     "SYMBOL: <fully qualified name: dotted module path, then class and function, e.g. package.module.Class.method>"
+    ],
+    "added_by_literal_fallback": true,
+    "A": true,
+    "H-stock": true,
+    "H-tuned": true,
+    "H-bm25": true,
+    "H-fused": true
+   }
+  ]
+ },
+ "all_issues_for_reference": {
+  "H-tuned-H-stock": [
+   -0.0062,
+   -0.0317,
+   0.0201
+  ],
+  "H-stock-A": [
+   0.0156,
+   -0.0152,
+   0.0461
+  ],
+  "H-tuned-A": [
+   0.0093,
+   -0.0211,
+   0.0402
+  ],
+  "H-bm25-A": [
+   -0.0031,
+   -0.0355,
+   0.0291
+  ],
+  "H-fused-A": [
+   0.0218,
+   -0.0089,
+   0.053
+  ]
+ }
+}

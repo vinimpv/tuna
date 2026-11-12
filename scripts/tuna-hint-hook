@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# UserPromptSubmit hook: tuna search before the agent starts, a hint card as additionalContext.
+#   scripts/tuna-hint-hook --repo saleor --tag lfm25-ft-lora [--backend claude --model claude-haiku-5-5] [--log FILE]
+# See src/tuna/hint.py. CPU only, offline; exits 0 with no output inside its own model calls.
+set -u
+[ -n "${TUNA_HINT_INSIDE:-}" ] && exit 0
+here=$(cd "$(dirname "$0")/.." && pwd)
+export CUDA_VISIBLE_DEVICES="" HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+export HF_HUB_DISABLE_PROGRESS_BARS=1 TQDM_DISABLE=1  # stderr stays quiet
+exec "$here/.venv/bin/python" -m tuna hint "$@"

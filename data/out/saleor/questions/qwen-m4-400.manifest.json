@@ -1,0 +1,74 @@
+{
+ "repo": "saleor",
+ "name": "qwen-m4-400",
+ "seed": 20261111,
+ "prompt_version": "question-v2-gold",
+ "prompt_sha256": "bf1f17c5efe2fa53d7cb27894979d9b01a93b38b3dc260602cdf0e8cf74e1b89",
+ "n": 400,
+ "max_attempts": 3,
+ "filter": "v2",
+ "writer_backend": "pi",
+ "exclude_files_sha256": null,
+ "per_file": 1,
+ "symbols_per_question": 0,
+ "only_files_sha256": null,
+ "used_golds_from": null,
+ "gold_list_sha256": "30446e1573bafcd22955f4dee4debf3330845170b6671b4e9d6d444ecd9d54ee",
+ "split_like": null,
+ "writer_engine": "ninfer (qwen3.6-35b-a3b), local RTX 5090",
+ "guards": {
+  "timeout_s": 90,
+  "max_tool_calls": 40
+ },
+ "runs": [
+  {
+   "started": "2026-11-12T10:43:19+00:00",
+   "workers": 8,
+   "wall_seconds": 451.6,
+   "files": 140,
+   "accepted": 387
+  }
+ ],
+ "surplus_accepted": [],
+ "writer": [
+  "qwen3.6-35b-a3b"
+ ],
+ "finished": true,
+ "accepted": 387,
+ "files_tried": 140,
+ "files_exhausted": 0,
+ "files_eligible": 140,
+ "files_with_questions": 140,
+ "heldout_files": 0,
+ "val_fraction": 0.0,
+ "splits": {},
+ "attempts": 464,
+ "rejections": {
+  "id_file_word": 36,
+  "unparseable": 21,
+  "id_mixed_case": 10,
+  "id_underscore": 5,
+  "leaks_identifier": 4,
+  "pi_runaway": 1
+ },
+ "reject_share": 0.1659,
+ "filter_reject_share": 0.1185,
+ "writer_failure_share": 0.0474,
+ "cost_usd": 0,
+ "golds_given": 400,
+ "median_attempt_of_accepted": 1,
+ "median_seconds_per_accepted": 6.8,
+ "median_seconds_per_attempt": 6.5,
+ "writer_seconds_total": 3485.0,
+ "accepted_without_reading_target": 0,
+ "questions_per_minute": [
+  {
+   "workers": 8,
+   "qpm": 51.4
+  }
+ ],
+ "updated": "2026-11-12T10:50:51+00:00",
+ "empty_at_cap_share": 0.0,
+ "empty_other_share": 0.0,
+ "prose_before_json_share": 0.0453
+}

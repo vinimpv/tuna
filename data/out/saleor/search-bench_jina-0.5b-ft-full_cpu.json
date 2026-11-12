@@ -1,0 +1,40 @@
+{
+ "repo": "saleor",
+ "tag": "jina-0.5b-ft-full",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": "$TUNA_OUT/saleor/models/jina-0.5b-ft-full",
+ "device": "cpu",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 11678,
+ "symbols": 11678,
+ "dim": 896,
+ "index_bytes": 41901703,
+ "query_ms": {
+  "p50": 117.47,
+  "p95": 125.74,
+  "mean": 116.3
+ },
+ "encode_ms": {
+  "p50": 112.49,
+  "p95": 119.45,
+  "mean": 111.68
+ },
+ "search_ms": {
+  "p50": 4.08,
+  "p95": 6.43,
+  "mean": 4.62
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 32,
+  "sample_documents": 32,
+  "sample_seconds": 4.24,
+  "documents_per_s": 7.55,
+  "estimated_full_rebuild_s": 1545.8,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16
+ }
+}

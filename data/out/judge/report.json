@@ -1,0 +1,73 @@
+{
+ "claude": {
+  "main_judged": 150,
+  "valid": 149,
+  "valid_share": 0.993,
+  "ci95": [
+   0.963,
+   0.999
+  ],
+  "failures": {
+   "does_not_answer": 0,
+   "another_symbol_as_good": 1
+  },
+  "controls_judged": 15,
+  "controls_rejected": 15,
+  "controls_rejected_share": 1.0,
+  "void": false,
+  "per_repo": {
+   "saleor": 30,
+   "zulip": 30,
+   "posthog": 30,
+   "dispatch": 30,
+   "homeassistant": 29
+  },
+  "errors": 0
+ },
+ "qwen": {
+  "main_judged": 90,
+  "valid": 85,
+  "valid_share": 0.944,
+  "ci95": [
+   0.876,
+   0.976
+  ],
+  "failures": {
+   "does_not_answer": 3,
+   "another_symbol_as_good": 2
+  },
+  "controls_judged": 15,
+  "controls_rejected": 15,
+  "controls_rejected_share": 1.0,
+  "void": false,
+  "per_repo": {
+   "saleor": 29,
+   "zulip": 30,
+   "posthog": 26
+  },
+  "errors": 0
+ },
+ "lfm3": {
+  "main_judged": 90,
+  "valid": 76,
+  "valid_share": 0.844,
+  "ci95": [
+   0.756,
+   0.905
+  ],
+  "failures": {
+   "does_not_answer": 12,
+   "another_symbol_as_good": 2
+  },
+  "controls_judged": 15,
+  "controls_rejected": 15,
+  "controls_rejected_share": 1.0,
+  "void": false,
+  "per_repo": {
+   "saleor": 24,
+   "zulip": 27,
+   "posthog": 25
+  },
+  "errors": 0
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "repo": "posthog",
+ "tag": "hobby-20261010-183147",
+ "commit": "df9b6d3f99d8a41e428bf7c20b3860e322a738d7",
+ "config": "posthog.toml",
+ "include": [
+  "posthog/*",
+  "products/feature_flags/*",
+  "products/experiments/*",
+  "products/error_tracking/*",
+  "products/cohorts/*",
+  "products/dashboards/*",
+  "products/alerts/*",
+  "products/batch_exports/*",
+  "products/data_warehouse/*"
+ ],
+ "exclude": [
+  "ee/*",
+  "posthog/schema.py",
+  "products/warehouse_sources/backend/temporal/data_imports/sources/*",
+  "*/tests/*",
+  "*/test/*",
+  "*/__tests__/*",
+  "*/test_*.py",
+  "*_test.py",
+  "*/tests.py",
+  "*/conftest.py",
+  "*/migrations/*",
+  "posthog/clickhouse/migrations/*",
+  "posthog/async_migrations/migrations/*"
+ ],
+ "languages": [
+  "python"
+ ],
+ "extractor": "tuna tree-sitter",
+ "grammars": {
+  "tree-sitter": "0.25.2",
+  "tree-sitter-python": "0.25.0"
+ },
+ "symbols": 29679,
+ "files": 2824,
+ "files_with_symbols": 2356,
+ "kinds": {
+  "Function": 12083,
+  "Class": 6358,
+  "Method": 11238
+ },
+ "dropped": {
+  "files_without_symbols": 468,
+  "duplicate_fqn": 38
+ },
+ "parse_error_files": [],
+ "symbols_sha256": "8c50116ff1115be6d9097067ce7bd847b4219c325cfa3919181d22bfbd9c1937",
+ "created": "2026-11-11T14:21:17+00:00"
+}

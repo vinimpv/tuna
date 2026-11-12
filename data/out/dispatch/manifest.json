@@ -1,0 +1,43 @@
+{
+ "repo": "dispatch",
+ "tag": "v20241220",
+ "commit": "0ce6d80c169d6888ed69db23c237562df8336ce4",
+ "config": "dispatch.toml",
+ "include": [
+  "src/dispatch/*"
+ ],
+ "exclude": [
+  "src/dispatch/static/*",
+  "src/dispatch/database/revisions/*",
+  "*/tests/*",
+  "*/test/*",
+  "*/test_*.py",
+  "*_test.py",
+  "*/tests.py",
+  "*/conftest.py",
+  "*/migrations/*"
+ ],
+ "languages": [
+  "python"
+ ],
+ "extractor": "tuna tree-sitter",
+ "grammars": {
+  "tree-sitter": "0.25.2",
+  "tree-sitter-python": "0.25.0"
+ },
+ "symbols": 2698,
+ "files": 473,
+ "files_with_symbols": 359,
+ "kinds": {
+  "Function": 1529,
+  "Class": 745,
+  "Method": 424
+ },
+ "dropped": {
+  "files_without_symbols": 114,
+  "duplicate_fqn": 7
+ },
+ "parse_error_files": [],
+ "symbols_sha256": "b291778b2d2c4021438c82604a4d851eebca2679bde5c63bb9b769695a6e9edc",
+ "created": "2026-11-12T08:20:19+00:00"
+}

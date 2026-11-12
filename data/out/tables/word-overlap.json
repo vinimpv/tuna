@@ -1,0 +1,149 @@
+[
+ {
+  "repo": "saleor",
+  "set": "qwen-m2",
+  "n": 100,
+  "mean": 0.4733,
+  "median": 0.458
+ },
+ {
+  "repo": "saleor",
+  "set": "claude-m2",
+  "n": 100,
+  "mean": 0.376,
+  "median": 0.3636
+ },
+ {
+  "repo": "saleor",
+  "set": "claude-m3",
+  "n": 400,
+  "mean": 0.3504,
+  "median": 0.3333
+ },
+ {
+  "repo": "saleor",
+  "set": "qwen-m4-400",
+  "n": 387,
+  "mean": 0.4434,
+  "median": 0.4444
+ },
+ {
+  "repo": "saleor",
+  "set": "issues-v1",
+  "n": 106,
+  "mean": 0.2337,
+  "median": 0.2308
+ },
+ {
+  "repo": "saleor",
+  "set": "issues-v1-title",
+  "n": 106,
+  "mean": 0.4003,
+  "median": 0.4
+ },
+ {
+  "repo": "saleor",
+  "set": "qwen-train1.train",
+  "n": 1349,
+  "mean": 0.4532,
+  "median": 0.4444
+ },
+ {
+  "repo": "zulip",
+  "set": "qwen-m2",
+  "n": 100,
+  "mean": 0.4357,
+  "median": 0.4286
+ },
+ {
+  "repo": "zulip",
+  "set": "claude-m2",
+  "n": 100,
+  "mean": 0.3072,
+  "median": 0.3
+ },
+ {
+  "repo": "zulip",
+  "set": "claude-m3",
+  "n": 400,
+  "mean": 0.3326,
+  "median": 0.3125
+ },
+ {
+  "repo": "zulip",
+  "set": "qwen-m4-400",
+  "n": 394,
+  "mean": 0.4235,
+  "median": 0.4286
+ },
+ {
+  "repo": "zulip",
+  "set": "issues-v1",
+  "n": 150,
+  "mean": 0.2534,
+  "median": 0.2267
+ },
+ {
+  "repo": "zulip",
+  "set": "issues-v1-title",
+  "n": 150,
+  "mean": 0.4908,
+  "median": 0.5
+ },
+ {
+  "repo": "zulip",
+  "set": "qwen-train1.train",
+  "n": 1200,
+  "mean": 0.4318,
+  "median": 0.4286
+ },
+ {
+  "repo": "posthog",
+  "set": "qwen-m2",
+  "n": 100,
+  "mean": 0.5409,
+  "median": 0.5455
+ },
+ {
+  "repo": "posthog",
+  "set": "claude-m2",
+  "n": 100,
+  "mean": 0.3964,
+  "median": 0.3798
+ },
+ {
+  "repo": "posthog",
+  "set": "claude-m3",
+  "n": 400,
+  "mean": 0.4038,
+  "median": 0.4
+ },
+ {
+  "repo": "posthog",
+  "set": "qwen-m4-400",
+  "n": 379,
+  "mean": 0.4831,
+  "median": 0.5
+ },
+ {
+  "repo": "posthog",
+  "set": "issues-v1",
+  "n": 65,
+  "mean": 0.1928,
+  "median": 0.1739
+ },
+ {
+  "repo": "posthog",
+  "set": "issues-v1-title",
+  "n": 65,
+  "mean": 0.3762,
+  "median": 0.4
+ },
+ {
+  "repo": "posthog",
+  "set": "qwen-train1.train",
+  "n": 1346,
+  "mean": 0.4944,
+  "median": 0.5
+ }
+]

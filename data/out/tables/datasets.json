@@ -1,0 +1,270 @@
+{
+ "datasets": [
+  {
+   "repo": "saleor",
+   "files": 1010,
+   "symbols": 11678,
+   "symbols_over_512_lfm": 910,
+   "share_over_512_lfm": 0.0779,
+   "qwen_train1_train": 1349,
+   "qwen_train1_val": 151,
+   "heldout_files": 178,
+   "test_sets": {
+    "qwen-m2": 100,
+    "claude-m2": 100,
+    "claude-m3": 400,
+    "qwen-m4-400": 387,
+    "issues-v1": 106,
+    "issues-v1-title": 106,
+    "issues-v1-noleak": 95,
+    "qwen-bug1": 500
+   }
+  },
+  {
+   "repo": "zulip",
+   "files": 596,
+   "symbols": 6836,
+   "symbols_over_512_lfm": 800,
+   "share_over_512_lfm": 0.117,
+   "qwen_train1_train": 1200,
+   "qwen_train1_val": 133,
+   "heldout_files": 168,
+   "test_sets": {
+    "qwen-m2": 100,
+    "claude-m2": 100,
+    "claude-m3": 400,
+    "qwen-m4-400": 394,
+    "issues-v1": 150,
+    "issues-v1-title": 150,
+    "issues-v1-noleak": 126,
+    "qwen-bug1": 500
+   }
+  },
+  {
+   "repo": "posthog",
+   "files": 2356,
+   "symbols": 29679,
+   "symbols_over_512_lfm": 3831,
+   "share_over_512_lfm": 0.1291,
+   "qwen_train1_train": 1346,
+   "qwen_train1_val": 154,
+   "heldout_files": 162,
+   "test_sets": {
+    "qwen-m2": 100,
+    "claude-m2": 100,
+    "claude-m3": 400,
+    "qwen-m4-400": 379,
+    "issues-v1": 65,
+    "issues-v1-title": 65,
+    "issues-v1-noleak": 48,
+    "qwen-bug1": 500
+   }
+  }
+ ],
+ "checkpoint_sizes": [
+  {
+   "repo": "saleor",
+   "row": "jina-0.5b-ft-full",
+   "bytes": 988099005,
+   "mib": 942.3
+  },
+  {
+   "repo": "saleor",
+   "row": "jina-0.5b-ft-lora",
+   "bytes": 17635053,
+   "mib": 16.8
+  },
+  {
+   "repo": "saleor",
+   "row": "jina-0.5b-ft-lora-4090",
+   "bytes": 17634551,
+   "mib": 16.8
+  },
+  {
+   "repo": "saleor",
+   "row": "jina-0.5b-ft-lora-s1",
+   "bytes": 17634549,
+   "mib": 16.8
+  },
+  {
+   "repo": "saleor",
+   "row": "jina-0.5b-ft-lora-s2",
+   "bytes": 17634548,
+   "mib": 16.8
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-full",
+   "bytes": 708987055,
+   "mib": 676.1
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-full-nofilter",
+   "bytes": 708987365,
+   "mib": 676.1
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora",
+   "bytes": 12015611,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-bug",
+   "bytes": 12016069,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-n150",
+   "bytes": 12015783,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-n400",
+   "bytes": 12016055,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-n800",
+   "bytes": 12015789,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-remine",
+   "bytes": 12016643,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-s1",
+   "bytes": 12016334,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "lfm25-ft-lora-s2",
+   "bytes": 12016340,
+   "mib": 11.5
+  },
+  {
+   "repo": "saleor",
+   "row": "qwen3-0.6b-ft-full",
+   "bytes": 1191590013,
+   "mib": 1136.4
+  },
+  {
+   "repo": "saleor",
+   "row": "qwen3-0.6b-ft-lora",
+   "bytes": 20229901,
+   "mib": 19.3
+  },
+  {
+   "repo": "saleor",
+   "row": "qwen3-0.6b-ft-lora-4090",
+   "bytes": 20228862,
+   "mib": 19.3
+  },
+  {
+   "repo": "saleor",
+   "row": "qwen3-0.6b-ft-lora-s1",
+   "bytes": 20229686,
+   "mib": 19.3
+  },
+  {
+   "repo": "saleor",
+   "row": "qwen3-0.6b-ft-lora-s2",
+   "bytes": 20229137,
+   "mib": 19.3
+  },
+  {
+   "repo": "zulip",
+   "row": "jina-0.5b-ft-full",
+   "bytes": 988099040,
+   "mib": 942.3
+  },
+  {
+   "repo": "zulip",
+   "row": "jina-0.5b-ft-lora",
+   "bytes": 17634466,
+   "mib": 16.8
+  },
+  {
+   "repo": "zulip",
+   "row": "lfm25-ft-full",
+   "bytes": 708986818,
+   "mib": 676.1
+  },
+  {
+   "repo": "zulip",
+   "row": "lfm25-ft-lora",
+   "bytes": 12015154,
+   "mib": 11.5
+  },
+  {
+   "repo": "zulip",
+   "row": "lfm25-ft-lora-bug",
+   "bytes": 12015504,
+   "mib": 11.5
+  },
+  {
+   "repo": "zulip",
+   "row": "qwen3-0.6b-ft-full",
+   "bytes": 1191590576,
+   "mib": 1136.4
+  },
+  {
+   "repo": "zulip",
+   "row": "qwen3-0.6b-ft-lora",
+   "bytes": 20228780,
+   "mib": 19.3
+  },
+  {
+   "repo": "posthog",
+   "row": "jina-0.5b-ft-full",
+   "bytes": 988099906,
+   "mib": 942.3
+  },
+  {
+   "repo": "posthog",
+   "row": "jina-0.5b-ft-lora",
+   "bytes": 17634228,
+   "mib": 16.8
+  },
+  {
+   "repo": "posthog",
+   "row": "lfm25-ft-full",
+   "bytes": 708986856,
+   "mib": 676.1
+  },
+  {
+   "repo": "posthog",
+   "row": "lfm25-ft-lora",
+   "bytes": 12016014,
+   "mib": 11.5
+  },
+  {
+   "repo": "posthog",
+   "row": "lfm25-ft-lora-bug",
+   "bytes": 12016365,
+   "mib": 11.5
+  },
+  {
+   "repo": "posthog",
+   "row": "qwen3-0.6b-ft-full",
+   "bytes": 1191589791,
+   "mib": 1136.4
+  },
+  {
+   "repo": "posthog",
+   "row": "qwen3-0.6b-ft-lora",
+   "bytes": 20229369,
+   "mib": 19.3
+  }
+ ]
+}

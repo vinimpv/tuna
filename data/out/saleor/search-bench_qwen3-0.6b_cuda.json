@@ -1,0 +1,28 @@
+{
+ "repo": "saleor",
+ "tag": "qwen3-0.6b",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": null,
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 11678,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 47880768,
+ "query_ms": {
+  "p50": 12.56,
+  "p95": 14.18,
+  "mean": 13.12
+ },
+ "encode_ms": {
+  "p50": 12.28,
+  "p95": 13.56,
+  "mean": 12.62
+ },
+ "search_ms": {
+  "p50": 0.23,
+  "p95": 0.6,
+  "mean": 0.5
+ }
+}

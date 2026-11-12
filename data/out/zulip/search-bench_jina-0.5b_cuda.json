@@ -1,0 +1,28 @@
+{
+ "repo": "zulip",
+ "tag": "jina-0.5b",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": null,
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 6836,
+ "symbols": 6836,
+ "dim": 896,
+ "index_bytes": 24528439,
+ "query_ms": {
+  "p50": 8.8,
+  "p95": 9.7,
+  "mean": 8.98
+ },
+ "encode_ms": {
+  "p50": 8.65,
+  "p95": 9.35,
+  "mean": 8.8
+ },
+ "search_ms": {
+  "p50": 0.12,
+  "p95": 0.22,
+  "mean": 0.18
+ }
+}

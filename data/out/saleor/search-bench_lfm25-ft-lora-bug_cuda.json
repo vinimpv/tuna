@@ -1,0 +1,29 @@
+{
+ "repo": "saleor",
+ "tag": "lfm25-ft-lora-bug",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/saleor/models/lfm25-ft-lora-bug",
+ "device": "cuda",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 13509,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 55387986,
+ "query_ms": {
+  "p50": 6.77,
+  "p95": 14.96,
+  "mean": 8.48
+ },
+ "encode_ms": {
+  "p50": 6.23,
+  "p95": 10.26,
+  "mean": 7.51
+ },
+ "search_ms": {
+  "p50": 0.45,
+  "p95": 3.2,
+  "mean": 0.97
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "repo": "zulip",
+ "tag": "jina-0.5b-ft-lora",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": "$TUNA_OUT/zulip/models/jina-0.5b-ft-lora",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 6836,
+ "symbols": 6836,
+ "dim": 896,
+ "index_bytes": 24528634,
+ "query_ms": {
+  "p50": 8.75,
+  "p95": 10.84,
+  "mean": 9.05
+ },
+ "encode_ms": {
+  "p50": 8.62,
+  "p95": 9.12,
+  "mean": 8.67
+ },
+ "search_ms": {
+  "p50": 0.12,
+  "p95": 1.66,
+  "mean": 0.37
+ }
+}

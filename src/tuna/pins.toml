@@ -1,0 +1,42 @@
+# Models that ship their own Python (`auto_map`, loaded with trust_remote_code).
+# tuna loads these only through tuna.pinned, only at the exact commit below, and
+# only after the code at that commit has been read. Changing a sha means reading
+# that revision's Python again and updating `audit`.
+#
+# patches_lfm2: the model's code monkey-patches transformers.models.lfm2 at
+# import time; tuna.pinned allows one such model per process.
+
+[models."LiquidAI/LFM2.5-Embedding-350M"]
+sha = "f35ae2c91d687658dbf1f2b449382f0b019b9808"
+date = "2026-06-20T14:00:58Z"
+kind = "sentence-transformer"
+patches_lfm2 = true
+# The code predates transformers 5.x, which passes `seq_idx` to the conv; see tuna.pinned.COMPAT.
+compat = ["lfm2-conv-drop-none-seq_idx"]
+audit = """2026-11-11, read in full: modeling_lfm2_bidirectional.py (139 lines). Imports torch and
+transformers.models.lfm2 only. No network, subprocess, file I/O, eval/exec, pickle or dynamic import.
+At import it replaces transformers.models.lfm2.modeling_lfm2.create_causal_mask and
+Lfm2ShortConv.forward process-wide (bidirectional encoder patches). Weights: model.safetensors only."""
+
+[models."LiquidAI/LFM2.5-ColBERT-350M"]
+sha = "9772bdf797255d8693b83e84aa98e9b2d36dd0be"
+date = "2026-08-17T16:32:46Z"
+kind = "multi-vector"
+patches_lfm2 = true
+audit = """2026-11-11, read in full: modeling_lfm2_bidirectional.py (149 lines). Same file as
+LFM2.5-Embedding-350M except the conv only zeroes padding states under flash_attention_2; same
+process-wide patches of transformers.models.lfm2. No network, subprocess, file I/O, eval/exec, pickle or
+dynamic import. modules.json names pylate.models.Dense.Dense, which sentence-transformers 6.1.0 maps to its
+own Dense (pylate is never imported). Weights: model.safetensors and 1_Dense/model.safetensors only."""
+
+[models."LiquidAI/LFM3-1.7B"]
+sha = "0dc4268b561499c648c7ba7c9466bf3d8d01517a"
+date = "2026-11-03T18:08:34Z"
+kind = "causal-lm"
+patches_lfm2 = false
+audit = """2026-11-11, read in full: configuration_lfm3.py (132 lines), modeling_lfm3.py (881),
+lfm3_conv.py (202). Imports torch, triton and transformers only. No network, subprocess, file I/O,
+eval/exec, pickle or dynamic import. lfm3_conv.py holds two Triton kernels (width-7 conv prefill/decode)
+that Triton JIT-compiles into its cache. The use_kernel_*_from_hub decorators are identity stubs while the
+`kernels` package is absent (it is not in uv.lock); tuna.pinned also sets USE_HUB_KERNELS=0.
+Tokenizer is the stock TokenizersBackend (no custom code). Weights: model.safetensors only."""

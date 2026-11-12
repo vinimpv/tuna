@@ -1,0 +1,29 @@
+{
+ "repo": "saleor",
+ "tag": "qwen3-4b",
+ "model": "Qwen/Qwen3-Embedding-4B",
+ "weights": null,
+ "device": "cpu",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 11678,
+ "symbols": 11678,
+ "dim": 2560,
+ "index_bytes": 119630470,
+ "query_ms": {
+  "p50": 638.02,
+  "p95": 738.47,
+  "mean": 636.27
+ },
+ "encode_ms": {
+  "p50": 631.87,
+  "p95": 728.96,
+  "mean": 628.82
+ },
+ "search_ms": {
+  "p50": 6.89,
+  "p95": 10.26,
+  "mean": 7.45
+ }
+}

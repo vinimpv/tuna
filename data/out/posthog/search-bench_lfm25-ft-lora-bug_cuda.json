@@ -1,0 +1,29 @@
+{
+ "repo": "posthog",
+ "tag": "lfm25-ft-lora-bug",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/posthog/models/lfm25-ft-lora-bug",
+ "device": "cuda",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 38778,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 158990890,
+ "query_ms": {
+  "p50": 10.39,
+  "p95": 17.12,
+  "mean": 11.54
+ },
+ "encode_ms": {
+  "p50": 6.67,
+  "p95": 9.54,
+  "mean": 7.13
+ },
+ "search_ms": {
+  "p50": 3.66,
+  "p95": 6.56,
+  "mean": 4.41
+ }
+}

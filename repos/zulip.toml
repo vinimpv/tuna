@@ -1,0 +1,18 @@
+# Zulip: team chat server, Django. Apache-2.0; confirmation/ is BSD-3-Clause
+# (both permissive). tools/ (developer tooling; tools/check-thirdparty is GPL-2.0+),
+# scripts/ and puppet/ are deployment code and stay out of the corpus.
+name = "zulip"
+url = "https://github.com/zulip/zulip"
+tag = "12.3"
+commit = "b31982251ff82d0b02e59f63ad21f19204e37aea"
+released = "2026-09-21"
+license = "Apache-2.0"
+description = "the Zulip team chat server codebase"
+
+include = ["zerver/*", "analytics/*", "corporate/*", "confirmation/*", "zilencer/*", "zproject/*"]
+exclude = [
+  "*/tests/*", "*/test/*", "*/test_*.py", "*_test.py", "*/tests.py", "*/conftest.py",
+  "*/migrations/*",
+  "zerver/openapi/test_*",
+  "zproject/test_*settings.py",
+]

@@ -1,0 +1,28 @@
+{
+ "repo": "zulip",
+ "tag": "qwen3-0.6b-ft-lora",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": "$TUNA_OUT/zulip/models/qwen3-0.6b-ft-lora",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 6836,
+ "symbols": 6836,
+ "dim": 1024,
+ "index_bytes": 28028760,
+ "query_ms": {
+  "p50": 12.09,
+  "p95": 14.15,
+  "mean": 12.4
+ },
+ "encode_ms": {
+  "p50": 11.93,
+  "p95": 12.99,
+  "mean": 12.16
+ },
+ "search_ms": {
+  "p50": 0.13,
+  "p95": 0.63,
+  "mean": 0.24
+ }
+}

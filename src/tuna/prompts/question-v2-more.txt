@@ -1,0 +1,2 @@
+These symbols in {{FILE}} already have a question. Choose a different symbol, one that is not in this list and not one of its parts:
+{{TAKEN}}

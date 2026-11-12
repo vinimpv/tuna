@@ -1,0 +1,28 @@
+{
+ "repo": "saleor",
+ "tag": "qwen3-0.6b-ft-lora",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": "$TUNA_OUT/saleor/models/qwen3-0.6b-ft-lora",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 11678,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 47880965,
+ "query_ms": {
+  "p50": 12.69,
+  "p95": 22.08,
+  "mean": 14.31
+ },
+ "encode_ms": {
+  "p50": 12.33,
+  "p95": 17.06,
+  "mean": 13.17
+ },
+ "search_ms": {
+  "p50": 0.27,
+  "p95": 4.84,
+  "mean": 1.15
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "repo": "posthog",
+ "tag": "qwen3-0.6b-ft-full",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": "$TUNA_OUT/posthog/models/qwen3-0.6b-ft-full",
+ "device": "cpu",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 29681,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 121693267,
+ "query_ms": {
+  "p50": 137.98,
+  "p95": 145.95,
+  "mean": 137.85
+ },
+ "encode_ms": {
+  "p50": 131.11,
+  "p95": 138.66,
+  "mean": 130.79
+ },
+ "search_ms": {
+  "p50": 6.8,
+  "p95": 9.78,
+  "mean": 7.06
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 32,
+  "sample_documents": 32,
+  "sample_seconds": 67.09,
+  "documents_per_s": 0.48,
+  "estimated_full_rebuild_s": 62230.8,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16
+ }
+}

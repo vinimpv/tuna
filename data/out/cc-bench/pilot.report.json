@@ -1,0 +1,2258 @@
+{
+ "bench": "pilot",
+ "repos": [
+  "saleor"
+ ],
+ "analysis_plan": {
+  "primary": "cost_usd",
+  "primary_pairs": [
+   "B-A",
+   "C-A",
+   "C-B"
+  ],
+  "exploratory": "arm D and its pairs",
+  "bootstrap": "10000 replicates, gold-file clusters resampled within repo",
+  "failures": "agent failure = miss at its cost; service failures rerun",
+  "pilot_questions_excluded_in": "without_pilot"
+ },
+ "pilot_questions": 25,
+ "service_failure_reruns": {
+  "saleor": {}
+ },
+ "pooled": {
+  "all": {
+   "arms": [
+    "A",
+    "B",
+    "C"
+   ],
+   "questions": 50,
+   "per_arm": {
+    "A": {
+     "cost_usd": [
+      0.0291,
+      0.0254,
+      0.0332
+     ],
+     "file_hit": [
+      0.72,
+      0.6,
+      0.84
+     ],
+     "symbol_hit": [
+      0.7,
+      0.56,
+      0.82
+     ],
+     "symbol_tail_hit": [
+      0.7,
+      0.56,
+      0.82
+     ],
+     "tool_calls_total": [
+      3.56,
+      3.02,
+      4.16
+     ],
+     "wall_s": [
+      16.1594,
+      9.0578,
+      24.8922
+     ],
+     "wall_s_net": [
+      16.1594,
+      9.0578,
+      24.8922
+     ],
+     "output_tokens": [
+      931.02,
+      796.938,
+      1081.4605
+     ],
+     "input_tokens": [
+      7.92,
+      7.12,
+      8.8
+     ],
+     "cache_creation_tokens": [
+      4382.1,
+      3845.698,
+      4996.886
+     ],
+     "cache_read_tokens": [
+      22222.88,
+      18541.0255,
+      26450.8505
+     ],
+     "total_input_tokens": [
+      26612.9,
+      22452.586,
+      31384.259
+     ],
+     "num_turns": [
+      4.56,
+      4.02,
+      5.16
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "wall_s_median": 8.0,
+     "wall_s_max": 139.7,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.45,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "shuffled": 50
+     },
+     "tool_calls_by_name_mean": {
+      "Grep": 2.12,
+      "Read": 1.44
+     }
+    },
+    "B": {
+     "cost_usd": [
+      0.0251,
+      0.0212,
+      0.0296
+     ],
+     "file_hit": [
+      0.76,
+      0.64,
+      0.88
+     ],
+     "symbol_hit": [
+      0.72,
+      0.6,
+      0.84
+     ],
+     "symbol_tail_hit": [
+      0.72,
+      0.6,
+      0.84
+     ],
+     "tool_calls_total": [
+      3.18,
+      2.62,
+      3.84
+     ],
+     "wall_s": [
+      10.9876,
+      7.9348,
+      15.9634
+     ],
+     "wall_s_net": [
+      10.4636,
+      7.4066,
+      15.4402
+     ],
+     "output_tokens": [
+      809.24,
+      668.639,
+      974.909
+     ],
+     "input_tokens": [
+      7.28,
+      6.44,
+      8.32
+     ],
+     "cache_creation_tokens": [
+      3724.84,
+      3126.2455,
+      4381.347
+     ],
+     "cache_read_tokens": [
+      21404.2,
+      17322.528,
+      26562.0055
+     ],
+     "total_input_tokens": [
+      25136.32,
+      20603.601,
+      30841.239
+     ],
+     "num_turns": [
+      4.18,
+      3.62,
+      4.84
+     ],
+     "search_used": [
+      0.34,
+      0.22,
+      0.48
+     ],
+     "searches": [
+      0.34,
+      0.22,
+      0.48
+     ],
+     "wall_s_median": 7.8,
+     "wall_s_max": 118.6,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.26,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "shuffled": 50
+     },
+     "tool_calls_by_name_mean": {
+      "Grep": 1.6,
+      "Read": 1.24,
+      "mcp__tuna__search": 0.34
+     }
+    },
+    "C": {
+     "cost_usd": [
+      0.0233,
+      0.0198,
+      0.0272
+     ],
+     "file_hit": [
+      0.76,
+      0.64,
+      0.88
+     ],
+     "symbol_hit": [
+      0.72,
+      0.6,
+      0.84
+     ],
+     "symbol_tail_hit": [
+      0.72,
+      0.6,
+      0.84
+     ],
+     "tool_calls_total": [
+      3.04,
+      2.46,
+      3.74
+     ],
+     "wall_s": [
+      8.665,
+      7.6878,
+      9.8122
+     ],
+     "wall_s_net": [
+      8.1048,
+      7.0972,
+      9.2846
+     ],
+     "output_tokens": [
+      786.54,
+      656.718,
+      939.861
+     ],
+     "input_tokens": [
+      7.08,
+      6.28,
+      8.04
+     ],
+     "cache_creation_tokens": [
+      3365.42,
+      2849.7505,
+      3922.3015
+     ],
+     "cache_read_tokens": [
+      19880.78,
+      16304.6445,
+      24396.7705
+     ],
+     "total_input_tokens": [
+      23253.28,
+      19270.258,
+      28187.308
+     ],
+     "num_turns": [
+      4.04,
+      3.46,
+      4.74
+     ],
+     "search_used": [
+      0.24,
+      0.12,
+      0.36
+     ],
+     "searches": [
+      0.24,
+      0.12,
+      0.36
+     ],
+     "wall_s_median": 7.7,
+     "wall_s_max": 26.3,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 1.17,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "shuffled": 50
+     },
+     "tool_calls_by_name_mean": {
+      "Grep": 1.56,
+      "Read": 1.24,
+      "mcp__tuna__search": 0.24
+     }
+    }
+   },
+   "paired_diff": {
+    "B-A": {
+     "role": "primary",
+     "cost_usd": [
+      -0.0039,
+      -0.006,
+      -0.002
+     ],
+     "file_hit": [
+      0.04,
+      0.0,
+      0.1
+     ],
+     "symbol_hit": [
+      0.02,
+      -0.06,
+      0.12
+     ],
+     "symbol_tail_hit": [
+      0.02,
+      -0.06,
+      0.12
+     ],
+     "tool_calls_total": [
+      -0.38,
+      -0.72,
+      -0.04
+     ],
+     "wall_s": [
+      -5.1718,
+      -14.4853,
+      3.6281
+     ],
+     "wall_s_net": [
+      -5.6958,
+      -14.966,
+      3.1393
+     ],
+     "output_tokens": [
+      -121.78,
+      -209.4005,
+      -39.46
+     ],
+     "input_tokens": [
+      -0.64,
+      -1.32,
+      0.04
+     ],
+     "cache_creation_tokens": [
+      -657.26,
+      -1018.561,
+      -303.7335
+     ],
+     "cache_read_tokens": [
+      -818.68,
+      -3653.448,
+      1874.291
+     ],
+     "total_input_tokens": [
+      -1476.58,
+      -4472.1485,
+      1340.6245
+     ],
+     "num_turns": [
+      -0.38,
+      -0.72,
+      -0.04
+     ],
+     "search_used": [
+      0.34,
+      0.22,
+      0.48
+     ],
+     "searches": [
+      0.34,
+      0.22,
+      0.48
+     ]
+    },
+    "C-A": {
+     "role": "primary",
+     "cost_usd": [
+      -0.0057,
+      -0.0087,
+      -0.003
+     ],
+     "file_hit": [
+      0.04,
+      0.0,
+      0.1
+     ],
+     "symbol_hit": [
+      0.02,
+      -0.06,
+      0.12
+     ],
+     "symbol_tail_hit": [
+      0.02,
+      -0.06,
+      0.12
+     ],
+     "tool_calls_total": [
+      -0.52,
+      -0.88,
+      -0.16
+     ],
+     "wall_s": [
+      -7.4944,
+      -16.3656,
+      -0.2772
+     ],
+     "wall_s_net": [
+      -8.0546,
+      -16.914,
+      -0.8824
+     ],
+     "output_tokens": [
+      -144.48,
+      -232.1405,
+      -61.3595
+     ],
+     "input_tokens": [
+      -0.84,
+      -1.52,
+      -0.2
+     ],
+     "cache_creation_tokens": [
+      -1016.68,
+      -1514.947,
+      -546.435
+     ],
+     "cache_read_tokens": [
+      -2342.1,
+      -5757.4355,
+      737.2565
+     ],
+     "total_input_tokens": [
+      -3359.62,
+      -7182.591,
+      75.038
+     ],
+     "num_turns": [
+      -0.52,
+      -0.88,
+      -0.16
+     ],
+     "search_used": [
+      0.24,
+      0.12,
+      0.36
+     ],
+     "searches": [
+      0.24,
+      0.12,
+      0.36
+     ]
+    },
+    "C-B": {
+     "role": "primary",
+     "cost_usd": [
+      -0.0018,
+      -0.0049,
+      0.0008
+     ],
+     "file_hit": [
+      0.0,
+      -0.06,
+      0.06
+     ],
+     "symbol_hit": [
+      0.0,
+      -0.06,
+      0.06
+     ],
+     "symbol_tail_hit": [
+      0.0,
+      -0.06,
+      0.06
+     ],
+     "tool_calls_total": [
+      -0.14,
+      -0.6,
+      0.26
+     ],
+     "wall_s": [
+      -2.3226,
+      -7.1524,
+      0.4656
+     ],
+     "wall_s_net": [
+      -2.3588,
+      -7.1958,
+      0.4154
+     ],
+     "output_tokens": [
+      -22.7,
+      -126.1815,
+      64.304
+     ],
+     "input_tokens": [
+      -0.2,
+      -1.12,
+      0.52
+     ],
+     "cache_creation_tokens": [
+      -359.42,
+      -863.1155,
+      125.8685
+     ],
+     "cache_read_tokens": [
+      -1523.42,
+      -6011.503,
+      1805.4075
+     ],
+     "total_input_tokens": [
+      -1883.04,
+      -6678.153,
+      1648.4215
+     ],
+     "num_turns": [
+      -0.14,
+      -0.6,
+      0.26
+     ],
+     "search_used": [
+      -0.1,
+      -0.2,
+      -0.02
+     ],
+     "searches": [
+      -0.1,
+      -0.2,
+      -0.02
+     ]
+    }
+   },
+   "clusters": {
+    "saleor": 50
+   }
+  },
+  "without_pilot": {
+   "arms": [
+    "A",
+    "B",
+    "C"
+   ],
+   "questions": 25,
+   "per_arm": {
+    "A": {
+     "cost_usd": [
+      0.0241,
+      0.021,
+      0.0273
+     ],
+     "file_hit": [
+      0.92,
+      0.8,
+      1.0
+     ],
+     "symbol_hit": [
+      0.88,
+      0.76,
+      1.0
+     ],
+     "symbol_tail_hit": [
+      0.88,
+      0.76,
+      1.0
+     ],
+     "tool_calls_total": [
+      2.8,
+      2.4,
+      3.24
+     ],
+     "wall_s": [
+      11.8684,
+      6.8716,
+      21.136
+     ],
+     "wall_s_net": [
+      11.8684,
+      6.8716,
+      21.136
+     ],
+     "output_tokens": [
+      745.44,
+      653.719,
+      842.401
+     ],
+     "input_tokens": [
+      6.88,
+      6.32,
+      7.52
+     ],
+     "cache_creation_tokens": [
+      3740.68,
+      3170.142,
+      4327.966
+     ],
+     "cache_read_tokens": [
+      17095.72,
+      15240.194,
+      19098.108
+     ],
+     "total_input_tokens": [
+      20843.28,
+      18588.632,
+      23180.556
+     ],
+     "num_turns": [
+      3.8,
+      3.4,
+      4.24
+     ],
+     "search_used": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "searches": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "wall_s_median": 6.5,
+     "wall_s_max": 118.2,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 0.6,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "shuffled": 25
+     },
+     "tool_calls_by_name_mean": {
+      "Grep": 1.56,
+      "Read": 1.24
+     }
+    },
+    "B": {
+     "cost_usd": [
+      0.0205,
+      0.0171,
+      0.024
+     ],
+     "file_hit": [
+      0.96,
+      0.88,
+      1.0
+     ],
+     "symbol_hit": [
+      0.96,
+      0.88,
+      1.0
+     ],
+     "symbol_tail_hit": [
+      0.96,
+      0.88,
+      1.0
+     ],
+     "tool_calls_total": [
+      2.32,
+      2.0,
+      2.64
+     ],
+     "wall_s": [
+      7.4708,
+      6.7644,
+      8.1976
+     ],
+     "wall_s_net": [
+      6.6956,
+      6.0156,
+      7.398
+     ],
+     "output_tokens": [
+      590.48,
+      508.8,
+      672.24
+     ],
+     "input_tokens": [
+      6.16,
+      5.6,
+      6.72
+     ],
+     "cache_creation_tokens": [
+      3234.96,
+      2548.19,
+      3954.083
+     ],
+     "cache_read_tokens": [
+      16166.44,
+      14051.88,
+      18415.906
+     ],
+     "total_input_tokens": [
+      19407.56,
+      16975.853,
+      22058.489
+     ],
+     "num_turns": [
+      3.32,
+      3.0,
+      3.64
+     ],
+     "search_used": [
+      0.48,
+      0.28,
+      0.68
+     ],
+     "searches": [
+      0.48,
+      0.28,
+      0.68
+     ],
+     "wall_s_median": 7.0,
+     "wall_s_max": 12.0,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 0.51,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "shuffled": 25
+     },
+     "tool_calls_by_name_mean": {
+      "Grep": 1.0,
+      "Read": 0.84,
+      "mcp__tuna__search": 0.48
+     }
+    },
+    "C": {
+     "cost_usd": [
+      0.0181,
+      0.0148,
+      0.0218
+     ],
+     "file_hit": [
+      0.96,
+      0.88,
+      1.0
+     ],
+     "symbol_hit": [
+      0.96,
+      0.88,
+      1.0
+     ],
+     "symbol_tail_hit": [
+      0.96,
+      0.88,
+      1.0
+     ],
+     "tool_calls_total": [
+      2.12,
+      1.72,
+      2.6
+     ],
+     "wall_s": [
+      7.5692,
+      6.64,
+      8.5924
+     ],
+     "wall_s_net": [
+      6.6392,
+      5.762,
+      7.6668
+     ],
+     "output_tokens": [
+      583.52,
+      474.595,
+      705.766
+     ],
+     "input_tokens": [
+      6.0,
+      5.28,
+      6.8
+     ],
+     "cache_creation_tokens": [
+      2684.04,
+      2125.772,
+      3300.023
+     ],
+     "cache_read_tokens": [
+      15279.08,
+      12987.556,
+      18116.297
+     ],
+     "total_input_tokens": [
+      17969.12,
+      15219.348,
+      21262.325
+     ],
+     "num_turns": [
+      3.12,
+      2.72,
+      3.6
+     ],
+     "search_used": [
+      0.4,
+      0.2,
+      0.6
+     ],
+     "searches": [
+      0.4,
+      0.2,
+      0.6
+     ],
+     "wall_s_median": 6.2,
+     "wall_s_max": 14.5,
+     "agent_failures": 0,
+     "agent_failures_cost_unknown": 0,
+     "cost_total_usd": 0.45,
+     "models": [
+      "claude-sonnet-5-5"
+     ],
+     "isolation_problems": 0,
+     "batches": {
+      "shuffled": 25
+     },
+     "tool_calls_by_name_mean": {
+      "Grep": 0.84,
+      "Read": 0.88,
+      "mcp__tuna__search": 0.4
+     }
+    }
+   },
+   "paired_diff": {
+    "B-A": {
+     "role": "primary",
+     "cost_usd": [
+      -0.0037,
+      -0.0059,
+      -0.0014
+     ],
+     "file_hit": [
+      0.04,
+      0.0,
+      0.12
+     ],
+     "symbol_hit": [
+      0.08,
+      0.0,
+      0.2
+     ],
+     "symbol_tail_hit": [
+      0.08,
+      0.0,
+      0.2
+     ],
+     "tool_calls_total": [
+      -0.48,
+      -0.84,
+      -0.12
+     ],
+     "wall_s": [
+      -4.3976,
+      -13.544,
+      0.5188
+     ],
+     "wall_s_net": [
+      -5.1728,
+      -14.2568,
+      -0.3056
+     ],
+     "output_tokens": [
+      -154.96,
+      -240.161,
+      -74.598
+     ],
+     "input_tokens": [
+      -0.72,
+      -1.36,
+      -0.16
+     ],
+     "cache_creation_tokens": [
+      -505.72,
+      -963.531,
+      -29.677
+     ],
+     "cache_read_tokens": [
+      -929.28,
+      -3028.064,
+      1136.151
+     ],
+     "total_input_tokens": [
+      -1435.72,
+      -3658.308,
+      763.502
+     ],
+     "num_turns": [
+      -0.48,
+      -0.84,
+      -0.12
+     ],
+     "search_used": [
+      0.48,
+      0.28,
+      0.68
+     ],
+     "searches": [
+      0.48,
+      0.28,
+      0.68
+     ]
+    },
+    "C-A": {
+     "role": "primary",
+     "cost_usd": [
+      -0.006,
+      -0.0083,
+      -0.0036
+     ],
+     "file_hit": [
+      0.04,
+      0.0,
+      0.12
+     ],
+     "symbol_hit": [
+      0.08,
+      0.0,
+      0.2
+     ],
+     "symbol_tail_hit": [
+      0.08,
+      0.0,
+      0.2
+     ],
+     "tool_calls_total": [
+      -0.68,
+      -1.12,
+      -0.24
+     ],
+     "wall_s": [
+      -4.2992,
+      -13.5672,
+      0.7088
+     ],
+     "wall_s_net": [
+      -5.2292,
+      -14.4652,
+      -0.2084
+     ],
+     "output_tokens": [
+      -161.92,
+      -250.841,
+      -65.231
+     ],
+     "input_tokens": [
+      -0.88,
+      -1.52,
+      -0.16
+     ],
+     "cache_creation_tokens": [
+      -1056.64,
+      -1459.522,
+      -661.717
+     ],
+     "cache_read_tokens": [
+      -1816.64,
+      -3813.317,
+      490.169
+     ],
+     "total_input_tokens": [
+      -2874.16,
+      -5080.895,
+      -353.052
+     ],
+     "num_turns": [
+      -0.68,
+      -1.12,
+      -0.24
+     ],
+     "search_used": [
+      0.4,
+      0.2,
+      0.6
+     ],
+     "searches": [
+      0.4,
+      0.2,
+      0.6
+     ]
+    },
+    "C-B": {
+     "role": "primary",
+     "cost_usd": [
+      -0.0024,
+      -0.0051,
+      0.0007
+     ],
+     "file_hit": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "symbol_hit": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "symbol_tail_hit": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tool_calls_total": [
+      -0.2,
+      -0.6,
+      0.24
+     ],
+     "wall_s": [
+      0.0984,
+      -0.6792,
+      0.9552
+     ],
+     "wall_s_net": [
+      -0.0564,
+      -0.806,
+      0.7912
+     ],
+     "output_tokens": [
+      -6.96,
+      -90.642,
+      86.523
+     ],
+     "input_tokens": [
+      -0.16,
+      -0.8,
+      0.64
+     ],
+     "cache_creation_tokens": [
+      -550.92,
+      -1105.659,
+      36.768
+     ],
+     "cache_read_tokens": [
+      -887.36,
+      -3323.198,
+      2052.533
+     ],
+     "total_input_tokens": [
+      -1438.44,
+      -4102.123,
+      1804.069
+     ],
+     "num_turns": [
+      -0.2,
+      -0.6,
+      0.24
+     ],
+     "search_used": [
+      -0.08,
+      -0.2,
+      0.0
+     ],
+     "searches": [
+      -0.08,
+      -0.2,
+      0.0
+     ]
+    }
+   },
+   "clusters": {
+    "saleor": 25
+   }
+  }
+ },
+ "per_repo": {
+  "saleor": {
+   "all": {
+    "arms": [
+     "A",
+     "B",
+     "C"
+    ],
+    "questions": 50,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0291,
+       0.0254,
+       0.0332
+      ],
+      "file_hit": [
+       0.72,
+       0.6,
+       0.84
+      ],
+      "symbol_hit": [
+       0.7,
+       0.56,
+       0.82
+      ],
+      "symbol_tail_hit": [
+       0.7,
+       0.56,
+       0.82
+      ],
+      "tool_calls_total": [
+       3.56,
+       3.02,
+       4.16
+      ],
+      "wall_s": [
+       16.1594,
+       9.0578,
+       24.8922
+      ],
+      "wall_s_net": [
+       16.1594,
+       9.0578,
+       24.8922
+      ],
+      "output_tokens": [
+       931.02,
+       796.938,
+       1081.4605
+      ],
+      "input_tokens": [
+       7.92,
+       7.12,
+       8.8
+      ],
+      "cache_creation_tokens": [
+       4382.1,
+       3845.698,
+       4996.886
+      ],
+      "cache_read_tokens": [
+       22222.88,
+       18541.0255,
+       26450.8505
+      ],
+      "total_input_tokens": [
+       26612.9,
+       22452.586,
+       31384.259
+      ],
+      "num_turns": [
+       4.56,
+       4.02,
+       5.16
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "wall_s_median": 8.0,
+      "wall_s_max": 139.7,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 1.45,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "shuffled": 50
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 2.12,
+       "Read": 1.44
+      }
+     },
+     "B": {
+      "cost_usd": [
+       0.0251,
+       0.0212,
+       0.0296
+      ],
+      "file_hit": [
+       0.76,
+       0.64,
+       0.88
+      ],
+      "symbol_hit": [
+       0.72,
+       0.6,
+       0.84
+      ],
+      "symbol_tail_hit": [
+       0.72,
+       0.6,
+       0.84
+      ],
+      "tool_calls_total": [
+       3.18,
+       2.62,
+       3.84
+      ],
+      "wall_s": [
+       10.9876,
+       7.9348,
+       15.9634
+      ],
+      "wall_s_net": [
+       10.4636,
+       7.4066,
+       15.4402
+      ],
+      "output_tokens": [
+       809.24,
+       668.639,
+       974.909
+      ],
+      "input_tokens": [
+       7.28,
+       6.44,
+       8.32
+      ],
+      "cache_creation_tokens": [
+       3724.84,
+       3126.2455,
+       4381.347
+      ],
+      "cache_read_tokens": [
+       21404.2,
+       17322.528,
+       26562.0055
+      ],
+      "total_input_tokens": [
+       25136.32,
+       20603.601,
+       30841.239
+      ],
+      "num_turns": [
+       4.18,
+       3.62,
+       4.84
+      ],
+      "search_used": [
+       0.34,
+       0.22,
+       0.48
+      ],
+      "searches": [
+       0.34,
+       0.22,
+       0.48
+      ],
+      "wall_s_median": 7.8,
+      "wall_s_max": 118.6,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 1.26,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "shuffled": 50
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.6,
+       "Read": 1.24,
+       "mcp__tuna__search": 0.34
+      }
+     },
+     "C": {
+      "cost_usd": [
+       0.0233,
+       0.0198,
+       0.0272
+      ],
+      "file_hit": [
+       0.76,
+       0.64,
+       0.88
+      ],
+      "symbol_hit": [
+       0.72,
+       0.6,
+       0.84
+      ],
+      "symbol_tail_hit": [
+       0.72,
+       0.6,
+       0.84
+      ],
+      "tool_calls_total": [
+       3.04,
+       2.46,
+       3.74
+      ],
+      "wall_s": [
+       8.665,
+       7.6878,
+       9.8122
+      ],
+      "wall_s_net": [
+       8.1048,
+       7.0972,
+       9.2846
+      ],
+      "output_tokens": [
+       786.54,
+       656.718,
+       939.861
+      ],
+      "input_tokens": [
+       7.08,
+       6.28,
+       8.04
+      ],
+      "cache_creation_tokens": [
+       3365.42,
+       2849.7505,
+       3922.3015
+      ],
+      "cache_read_tokens": [
+       19880.78,
+       16304.6445,
+       24396.7705
+      ],
+      "total_input_tokens": [
+       23253.28,
+       19270.258,
+       28187.308
+      ],
+      "num_turns": [
+       4.04,
+       3.46,
+       4.74
+      ],
+      "search_used": [
+       0.24,
+       0.12,
+       0.36
+      ],
+      "searches": [
+       0.24,
+       0.12,
+       0.36
+      ],
+      "wall_s_median": 7.7,
+      "wall_s_max": 26.3,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 1.17,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "shuffled": 50
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.56,
+       "Read": 1.24,
+       "mcp__tuna__search": 0.24
+      }
+     }
+    },
+    "paired_diff": {
+     "B-A": {
+      "role": "primary",
+      "cost_usd": [
+       -0.0039,
+       -0.006,
+       -0.002
+      ],
+      "file_hit": [
+       0.04,
+       0.0,
+       0.1
+      ],
+      "symbol_hit": [
+       0.02,
+       -0.06,
+       0.12
+      ],
+      "symbol_tail_hit": [
+       0.02,
+       -0.06,
+       0.12
+      ],
+      "tool_calls_total": [
+       -0.38,
+       -0.72,
+       -0.04
+      ],
+      "wall_s": [
+       -5.1718,
+       -14.4853,
+       3.6281
+      ],
+      "wall_s_net": [
+       -5.6958,
+       -14.966,
+       3.1393
+      ],
+      "output_tokens": [
+       -121.78,
+       -209.4005,
+       -39.46
+      ],
+      "input_tokens": [
+       -0.64,
+       -1.32,
+       0.04
+      ],
+      "cache_creation_tokens": [
+       -657.26,
+       -1018.561,
+       -303.7335
+      ],
+      "cache_read_tokens": [
+       -818.68,
+       -3653.448,
+       1874.291
+      ],
+      "total_input_tokens": [
+       -1476.58,
+       -4472.1485,
+       1340.6245
+      ],
+      "num_turns": [
+       -0.38,
+       -0.72,
+       -0.04
+      ],
+      "search_used": [
+       0.34,
+       0.22,
+       0.48
+      ],
+      "searches": [
+       0.34,
+       0.22,
+       0.48
+      ]
+     },
+     "C-A": {
+      "role": "primary",
+      "cost_usd": [
+       -0.0057,
+       -0.0087,
+       -0.003
+      ],
+      "file_hit": [
+       0.04,
+       0.0,
+       0.1
+      ],
+      "symbol_hit": [
+       0.02,
+       -0.06,
+       0.12
+      ],
+      "symbol_tail_hit": [
+       0.02,
+       -0.06,
+       0.12
+      ],
+      "tool_calls_total": [
+       -0.52,
+       -0.88,
+       -0.16
+      ],
+      "wall_s": [
+       -7.4944,
+       -16.3656,
+       -0.2772
+      ],
+      "wall_s_net": [
+       -8.0546,
+       -16.914,
+       -0.8824
+      ],
+      "output_tokens": [
+       -144.48,
+       -232.1405,
+       -61.3595
+      ],
+      "input_tokens": [
+       -0.84,
+       -1.52,
+       -0.2
+      ],
+      "cache_creation_tokens": [
+       -1016.68,
+       -1514.947,
+       -546.435
+      ],
+      "cache_read_tokens": [
+       -2342.1,
+       -5757.4355,
+       737.2565
+      ],
+      "total_input_tokens": [
+       -3359.62,
+       -7182.591,
+       75.038
+      ],
+      "num_turns": [
+       -0.52,
+       -0.88,
+       -0.16
+      ],
+      "search_used": [
+       0.24,
+       0.12,
+       0.36
+      ],
+      "searches": [
+       0.24,
+       0.12,
+       0.36
+      ]
+     },
+     "C-B": {
+      "role": "primary",
+      "cost_usd": [
+       -0.0018,
+       -0.0049,
+       0.0008
+      ],
+      "file_hit": [
+       0.0,
+       -0.06,
+       0.06
+      ],
+      "symbol_hit": [
+       0.0,
+       -0.06,
+       0.06
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       -0.06,
+       0.06
+      ],
+      "tool_calls_total": [
+       -0.14,
+       -0.6,
+       0.26
+      ],
+      "wall_s": [
+       -2.3226,
+       -7.1524,
+       0.4656
+      ],
+      "wall_s_net": [
+       -2.3588,
+       -7.1958,
+       0.4154
+      ],
+      "output_tokens": [
+       -22.7,
+       -126.1815,
+       64.304
+      ],
+      "input_tokens": [
+       -0.2,
+       -1.12,
+       0.52
+      ],
+      "cache_creation_tokens": [
+       -359.42,
+       -863.1155,
+       125.8685
+      ],
+      "cache_read_tokens": [
+       -1523.42,
+       -6011.503,
+       1805.4075
+      ],
+      "total_input_tokens": [
+       -1883.04,
+       -6678.153,
+       1648.4215
+      ],
+      "num_turns": [
+       -0.14,
+       -0.6,
+       0.26
+      ],
+      "search_used": [
+       -0.1,
+       -0.2,
+       -0.02
+      ],
+      "searches": [
+       -0.1,
+       -0.2,
+       -0.02
+      ]
+     }
+    },
+    "clusters": {
+     "saleor": 50
+    }
+   },
+   "without_pilot": {
+    "arms": [
+     "A",
+     "B",
+     "C"
+    ],
+    "questions": 25,
+    "per_arm": {
+     "A": {
+      "cost_usd": [
+       0.0241,
+       0.021,
+       0.0273
+      ],
+      "file_hit": [
+       0.92,
+       0.8,
+       1.0
+      ],
+      "symbol_hit": [
+       0.88,
+       0.76,
+       1.0
+      ],
+      "symbol_tail_hit": [
+       0.88,
+       0.76,
+       1.0
+      ],
+      "tool_calls_total": [
+       2.8,
+       2.4,
+       3.24
+      ],
+      "wall_s": [
+       11.8684,
+       6.8716,
+       21.136
+      ],
+      "wall_s_net": [
+       11.8684,
+       6.8716,
+       21.136
+      ],
+      "output_tokens": [
+       745.44,
+       653.719,
+       842.401
+      ],
+      "input_tokens": [
+       6.88,
+       6.32,
+       7.52
+      ],
+      "cache_creation_tokens": [
+       3740.68,
+       3170.142,
+       4327.966
+      ],
+      "cache_read_tokens": [
+       17095.72,
+       15240.194,
+       19098.108
+      ],
+      "total_input_tokens": [
+       20843.28,
+       18588.632,
+       23180.556
+      ],
+      "num_turns": [
+       3.8,
+       3.4,
+       4.24
+      ],
+      "search_used": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "searches": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "wall_s_median": 6.5,
+      "wall_s_max": 118.2,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.6,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "shuffled": 25
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.56,
+       "Read": 1.24
+      }
+     },
+     "B": {
+      "cost_usd": [
+       0.0205,
+       0.0171,
+       0.024
+      ],
+      "file_hit": [
+       0.96,
+       0.88,
+       1.0
+      ],
+      "symbol_hit": [
+       0.96,
+       0.88,
+       1.0
+      ],
+      "symbol_tail_hit": [
+       0.96,
+       0.88,
+       1.0
+      ],
+      "tool_calls_total": [
+       2.32,
+       2.0,
+       2.64
+      ],
+      "wall_s": [
+       7.4708,
+       6.7644,
+       8.1976
+      ],
+      "wall_s_net": [
+       6.6956,
+       6.0156,
+       7.398
+      ],
+      "output_tokens": [
+       590.48,
+       508.8,
+       672.24
+      ],
+      "input_tokens": [
+       6.16,
+       5.6,
+       6.72
+      ],
+      "cache_creation_tokens": [
+       3234.96,
+       2548.19,
+       3954.083
+      ],
+      "cache_read_tokens": [
+       16166.44,
+       14051.88,
+       18415.906
+      ],
+      "total_input_tokens": [
+       19407.56,
+       16975.853,
+       22058.489
+      ],
+      "num_turns": [
+       3.32,
+       3.0,
+       3.64
+      ],
+      "search_used": [
+       0.48,
+       0.28,
+       0.68
+      ],
+      "searches": [
+       0.48,
+       0.28,
+       0.68
+      ],
+      "wall_s_median": 7.0,
+      "wall_s_max": 12.0,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.51,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "shuffled": 25
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 1.0,
+       "Read": 0.84,
+       "mcp__tuna__search": 0.48
+      }
+     },
+     "C": {
+      "cost_usd": [
+       0.0181,
+       0.0148,
+       0.0218
+      ],
+      "file_hit": [
+       0.96,
+       0.88,
+       1.0
+      ],
+      "symbol_hit": [
+       0.96,
+       0.88,
+       1.0
+      ],
+      "symbol_tail_hit": [
+       0.96,
+       0.88,
+       1.0
+      ],
+      "tool_calls_total": [
+       2.12,
+       1.72,
+       2.6
+      ],
+      "wall_s": [
+       7.5692,
+       6.64,
+       8.5924
+      ],
+      "wall_s_net": [
+       6.6392,
+       5.762,
+       7.6668
+      ],
+      "output_tokens": [
+       583.52,
+       474.595,
+       705.766
+      ],
+      "input_tokens": [
+       6.0,
+       5.28,
+       6.8
+      ],
+      "cache_creation_tokens": [
+       2684.04,
+       2125.772,
+       3300.023
+      ],
+      "cache_read_tokens": [
+       15279.08,
+       12987.556,
+       18116.297
+      ],
+      "total_input_tokens": [
+       17969.12,
+       15219.348,
+       21262.325
+      ],
+      "num_turns": [
+       3.12,
+       2.72,
+       3.6
+      ],
+      "search_used": [
+       0.4,
+       0.2,
+       0.6
+      ],
+      "searches": [
+       0.4,
+       0.2,
+       0.6
+      ],
+      "wall_s_median": 6.2,
+      "wall_s_max": 14.5,
+      "agent_failures": 0,
+      "agent_failures_cost_unknown": 0,
+      "cost_total_usd": 0.45,
+      "models": [
+       "claude-sonnet-5-5"
+      ],
+      "isolation_problems": 0,
+      "batches": {
+       "shuffled": 25
+      },
+      "tool_calls_by_name_mean": {
+       "Grep": 0.84,
+       "Read": 0.88,
+       "mcp__tuna__search": 0.4
+      }
+     }
+    },
+    "paired_diff": {
+     "B-A": {
+      "role": "primary",
+      "cost_usd": [
+       -0.0037,
+       -0.0059,
+       -0.0014
+      ],
+      "file_hit": [
+       0.04,
+       0.0,
+       0.12
+      ],
+      "symbol_hit": [
+       0.08,
+       0.0,
+       0.2
+      ],
+      "symbol_tail_hit": [
+       0.08,
+       0.0,
+       0.2
+      ],
+      "tool_calls_total": [
+       -0.48,
+       -0.84,
+       -0.12
+      ],
+      "wall_s": [
+       -4.3976,
+       -13.544,
+       0.5188
+      ],
+      "wall_s_net": [
+       -5.1728,
+       -14.2568,
+       -0.3056
+      ],
+      "output_tokens": [
+       -154.96,
+       -240.161,
+       -74.598
+      ],
+      "input_tokens": [
+       -0.72,
+       -1.36,
+       -0.16
+      ],
+      "cache_creation_tokens": [
+       -505.72,
+       -963.531,
+       -29.677
+      ],
+      "cache_read_tokens": [
+       -929.28,
+       -3028.064,
+       1136.151
+      ],
+      "total_input_tokens": [
+       -1435.72,
+       -3658.308,
+       763.502
+      ],
+      "num_turns": [
+       -0.48,
+       -0.84,
+       -0.12
+      ],
+      "search_used": [
+       0.48,
+       0.28,
+       0.68
+      ],
+      "searches": [
+       0.48,
+       0.28,
+       0.68
+      ]
+     },
+     "C-A": {
+      "role": "primary",
+      "cost_usd": [
+       -0.006,
+       -0.0083,
+       -0.0036
+      ],
+      "file_hit": [
+       0.04,
+       0.0,
+       0.12
+      ],
+      "symbol_hit": [
+       0.08,
+       0.0,
+       0.2
+      ],
+      "symbol_tail_hit": [
+       0.08,
+       0.0,
+       0.2
+      ],
+      "tool_calls_total": [
+       -0.68,
+       -1.12,
+       -0.24
+      ],
+      "wall_s": [
+       -4.2992,
+       -13.5672,
+       0.7088
+      ],
+      "wall_s_net": [
+       -5.2292,
+       -14.4652,
+       -0.2084
+      ],
+      "output_tokens": [
+       -161.92,
+       -250.841,
+       -65.231
+      ],
+      "input_tokens": [
+       -0.88,
+       -1.52,
+       -0.16
+      ],
+      "cache_creation_tokens": [
+       -1056.64,
+       -1459.522,
+       -661.717
+      ],
+      "cache_read_tokens": [
+       -1816.64,
+       -3813.317,
+       490.169
+      ],
+      "total_input_tokens": [
+       -2874.16,
+       -5080.895,
+       -353.052
+      ],
+      "num_turns": [
+       -0.68,
+       -1.12,
+       -0.24
+      ],
+      "search_used": [
+       0.4,
+       0.2,
+       0.6
+      ],
+      "searches": [
+       0.4,
+       0.2,
+       0.6
+      ]
+     },
+     "C-B": {
+      "role": "primary",
+      "cost_usd": [
+       -0.0024,
+       -0.0051,
+       0.0007
+      ],
+      "file_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "symbol_tail_hit": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "tool_calls_total": [
+       -0.2,
+       -0.6,
+       0.24
+      ],
+      "wall_s": [
+       0.0984,
+       -0.6792,
+       0.9552
+      ],
+      "wall_s_net": [
+       -0.0564,
+       -0.806,
+       0.7912
+      ],
+      "output_tokens": [
+       -6.96,
+       -90.642,
+       86.523
+      ],
+      "input_tokens": [
+       -0.16,
+       -0.8,
+       0.64
+      ],
+      "cache_creation_tokens": [
+       -550.92,
+       -1105.659,
+       36.768
+      ],
+      "cache_read_tokens": [
+       -887.36,
+       -3323.198,
+       2052.533
+      ],
+      "total_input_tokens": [
+       -1438.44,
+       -4102.123,
+       1804.069
+      ],
+      "num_turns": [
+       -0.2,
+       -0.6,
+       0.24
+      ],
+      "search_used": [
+       -0.08,
+       -0.2,
+       0.0
+      ],
+      "searches": [
+       -0.08,
+       -0.2,
+       0.0
+      ]
+     }
+    },
+    "clusters": {
+     "saleor": 25
+    }
+   }
+  }
+ },
+ "search_use_observational": {
+  "all": {
+   "pooled": {
+    "B": {
+     "runs": 50,
+     "runs_with_search": 17,
+     "share_with_search": 0.34,
+     "search_calls_per_run": 0.34,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 0.647,
+     "gold_file_rate_with_search": 0.706,
+     "gold_file_rate_without_search": 0.788,
+     "gold_symbol_rate_with_search": 0.706,
+     "gold_symbol_rate_without_search": 0.727
+    },
+    "C": {
+     "runs": 50,
+     "runs_with_search": 12,
+     "share_with_search": 0.24,
+     "search_calls_per_run": 0.24,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 0.833,
+     "gold_file_rate_with_search": 0.917,
+     "gold_file_rate_without_search": 0.711,
+     "gold_symbol_rate_with_search": 0.917,
+     "gold_symbol_rate_without_search": 0.658
+    }
+   },
+   "saleor": {
+    "B": {
+     "runs": 50,
+     "runs_with_search": 17,
+     "share_with_search": 0.34,
+     "search_calls_per_run": 0.34,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 0.647,
+     "gold_file_rate_with_search": 0.706,
+     "gold_file_rate_without_search": 0.788,
+     "gold_symbol_rate_with_search": 0.706,
+     "gold_symbol_rate_without_search": 0.727
+    },
+    "C": {
+     "runs": 50,
+     "runs_with_search": 12,
+     "share_with_search": 0.24,
+     "search_calls_per_run": 0.24,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 0.833,
+     "gold_file_rate_with_search": 0.917,
+     "gold_file_rate_without_search": 0.711,
+     "gold_symbol_rate_with_search": 0.917,
+     "gold_symbol_rate_without_search": 0.658
+    }
+   }
+  },
+  "without_pilot": {
+   "pooled": {
+    "B": {
+     "runs": 25,
+     "runs_with_search": 12,
+     "share_with_search": 0.48,
+     "search_calls_per_run": 0.48,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 0.75,
+     "gold_file_rate_with_search": 1.0,
+     "gold_file_rate_without_search": 0.923,
+     "gold_symbol_rate_with_search": 1.0,
+     "gold_symbol_rate_without_search": 0.923
+    },
+    "C": {
+     "runs": 25,
+     "runs_with_search": 10,
+     "share_with_search": 0.4,
+     "search_calls_per_run": 0.4,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 1.0,
+     "gold_file_rate_with_search": 1.0,
+     "gold_file_rate_without_search": 0.933,
+     "gold_symbol_rate_with_search": 1.0,
+     "gold_symbol_rate_without_search": 0.933
+    }
+   },
+   "saleor": {
+    "B": {
+     "runs": 25,
+     "runs_with_search": 12,
+     "share_with_search": 0.48,
+     "search_calls_per_run": 0.48,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 0.75,
+     "gold_file_rate_with_search": 1.0,
+     "gold_file_rate_without_search": 0.923,
+     "gold_symbol_rate_with_search": 1.0,
+     "gold_symbol_rate_without_search": 0.923
+    },
+    "C": {
+     "runs": 25,
+     "runs_with_search": 10,
+     "share_with_search": 0.4,
+     "search_calls_per_run": 0.4,
+     "search_calls_per_searching_run": 1.0,
+     "gold_file_in_search_results": 1.0,
+     "gold_file_rate_with_search": 1.0,
+     "gold_file_rate_without_search": 0.933,
+     "gold_symbol_rate_with_search": 1.0,
+     "gold_symbol_rate_without_search": 0.933
+    }
+   }
+  }
+ }
+}

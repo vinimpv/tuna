@@ -1,0 +1,13 @@
+{
+ "repo": "saleor",
+ "commit": "28a1227b9a2db153c22ed6165b0987d0c96f80f8",
+ "take": [
+  "claude-m3:25",
+  "issues-v1:25"
+ ],
+ "seed": 20261112,
+ "questions": 50,
+ "distinct_gold_files": 56,
+ "max_per_file": 1,
+ "sha256": "6c9e5f756a46192bc3ff73480f8bc42a89657609f252802fdbd3511a62eaa901"
+}

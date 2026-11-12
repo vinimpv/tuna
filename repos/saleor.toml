@@ -1,0 +1,15 @@
+# Saleor: headless e-commerce, Django + GraphQL (Graphene). BSD-3-Clause.
+name = "saleor"
+url = "https://github.com/saleor/saleor"
+tag = "3.23.41"
+commit = "28a1227b9a2db153c22ed6165b0987d0c96f80f8"
+released = "2026-10-09"
+license = "BSD-3-Clause"
+description = "the Saleor e-commerce codebase"
+
+# fnmatch globs on the repo-relative path; `*` crosses `/`, and "*/x/*" also matches a top-level x/.
+include = ["saleor/*"]
+exclude = [
+  "*/tests/*", "*/test/*", "*/test_*.py", "*_test.py", "*/tests.py", "*/conftest.py", "conftest.py",
+  "*/migrations/*",
+]

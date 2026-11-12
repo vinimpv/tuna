@@ -1,0 +1,28 @@
+{
+ "repo": "zulip",
+ "tag": "jina-0.5b-ft-full",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": "$TUNA_OUT/zulip/models/jina-0.5b-ft-full",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 6836,
+ "symbols": 6836,
+ "dim": 896,
+ "index_bytes": 24528634,
+ "query_ms": {
+  "p50": 8.7,
+  "p95": 10.46,
+  "mean": 8.99
+ },
+ "encode_ms": {
+  "p50": 8.57,
+  "p95": 9.14,
+  "mean": 8.64
+ },
+ "search_ms": {
+  "p50": 0.12,
+  "p95": 1.29,
+  "mean": 0.35
+ }
+}

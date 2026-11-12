@@ -1,0 +1,169 @@
+{
+ "label": "dollars = cost the Claude Code client reports at API list prices",
+ "like_for_like_dollars": {
+  "B-first - A": {
+   "issues": 149,
+   "means": {
+    "A": 0.0356,
+    "B": 0.0335
+   },
+   "cost_usd": [
+    -0.0021,
+    -0.0042,
+    -0.0
+   ],
+   "api_calls": [
+    -0.1745,
+    -0.4228,
+    0.0638
+   ],
+   "tool_calls_total": [
+    -0.4564,
+    -0.7578,
+    -0.1615
+   ],
+   "output_tokens": [
+    -136.7114,
+    -200.3535,
+    -75.2328
+   ]
+  },
+  "C-first - A": {
+   "issues": 172,
+   "means": {
+    "A": 0.0349,
+    "C": 0.0337
+   },
+   "cost_usd": [
+    -0.0012,
+    -0.0035,
+    0.0014
+   ],
+   "api_calls": [
+    -0.3023,
+    -0.5528,
+    -0.0242
+   ],
+   "tool_calls_total": [
+    -0.3314,
+    -0.7134,
+    0.0989
+   ],
+   "output_tokens": [
+    -73.6105,
+    -144.3603,
+    4.6192
+   ]
+  }
+ },
+ "tool_available": {
+  "issues": 321,
+  "api_calls": [
+   -0.2788,
+   -0.4453,
+   -0.1201
+  ],
+  "tool_calls_total": [
+   -0.4065,
+   -0.6449,
+   -0.1723
+  ],
+  "output_tokens": [
+   -113.3209,
+   -164.9694,
+   -65.7072
+  ]
+ },
+ "null_test_C_minus_B_neither_searched": {
+  "issues": 254,
+  "api_calls": [
+   0.1654,
+   -0.065,
+   0.4108
+  ],
+  "tool_calls_total": [
+   0.2953,
+   0.0083,
+   0.5951
+  ],
+  "output_tokens": [
+   71.6299,
+   5.2444,
+   142.4275
+  ],
+  "cost_usd": [
+   0.0022,
+   -0.0,
+   0.0046
+  ],
+  "file_hit": [
+   -0.0157,
+   -0.042,
+   0.0115
+  ]
+ },
+ "descriptive_only": [
+  "search_use_observational (with/without search split)",
+  "D_by_search",
+  "sensitivity.no_search_in_B_and_C (other than the C-B null test)"
+ ],
+ "pilot_by_card_gold": {
+  "H-stock: card held gold file": {
+   "issues": 48,
+   "A_file_hit": 0.8542,
+   "H-stock_file_hit": 0.8333
+  },
+  "H-stock: card lacked gold file": {
+   "issues": 12,
+   "A_file_hit": 0.25,
+   "H-stock_file_hit": 0.1667
+  },
+  "H-tuned: card held gold file": {
+   "issues": 49,
+   "A_file_hit": 0.8776,
+   "H-tuned_file_hit": 0.8367
+  },
+  "H-tuned: card lacked gold file": {
+   "issues": 11,
+   "A_file_hit": 0.0909,
+   "H-tuned_file_hit": 0.1818
+  },
+  "gold_symbol_rate": {
+   "A": [
+    0.6167,
+    0.5,
+    0.7333
+   ],
+   "H-stock": [
+    0.6333,
+    0.5167,
+    0.75
+   ],
+   "H-tuned": [
+    0.65,
+    0.5333,
+    0.7667
+   ]
+  }
+ },
+ "pilot_A_vs_first_run_A": {
+  "issues": 60,
+  "pilot_A_file_hit": [
+   0.7333,
+   0.6167,
+   0.8333
+  ],
+  "first_run_A_file_hit_same_issues": [
+   0.6833,
+   0.5667,
+   0.8
+  ],
+  "pilot_minus_first_run": [
+   0.05,
+   0.0,
+   0.1167
+  ],
+  "agreement": 0.95,
+  "first_run_A_all_321": 0.6231
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "repo": "saleor",
+ "tag": "qwen3-0.6b",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": null,
+ "device": "cpu",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 11678,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 47880768,
+ "query_ms": {
+  "p50": 143.92,
+  "p95": 162.68,
+  "mean": 146.07
+ },
+ "encode_ms": {
+  "p50": 137.14,
+  "p95": 152.87,
+  "mean": 139.5
+ },
+ "search_ms": {
+  "p50": 6.29,
+  "p95": 11.01,
+  "mean": 6.57
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 1000,
+  "sample_documents": 1000,
+  "sample_seconds": 321.08,
+  "documents_per_s": 3.11,
+  "estimated_full_rebuild_s": 3749.6,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16,
+  "loadavg_before": "8.39 5.79 7.48",
+  "loadavg_after": "17.78 15.61 11.55",
+  "started_utc": "2026-11-12T08:48:21Z",
+  "quiet_rule": "1-min load < 4 for 3 min before start"
+ }
+}

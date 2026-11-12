@@ -1,0 +1,20 @@
+# Netflix Dispatch: incident management, FastAPI + SQLAlchemy backend. Apache-2.0. Transfer-only test
+# repo: nothing trains on it. The repository was archived in 2025-09; the pin is its last release tag.
+# Backend Python only (src/dispatch/), the same scope rules as PostHog: no tests, no migrations
+# (Alembic revisions), no frontend.
+name = "dispatch"
+url = "https://github.com/Netflix/dispatch"
+tag = "v20241220"
+commit = "0ce6d80c169d6888ed69db23c237562df8336ce4"
+released = "2024-12-21"
+license = "Apache-2.0"
+description = "the Netflix Dispatch incident management backend codebase"
+test_only = true
+
+include = ["src/dispatch/*"]
+exclude = [
+  "src/dispatch/static/*",
+  "src/dispatch/database/revisions/*",
+  "*/tests/*", "*/test/*", "*/test_*.py", "*_test.py", "*/tests.py", "*/conftest.py",
+  "*/migrations/*",
+]

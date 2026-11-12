@@ -1,0 +1,48 @@
+{
+ "repo": "zulip",
+ "tag": "12.3",
+ "commit": "b31982251ff82d0b02e59f63ad21f19204e37aea",
+ "config": "zulip.toml",
+ "include": [
+  "zerver/*",
+  "analytics/*",
+  "corporate/*",
+  "confirmation/*",
+  "zilencer/*",
+  "zproject/*"
+ ],
+ "exclude": [
+  "*/tests/*",
+  "*/test/*",
+  "*/test_*.py",
+  "*_test.py",
+  "*/tests.py",
+  "*/conftest.py",
+  "*/migrations/*",
+  "zerver/openapi/test_*",
+  "zproject/test_*settings.py"
+ ],
+ "languages": [
+  "python"
+ ],
+ "extractor": "tuna tree-sitter",
+ "grammars": {
+  "tree-sitter": "0.25.2",
+  "tree-sitter-python": "0.25.0"
+ },
+ "symbols": 6836,
+ "files": 738,
+ "files_with_symbols": 596,
+ "kinds": {
+  "Class": 1168,
+  "Method": 1665,
+  "Function": 4003
+ },
+ "dropped": {
+  "files_without_symbols": 142,
+  "duplicate_fqn": 24
+ },
+ "parse_error_files": [],
+ "symbols_sha256": "42a4a0473113a0c0e67edf0c67dfa663152405f8e2e1027d3165d3dfe2e6c63d",
+ "created": "2026-11-11T14:21:14+00:00"
+}

@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+# Ask Claude Code a question about a checked-out repo, read-only. The Claude
+# counterpart of scripts/pi-ask, with the same interface:
+#
+#   scripts/claude-ask [--model ID] [--events FILE] [--] PROMPT...   # run from inside the repo
+#
+# Claude only gets the Read, Grep and Glob tools: no Bash, edit or write, no web,
+# no MCP, no subagents. --safe-mode keeps out CLAUDE.md/AGENTS.md, skills,
+# plugins, hooks and memory (pi's -nc -ne); --setting-sources "" ignores every
+# settings file; no session is saved. The answer is printed on stdout.
+#
+# --events FILE saves the stream-json event log (every model turn, tool call
+# and result, and the final result event with usage) to FILE.
+#
+# Model: Claude Code's default unless --model or $CLAUDE_ASK_MODEL is given.
+# Exit 0 with the answer, 4 when Claude reports an error (usage limit, API
+# error): the error text goes to stderr.
+set -euo pipefail
+
+CLAUDE_BIN=${CLAUDE_BIN:-claude}
+model=${CLAUDE_ASK_MODEL:-}
+events=""
+prompt_file=""   # --prompt-file F: the prompt is read from F on stdin (for prompts over the argument-size limit)
+while [ $# -gt 0 ]; do
+  case $1 in
+    --model) model=$2; shift 2 ;;
+    --events) events=$2; shift 2 ;;
+    --prompt-file) prompt_file=$2; shift 2 ;;
+    --) shift; break ;;
+    *) break ;;
+  esac
+done
+[ $# -gt 0 ] || [ -n "$prompt_file" ] || { echo "usage: claude-ask [--model ID] [--events FILE] [--prompt-file F | [--] PROMPT...]" >&2; exit 2; }
+[ -n "$events" ] || events=$(mktemp)
+
+flags=(-p --output-format stream-json --verbose --safe-mode
+       --tools Read,Grep,Glob --allowedTools Read,Grep,Glob
+       --permission-mode dontAsk --permission-prompts none
+       --strict-mcp-config --setting-sources "" --no-session-persistence --disable-slash-commands)
+[ -z "$model" ] || flags+=(--model "$model")
+
+# stdin is closed so -p does not wait for piped input.
+rc=0
+if [ -n "$prompt_file" ]; then
+  "$CLAUDE_BIN" "${flags[@]}" <"$prompt_file" >"$events" || rc=$?
+else
+  "$CLAUDE_BIN" "${flags[@]}" -- "$@" </dev/null >"$events" || rc=$?
+fi
+
+python3 -I -c '
+import json, sys
+result = None
+for line in open(sys.argv[1], encoding="utf-8"):
+    try:
+        e = json.loads(line)
+    except json.JSONDecodeError:
+        continue
+    if e.get("type") == "result":
+        result = e
+if result is None:
+    sys.stderr.write("claude-ask: no result event (claude exit %s)\n" % sys.argv[2])
+    sys.exit(4)
+if result.get("is_error") or result.get("subtype") != "success":
+    sys.stderr.write("claude-ask: %s %s: %s\n" % (result.get("subtype"), result.get("api_error_status"),
+                                                 str(result.get("result"))[:500]))
+    sys.exit(4)
+sys.stdout.write(result.get("result") or "")' "$events" "$rc"

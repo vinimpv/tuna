@@ -1,0 +1,28 @@
+{
+ "repo": "posthog",
+ "tag": "jina-0.5b",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": null,
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 29681,
+ "symbols": 29679,
+ "dim": 896,
+ "index_bytes": 106496301,
+ "query_ms": {
+  "p50": 11.44,
+  "p95": 13.74,
+  "mean": 12.12
+ },
+ "encode_ms": {
+  "p50": 9.49,
+  "p95": 10.5,
+  "mean": 10.03
+ },
+ "search_ms": {
+  "p50": 1.88,
+  "p95": 3.23,
+  "mean": 2.09
+ }
+}

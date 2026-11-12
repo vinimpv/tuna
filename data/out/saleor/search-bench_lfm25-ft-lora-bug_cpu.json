@@ -1,0 +1,41 @@
+{
+ "repo": "saleor",
+ "tag": "lfm25-ft-lora-bug",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": "$TUNA_OUT/saleor/models/lfm25-ft-lora-bug",
+ "device": "cpu",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 13509,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 55387986,
+ "query_ms": {
+  "p50": 104.97,
+  "p95": 112.03,
+  "mean": 105.11
+ },
+ "encode_ms": {
+  "p50": 99.88,
+  "p95": 106.29,
+  "mean": 100.02
+ },
+ "search_ms": {
+  "p50": 4.46,
+  "p95": 7.67,
+  "mean": 5.09
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 32,
+  "sample_documents": 32,
+  "sample_seconds": 4.64,
+  "documents_per_s": 6.9,
+  "estimated_full_rebuild_s": 1957.0,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16
+ }
+}

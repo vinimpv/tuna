@@ -1,0 +1,55 @@
+{
+ "repo": "saleor",
+ "name": "issues-v1",
+ "kind": "github-issues",
+ "commit": "28a1227b9a2db153c22ed6165b0987d0c96f80f8",
+ "tag": "3.23.41",
+ "github": "saleor/saleor",
+ "seed": 20261111,
+ "n": 150,
+ "max_gold": 3,
+ "min_words": 15,
+ "max_log_lines": 20,
+ "stages": {
+  "issues_linked": 784,
+  "single_issue_commits": 655,
+  "after_no_in_scope_change": 518,
+  "after_mostly_out_of_scope": 485,
+  "after_no_function_changed": 439,
+  "after_too_many_functions": 235,
+  "after_gold_gone_at_pin": 109,
+  "with_gold": 109,
+  "closed_issue_by_human": 109,
+  "english": 109,
+  "min_15_words": 106,
+  "sampled": 106
+ },
+ "pr_search": {
+  "mapped": 676,
+  "no_commit_at_pin": 22,
+  "no_closing_keyword_in_body": 90,
+  "searched": 788
+ },
+ "commits_to_pin": 22604,
+ "reverts_skipped": 109,
+ "accepted": 106,
+ "leak_flagged": 11,
+ "noleak": 95,
+ "gold_per_item": {
+  "1": 73,
+  "3": 11,
+  "2": 22
+ },
+ "link_source": {
+  "pr_body": 104,
+  "commit_message+pr_body": 1,
+  "commit_message": 1
+ },
+ "github_requests_this_run": {
+  "core": 0,
+  "search": 0
+ },
+ "github_responses_used": 62,
+ "symbols_sha256": "5ac20c9d0e87f38908c6f64d8609ee5b287c93344679f9991635039b862d4321",
+ "updated": "2026-11-11T18:12:44+00:00"
+}

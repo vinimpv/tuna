@@ -1,0 +1,32 @@
+# PostHog backend: Django + ClickHouse. MIT except ee/ (PostHog Enterprise
+# licence, proprietary) which is never included. PostHog has no app version
+# tags; the pin is its self-host "hobby" release tag.
+name = "posthog"
+url = "https://github.com/PostHog/posthog"
+tag = "hobby-20261010-183147"
+commit = "df9b6d3f99d8a41e428bf7c20b3860e322a738d7"
+released = "2026-10-10"
+license = "MIT (ee/ excluded: proprietary)"
+description = "the PostHog product analytics backend codebase"
+
+# posthog/ plus a chosen set of mature product areas (about 200k non-test lines on
+# top of posthog/). Fast-moving or AI-agent products (signals, tasks, posthog_ai,
+# review_hog, ...) and the templated warehouse_sources connectors are left out.
+include = [
+  "posthog/*",
+  "products/feature_flags/*",
+  "products/experiments/*",
+  "products/error_tracking/*",
+  "products/cohorts/*",
+  "products/dashboards/*",
+  "products/alerts/*",
+  "products/batch_exports/*",
+  "products/data_warehouse/*",
+]
+exclude = [
+  "ee/*",
+  "posthog/schema.py",                                          # generated from the TS schema
+  "products/warehouse_sources/backend/temporal/data_imports/sources/*",  # ~1,370 templated connectors
+  "*/tests/*", "*/test/*", "*/__tests__/*", "*/test_*.py", "*_test.py", "*/tests.py", "*/conftest.py",
+  "*/migrations/*", "posthog/clickhouse/migrations/*", "posthog/async_migrations/migrations/*",
+]

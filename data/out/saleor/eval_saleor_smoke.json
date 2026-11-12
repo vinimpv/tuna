@@ -1,0 +1,19 @@
+{
+ "repo": "saleor",
+ "questions": "samples/saleor_smoke.jsonl",
+ "n": 5,
+ "unreachable_gold": [],
+ "missing_gold": {},
+ "results": {
+  "bm25": {
+   "hit@1": 0.4,
+   "hit@3": 0.4,
+   "hit@5": 0.4,
+   "hit@10": 0.6,
+   "hit@20": 0.6,
+   "mrr": 0.4407,
+   "recall@200": 1.0,
+   "n": 5
+  }
+ }
+}

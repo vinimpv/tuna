@@ -1,0 +1,66 @@
+{
+ "repo": "posthog",
+ "name": "qwen-m2",
+ "seed": 20261111,
+ "prompt_version": "question-v2",
+ "prompt_sha256": "27cfcbd67ddc5ceb94e87d16ba3dc6c7461616349b23c6fe2e1a8d022d2a55b1",
+ "n": 100,
+ "max_attempts": 3,
+ "filter": "v2",
+ "guards": {
+  "timeout_s": 90,
+  "max_tool_calls": 40
+ },
+ "runs": [
+  {
+   "started": "2026-11-11T17:16:28+00:00",
+   "workers": 8,
+   "wall_seconds": 238.0,
+   "files": 111,
+   "accepted": 106
+  }
+ ],
+ "surplus_accepted": [
+  "posthog/api/project.py",
+  "products/error_tracking/backend/facade/api.py",
+  "posthog/dags/clickhouse_cleanup.py",
+  "products/batch_exports/backend/temporal/destinations/snowflake_batch_export.py",
+  "posthog/tasks/email.py",
+  "products/data_warehouse/backend/logic/external_data_source/alerts.py"
+ ],
+ "writer": [
+  "qwen3.6-35b-a3b"
+ ],
+ "finished": true,
+ "accepted": 100,
+ "files_tried": 111,
+ "files_exhausted": 5,
+ "files_eligible": 2356,
+ "attempts": 131,
+ "rejections": {
+  "id_file_word": 17,
+  "id_mixed_case": 3,
+  "unparseable": 2,
+  "id_dotted": 1,
+  "leaks_identifier": 1,
+  "pi_runaway": 1
+ },
+ "median_attempt_of_accepted": 1.0,
+ "median_seconds_per_accepted": 12.2,
+ "median_seconds_per_attempt": 11.3,
+ "writer_seconds_total": 1832.0,
+ "accepted_without_reading_target": 0,
+ "questions_per_minute": [
+  {
+   "workers": 8,
+   "qpm": 26.7
+  }
+ ],
+ "updated": "2026-11-11T17:20:26+00:00",
+ "reject_share": 0.1908,
+ "filter_reject_share": 0.1679,
+ "writer_failure_share": 0.0229,
+ "empty_at_cap_share": 0.0,
+ "empty_other_share": 0.0,
+ "prose_before_json_share": 0.0153
+}

@@ -1,0 +1,28 @@
+{
+ "repo": "posthog",
+ "tag": "lfm25-emb",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": null,
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 38778,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 158990692,
+ "query_ms": {
+  "p50": 11.98,
+  "p95": 13.88,
+  "mean": 12.25
+ },
+ "encode_ms": {
+  "p50": 7.01,
+  "p95": 8.01,
+  "mean": 7.14
+ },
+ "search_ms": {
+  "p50": 5.05,
+  "p95": 6.32,
+  "mean": 5.1
+ }
+}

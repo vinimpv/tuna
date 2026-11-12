@@ -1,0 +1,12 @@
+{
+ "repo": "zulip",
+ "commit": "b31982251ff82d0b02e59f63ad21f19204e37aea",
+ "take": [
+  "issues-v1:20"
+ ],
+ "seed": 20261112,
+ "questions": 20,
+ "distinct_gold_files": 22,
+ "max_per_file": 1,
+ "sha256": "bc15b778568a7a3e86d2864842f189a62f06e4a8652b9a39c7d3b2eee24a226e"
+}

@@ -1,0 +1,16 @@
+You are helping build a code-search benchmark for this repository.
+
+Read the file {{FILE}}. You may look at other files if you need them to understand it, but the answer must be defined in {{FILE}}.
+
+Choose ONE function, method or class defined in {{FILE}}. Then write ONE question that a developer who is new to this repository would type into a code search tool, whose single best answer is that symbol.
+
+Rules for the question:
+- Ask about behaviour, in plain words, the way someone who has not read the code would ask.
+- Do not use the symbol's name, in any form, and do not mention the file name or path.
+- Make it specific enough that this symbol is the one best answer, not one of several.
+- Use at least 6 words.
+
+Give the answer as the symbol's fully qualified name (FQN): the module path {{MODULE}} followed by the symbol's name, for example {{MODULE}}.some_function for a function, {{MODULE}}.SomeClass for a class, or {{MODULE}}.SomeClass.some_method for a method. A definition nested inside another one continues the dots: {{MODULE}}.outer_function.inner_function.
+
+Reply with exactly one JSON object on a single line and nothing else:
+{"question": "...", "gold_fqn": "..."}

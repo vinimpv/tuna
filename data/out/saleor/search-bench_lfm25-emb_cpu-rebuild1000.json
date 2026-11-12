@@ -1,0 +1,45 @@
+{
+ "repo": "saleor",
+ "tag": "lfm25-emb",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": null,
+ "device": "cpu",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 13509,
+ "symbols": 11678,
+ "dim": 1024,
+ "index_bytes": 55387790,
+ "query_ms": {
+  "p50": 106.94,
+  "p95": 128.93,
+  "mean": 109.71
+ },
+ "encode_ms": {
+  "p50": 101.43,
+  "p95": 119.19,
+  "mean": 103.77
+ },
+ "search_ms": {
+  "p50": 5.93,
+  "p95": 9.15,
+  "mean": 5.94
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 1000,
+  "sample_documents": 1133,
+  "sample_seconds": 121.26,
+  "documents_per_s": 9.34,
+  "estimated_full_rebuild_s": 1445.8,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16,
+  "loadavg_before": "2.99 5.92 8.33",
+  "loadavg_after": "17.60 11.05 9.94",
+  "started_utc": "2026-11-12T09:01:06Z",
+  "quiet_rule": "1-min load < 4 for 3 min before start"
+ }
+}

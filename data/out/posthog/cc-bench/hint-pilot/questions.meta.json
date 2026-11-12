@@ -1,0 +1,12 @@
+{
+ "repo": "posthog",
+ "commit": "df9b6d3f99d8a41e428bf7c20b3860e322a738d7",
+ "take": [
+  "issues-v1:20"
+ ],
+ "seed": 20261112,
+ "questions": 20,
+ "distinct_gold_files": 21,
+ "max_per_file": 1,
+ "sha256": "358a76fedaff104eb2b26e2b354a3529bec0aae843298625211b1c5c8968a58b"
+}

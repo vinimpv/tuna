@@ -1,0 +1,209 @@
+{
+ "missing_scores": [],
+ "writer_gap": {
+  "LFM2.5 stock": {
+   "saleor": {
+    "n": 387,
+    "claude_minus_qwen": -0.0976,
+    "ci95": [
+     -0.1308,
+     -0.0654
+    ]
+   },
+   "zulip": {
+    "n": 394,
+    "claude_minus_qwen": -0.048,
+    "ci95": [
+     -0.0841,
+     -0.0108
+    ]
+   },
+   "posthog": {
+    "n": 379,
+    "claude_minus_qwen": -0.1047,
+    "ci95": [
+     -0.1442,
+     -0.0652
+    ]
+   },
+   "pooled": {
+    "n": 1160,
+    "claude_minus_qwen": -0.0831,
+    "ci95": [
+     -0.1037,
+     -0.0623
+    ]
+   }
+  },
+  "LFM2.5 tuned": {
+   "saleor": {
+    "n": 387,
+    "claude_minus_qwen": -0.112,
+    "ci95": [
+     -0.1552,
+     -0.0684
+    ]
+   },
+   "zulip": {
+    "n": 394,
+    "claude_minus_qwen": -0.0866,
+    "ci95": [
+     -0.1282,
+     -0.046
+    ]
+   },
+   "posthog": {
+    "n": 379,
+    "claude_minus_qwen": -0.1574,
+    "ci95": [
+     -0.2046,
+     -0.1098
+    ]
+   },
+   "pooled": {
+    "n": 1160,
+    "claude_minus_qwen": -0.1182,
+    "ci95": [
+     -0.1432,
+     -0.0932
+    ]
+   }
+  },
+  "jina-0.5B stock": {
+   "saleor": {
+    "n": 387,
+    "claude_minus_qwen": -0.167,
+    "ci95": [
+     -0.2096,
+     -0.1254
+    ]
+   },
+   "zulip": {
+    "n": 394,
+    "claude_minus_qwen": -0.1411,
+    "ci95": [
+     -0.1874,
+     -0.0949
+    ]
+   },
+   "posthog": {
+    "n": 379,
+    "claude_minus_qwen": -0.154,
+    "ci95": [
+     -0.1985,
+     -0.1086
+    ]
+   },
+   "pooled": {
+    "n": 1160,
+    "claude_minus_qwen": -0.154,
+    "ci95": [
+     -0.1792,
+     -0.1276
+    ]
+   }
+  },
+  "jina-0.5B tuned": {
+   "saleor": {
+    "n": 387,
+    "claude_minus_qwen": -0.1002,
+    "ci95": [
+     -0.1397,
+     -0.0607
+    ]
+   },
+   "zulip": {
+    "n": 394,
+    "claude_minus_qwen": -0.0724,
+    "ci95": [
+     -0.1113,
+     -0.0336
+    ]
+   },
+   "posthog": {
+    "n": 379,
+    "claude_minus_qwen": -0.0986,
+    "ci95": [
+     -0.1407,
+     -0.0578
+    ]
+   },
+   "pooled": {
+    "n": 1160,
+    "claude_minus_qwen": -0.0903,
+    "ci95": [
+     -0.1132,
+     -0.0672
+    ]
+   }
+  },
+  "Qwen3-0.6B stock": {
+   "saleor": {
+    "n": 387,
+    "claude_minus_qwen": -0.1293,
+    "ci95": [
+     -0.1721,
+     -0.0863
+    ]
+   },
+   "zulip": {
+    "n": 394,
+    "claude_minus_qwen": -0.1069,
+    "ci95": [
+     -0.151,
+     -0.0611
+    ]
+   },
+   "posthog": {
+    "n": 379,
+    "claude_minus_qwen": -0.1614,
+    "ci95": [
+     -0.207,
+     -0.116
+    ]
+   },
+   "pooled": {
+    "n": 1160,
+    "claude_minus_qwen": -0.1322,
+    "ci95": [
+     -0.1576,
+     -0.1069
+    ]
+   }
+  },
+  "Qwen3-0.6B tuned": {
+   "saleor": {
+    "n": 387,
+    "claude_minus_qwen": -0.0656,
+    "ci95": [
+     -0.1004,
+     -0.0313
+    ]
+   },
+   "zulip": {
+    "n": 394,
+    "claude_minus_qwen": -0.0292,
+    "ci95": [
+     -0.0633,
+     0.0063
+    ]
+   },
+   "posthog": {
+    "n": 379,
+    "claude_minus_qwen": -0.0966,
+    "ci95": [
+     -0.139,
+     -0.0547
+    ]
+   },
+   "pooled": {
+    "n": 1160,
+    "claude_minus_qwen": -0.0634,
+    "ci95": [
+     -0.0845,
+     -0.0416
+    ]
+   }
+  }
+ }
+}

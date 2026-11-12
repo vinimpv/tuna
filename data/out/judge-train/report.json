@@ -1,0 +1,25 @@
+{
+ "qwen-train1": {
+  "main_judged": 90,
+  "valid": 89,
+  "valid_share": 0.989,
+  "ci95": [
+   0.94,
+   0.998
+  ],
+  "failures": {
+   "does_not_answer": 0,
+   "another_symbol_as_good": 1
+  },
+  "controls_judged": 15,
+  "controls_rejected": 15,
+  "controls_rejected_share": 1.0,
+  "void": false,
+  "per_repo": {
+   "saleor": 30,
+   "zulip": 30,
+   "posthog": 29
+  },
+  "errors": 0
+ }
+}

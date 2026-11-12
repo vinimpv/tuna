@@ -1,0 +1,24 @@
+You are helping build a code-search benchmark for this repository.
+
+Read the file {{FILE}}. You may look at other files if you need them to understand it, but the answer must be defined in {{FILE}}.
+
+Choose ONE function, method or class defined in {{FILE}}. Then write ONE question that a developer who has never seen this code would type into a code search tool, whose single best answer is that symbol.
+
+Ask about behaviour, purpose or outcome: what happens in the product, or what the code is for, in the developer's own words.
+- Phrase it as "where...", "how...", "what happens when...", "what decides..." - not "which function / method / class does ...".
+- No code names of any kind. No identifiers: nothing in snake_case, CamelCase or with dots, and no names of functions, classes, methods, fields, parameters, variables, settings, signals or events. Nothing in backticks.
+- No implementation details. Do not describe how the code works step by step (not "by returning the record's id field", not "takes the minimum and subtracts one"). Describe what it achieves.
+- Product and framework words are fine: GraphQL, Django, Celery, Stripe, webhook, checkout, and the like.
+- Make it specific enough that this symbol is the one best answer, not one of several.
+- Use at least 6 words. Do not mention the file name or path.
+
+The style, shown on a made-up forum app (not this repository):
+- Good: "What happens to a member's unread notifications when their account is suspended?"
+- Good: "Where is the limit on how many images a single post can have enforced?"
+- Bad: "Which function returns the author_id field of a comment?" (code name, implementation detail)
+- Bad: "How does build_feed_query merge the two result sets?" (code name)
+
+Give the answer as the symbol's fully qualified name (FQN): the module path {{MODULE}} followed by the symbol's name, for example {{MODULE}}.some_function for a function, {{MODULE}}.SomeClass for a class, or {{MODULE}}.SomeClass.some_method for a method. A definition nested inside another one continues the dots: {{MODULE}}.outer_function.inner_function.
+
+Reply with exactly one JSON object on a single line, and nothing else: no explanation before or after it, no code fence.
+{"question": "...", "gold_fqn": "..."}

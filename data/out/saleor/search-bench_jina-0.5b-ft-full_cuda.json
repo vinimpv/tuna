@@ -1,0 +1,28 @@
+{
+ "repo": "saleor",
+ "tag": "jina-0.5b-ft-full",
+ "model": "jinaai/jina-code-embeddings-0.5b",
+ "weights": "$TUNA_OUT/saleor/models/jina-0.5b-ft-full",
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 11678,
+ "symbols": 11678,
+ "dim": 896,
+ "index_bytes": 41901703,
+ "query_ms": {
+  "p50": 9.11,
+  "p95": 14.18,
+  "mean": 10.15
+ },
+ "encode_ms": {
+  "p50": 8.82,
+  "p95": 10.44,
+  "mean": 9.42
+ },
+ "search_ms": {
+  "p50": 0.2,
+  "p95": 2.63,
+  "mean": 0.73
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "bench": "issues",
+ "written_utc": "2026-11-12T08:19:53+00:00",
+ "written_before_first_run": true,
+ "replaces": "an earlier plan mixing claude-m3 questions, stopped after 30 runs; its 18 finished issue runs are reused",
+ "model": "claude-sonnet-5-5",
+ "workers": 4,
+ "max_utilization": 0.985,
+ "search_device": "cpu",
+ "questions": {
+  "saleor": 106,
+  "zulip": 150,
+  "posthog": 65,
+  "total": 321,
+  "set": "issues-v1 (all), no claude-m3"
+ },
+ "arms": {
+  "A": "Read,Grep,Glob",
+  "B": "+search lfm25-emb",
+  "C": "+search lfm25-ft-lora",
+  "D": "+search rrf(bm25, qwen3-0.6b-ft-lora), k=60, run after A-C"
+ },
+ "runs": {
+  "A-C": 963,
+  "reused_saleor": {
+   "pilot": 75,
+   "full": 18
+  },
+  "A-C_to_run": 870,
+  "D": 321
+ },
+ "reuse_rule": "status ok, no isolation problems, flags_hash equal to the current command line for that arm",
+ "split": {
+  "saleor": {
+   "repo": "saleor",
+   "commit": "28a1227b9a2db153c22ed6165b0987d0c96f80f8",
+   "take": [
+    "issues-v1:106"
+   ],
+   "seed": 20261112,
+   "questions": 106,
+   "distinct_gold_files": 91,
+   "max_per_file": 5,
+   "sha256": "5e07edd7525116c949668baf42ea085abcc3ed365c35522923f86fa74ee3263b"
+  },
+  "zulip": {
+   "repo": "zulip",
+   "commit": "b31982251ff82d0b02e59f63ad21f19204e37aea",
+   "take": [
+    "issues-v1:150"
+   ],
+   "seed": 20261112,
+   "questions": 150,
+   "distinct_gold_files": 101,
+   "max_per_file": 7,
+   "sha256": "8e9c914ab8e11b41c98511f69cce7118359656fa03b8a613cb677a863d72a7c9"
+  },
+  "posthog": {
+   "repo": "posthog",
+   "commit": "df9b6d3f99d8a41e428bf7c20b3860e322a738d7",
+   "take": [
+    "issues-v1:65"
+   ],
+   "seed": 20261112,
+   "questions": 65,
+   "distinct_gold_files": 53,
+   "max_per_file": 5,
+   "sha256": "bfac8e58e39a6f5b0461cfafa59eec2b061ba536f56b4400492116fa3bf46b1c"
+  }
+ }
+}

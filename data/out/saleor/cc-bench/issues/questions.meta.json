@@ -1,0 +1,12 @@
+{
+ "repo": "saleor",
+ "commit": "28a1227b9a2db153c22ed6165b0987d0c96f80f8",
+ "take": [
+  "issues-v1:106"
+ ],
+ "seed": 20261112,
+ "questions": 106,
+ "distinct_gold_files": 91,
+ "max_per_file": 5,
+ "sha256": "5e07edd7525116c949668baf42ea085abcc3ed365c35522923f86fa74ee3263b"
+}

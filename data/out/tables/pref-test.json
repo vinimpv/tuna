@@ -1,0 +1,1442 @@
+[
+ {
+  "target": "saleor",
+  "model": "LFM2.5",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4841
+  ],
+  "ratio": {
+   "stock": 2.028,
+   "tuned here": 1.6,
+   "tuned on zulip": 1.539,
+   "tuned on posthog": 1.613
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.789,
+    "ci95": [
+     0.683,
+     0.914
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.759,
+    "ci95": [
+     0.66,
+     0.869
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.795,
+    "ci95": [
+     0.688,
+     0.916
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "LFM2.5",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   4937
+  ],
+  "ratio": {
+   "stock": 1.556,
+   "tuned here": 1.27,
+   "tuned on zulip": 1.152,
+   "tuned on posthog": 1.259
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.816,
+    "ci95": [
+     0.749,
+     0.888
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.74,
+    "ci95": [
+     0.68,
+     0.802
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.809,
+    "ci95": [
+     0.743,
+     0.881
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "LFM2.5",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4841
+  ],
+  "ratio": {
+   "stock": 1.682,
+   "tuned here": 1.468,
+   "tuned on zulip": 1.355,
+   "tuned on posthog": 1.359
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.873,
+    "ci95": [
+     0.831,
+     0.916
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.805,
+    "ci95": [
+     0.769,
+     0.843
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.808,
+    "ci95": [
+     0.769,
+     0.848
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "LFM2.5",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   4937
+  ],
+  "ratio": {
+   "stock": 1.29,
+   "tuned here": 1.185,
+   "tuned on zulip": 1.09,
+   "tuned on posthog": 1.16
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.919,
+    "ci95": [
+     0.891,
+     0.948
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.845,
+    "ci95": [
+     0.821,
+     0.87
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.9,
+    "ci95": [
+     0.872,
+     0.929
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "jina-0.5B",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4841
+  ],
+  "ratio": {
+   "stock": 1.7,
+   "tuned here": 2.548,
+   "tuned on zulip": 2.308,
+   "tuned on posthog": 2.207
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.499,
+    "ci95": [
+     1.329,
+     1.701
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.358,
+    "ci95": [
+     1.203,
+     1.531
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.298,
+    "ci95": [
+     1.161,
+     1.459
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "jina-0.5B",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   4937
+  ],
+  "ratio": {
+   "stock": 1.324,
+   "tuned here": 1.777,
+   "tuned on zulip": 1.665,
+   "tuned on posthog": 1.558
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.342,
+    "ci95": [
+     1.241,
+     1.452
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.257,
+    "ci95": [
+     1.169,
+     1.352
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.177,
+    "ci95": [
+     1.093,
+     1.267
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "jina-0.5B",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4841
+  ],
+  "ratio": {
+   "stock": 1.35,
+   "tuned here": 1.947,
+   "tuned on zulip": 1.764,
+   "tuned on posthog": 1.715
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.442,
+    "ci95": [
+     1.379,
+     1.51
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.307,
+    "ci95": [
+     1.253,
+     1.361
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.27,
+    "ci95": [
+     1.216,
+     1.325
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "jina-0.5B",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   4937
+  ],
+  "ratio": {
+   "stock": 1.238,
+   "tuned here": 1.528,
+   "tuned on zulip": 1.473,
+   "tuned on posthog": 1.432
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.235,
+    "ci95": [
+     1.2,
+     1.271
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.19,
+    "ci95": [
+     1.158,
+     1.223
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.157,
+    "ci95": [
+     1.126,
+     1.188
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "Qwen3-0.6B",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4841
+  ],
+  "ratio": {
+   "stock": 1.787,
+   "tuned here": 2.396,
+   "tuned on zulip": 2.23,
+   "tuned on posthog": 2.453
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.341,
+    "ci95": [
+     1.203,
+     1.502
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.248,
+    "ci95": [
+     1.115,
+     1.396
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.373,
+    "ci95": [
+     1.232,
+     1.535
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "Qwen3-0.6B",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   4937
+  ],
+  "ratio": {
+   "stock": 1.549,
+   "tuned here": 1.646,
+   "tuned on zulip": 1.47,
+   "tuned on posthog": 1.674
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.063,
+    "ci95": [
+     0.988,
+     1.145
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.949,
+    "ci95": [
+     0.885,
+     1.02
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.081,
+    "ci95": [
+     1.007,
+     1.16
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "Qwen3-0.6B",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4841
+  ],
+  "ratio": {
+   "stock": 1.329,
+   "tuned here": 1.817,
+   "tuned on zulip": 1.755,
+   "tuned on posthog": 1.768
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.367,
+    "ci95": [
+     1.309,
+     1.428
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.32,
+    "ci95": [
+     1.269,
+     1.374
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.33,
+    "ci95": [
+     1.277,
+     1.389
+    ]
+   }
+  }
+ },
+ {
+  "target": "saleor",
+  "model": "Qwen3-0.6B",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   4937
+  ],
+  "ratio": {
+   "stock": 1.395,
+   "tuned here": 1.517,
+   "tuned on zulip": 1.373,
+   "tuned on posthog": 1.558
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.088,
+    "ci95": [
+     1.058,
+     1.118
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.984,
+    "ci95": [
+     0.96,
+     1.01
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.117,
+    "ci95": [
+     1.088,
+     1.148
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "LFM2.5",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4013
+  ],
+  "ratio": {
+   "stock": 1.219,
+   "tuned here": 1.274,
+   "tuned on saleor": 1.315,
+   "tuned on posthog": 1.344
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.045,
+    "ci95": [
+     0.935,
+     1.169
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.078,
+    "ci95": [
+     0.961,
+     1.208
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.102,
+    "ci95": [
+     0.985,
+     1.232
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "LFM2.5",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1333,
+   1090
+  ],
+  "ratio": {
+   "stock": 1.46,
+   "tuned here": 1.182,
+   "tuned on saleor": 1.176,
+   "tuned on posthog": 1.133
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.809,
+    "ci95": [
+     0.734,
+     0.892
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.806,
+    "ci95": [
+     0.729,
+     0.893
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.776,
+    "ci95": [
+     0.704,
+     0.856
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "LFM2.5",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4013
+  ],
+  "ratio": {
+   "stock": 1.342,
+   "tuned here": 1.081,
+   "tuned on saleor": 1.135,
+   "tuned on posthog": 1.093
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.806,
+    "ci95": [
+     0.775,
+     0.838
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.846,
+    "ci95": [
+     0.809,
+     0.884
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.815,
+    "ci95": [
+     0.781,
+     0.85
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "LFM2.5",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1333,
+   1090
+  ],
+  "ratio": {
+   "stock": 1.462,
+   "tuned here": 1.196,
+   "tuned on saleor": 1.152,
+   "tuned on posthog": 1.114
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.818,
+    "ci95": [
+     0.789,
+     0.847
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.788,
+    "ci95": [
+     0.756,
+     0.82
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.762,
+    "ci95": [
+     0.732,
+     0.792
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "jina-0.5B",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4013
+  ],
+  "ratio": {
+   "stock": 0.947,
+   "tuned here": 1.403,
+   "tuned on saleor": 1.527,
+   "tuned on posthog": 1.348
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.481,
+    "ci95": [
+     1.332,
+     1.647
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.612,
+    "ci95": [
+     1.438,
+     1.806
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.422,
+    "ci95": [
+     1.284,
+     1.586
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "jina-0.5B",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1333,
+   1090
+  ],
+  "ratio": {
+   "stock": 1.368,
+   "tuned here": 1.844,
+   "tuned on saleor": 1.54,
+   "tuned on posthog": 1.463
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.347,
+    "ci95": [
+     1.218,
+     1.49
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.125,
+    "ci95": [
+     1.014,
+     1.249
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.069,
+    "ci95": [
+     0.97,
+     1.181
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "jina-0.5B",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4013
+  ],
+  "ratio": {
+   "stock": 0.913,
+   "tuned here": 1.262,
+   "tuned on saleor": 1.404,
+   "tuned on posthog": 1.22
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.382,
+    "ci95": [
+     1.326,
+     1.443
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.537,
+    "ci95": [
+     1.464,
+     1.618
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.335,
+    "ci95": [
+     1.28,
+     1.394
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "jina-0.5B",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1333,
+   1090
+  ],
+  "ratio": {
+   "stock": 1.162,
+   "tuned here": 1.566,
+   "tuned on saleor": 1.369,
+   "tuned on posthog": 1.285
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.347,
+    "ci95": [
+     1.3,
+     1.396
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.178,
+    "ci95": [
+     1.132,
+     1.222
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.106,
+    "ci95": [
+     1.069,
+     1.143
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "Qwen3-0.6B",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4013
+  ],
+  "ratio": {
+   "stock": 1.381,
+   "tuned here": 1.417,
+   "tuned on saleor": 1.482,
+   "tuned on posthog": 1.625
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.026,
+    "ci95": [
+     0.942,
+     1.121
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.073,
+    "ci95": [
+     0.979,
+     1.174
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.176,
+    "ci95": [
+     1.071,
+     1.294
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "Qwen3-0.6B",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1333,
+   1090
+  ],
+  "ratio": {
+   "stock": 1.669,
+   "tuned here": 1.496,
+   "tuned on saleor": 1.515,
+   "tuned on posthog": 1.541
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.896,
+    "ci95": [
+     0.815,
+     0.987
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.908,
+    "ci95": [
+     0.822,
+     1.005
+    ]
+   },
+   "tuned on posthog": {
+    "point": 0.923,
+    "ci95": [
+     0.84,
+     1.012
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "Qwen3-0.6B",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   4013
+  ],
+  "ratio": {
+   "stock": 1.236,
+   "tuned here": 1.218,
+   "tuned on saleor": 1.327,
+   "tuned on posthog": 1.333
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.985,
+    "ci95": [
+     0.953,
+     1.017
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.073,
+    "ci95": [
+     1.034,
+     1.113
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.078,
+    "ci95": [
+     1.041,
+     1.118
+    ]
+   }
+  }
+ },
+ {
+  "target": "zulip",
+  "model": "Qwen3-0.6B",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1333,
+   1090
+  ],
+  "ratio": {
+   "stock": 1.312,
+   "tuned here": 1.425,
+   "tuned on saleor": 1.383,
+   "tuned on posthog": 1.388
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.086,
+    "ci95": [
+     1.048,
+     1.125
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.054,
+    "ci95": [
+     1.015,
+     1.094
+    ]
+   },
+   "tuned on posthog": {
+    "point": 1.058,
+    "ci95": [
+     1.021,
+     1.096
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "LFM2.5",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   5543
+  ],
+  "ratio": {
+   "stock": 1.822,
+   "tuned here": 1.402,
+   "tuned on saleor": 1.552,
+   "tuned on zulip": 1.307
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.769,
+    "ci95": [
+     0.641,
+     0.925
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.852,
+    "ci95": [
+     0.717,
+     1.013
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.717,
+    "ci95": [
+     0.595,
+     0.858
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "LFM2.5",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   22236
+  ],
+  "ratio": {
+   "stock": 1.975,
+   "tuned here": 1.409,
+   "tuned on saleor": 1.11,
+   "tuned on zulip": 1.388
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.713,
+    "ci95": [
+     0.641,
+     0.794
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.562,
+    "ci95": [
+     0.497,
+     0.635
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.703,
+    "ci95": [
+     0.633,
+     0.78
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "LFM2.5",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   5543
+  ],
+  "ratio": {
+   "stock": 1.585,
+   "tuned here": 1.113,
+   "tuned on saleor": 1.133,
+   "tuned on zulip": 1.143
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.702,
+    "ci95": [
+     0.658,
+     0.75
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.715,
+    "ci95": [
+     0.67,
+     0.761
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.721,
+    "ci95": [
+     0.678,
+     0.766
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "LFM2.5",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   22236
+  ],
+  "ratio": {
+   "stock": 1.889,
+   "tuned here": 1.256,
+   "tuned on saleor": 1.092,
+   "tuned on zulip": 1.168
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 0.665,
+    "ci95": [
+     0.64,
+     0.691
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.578,
+    "ci95": [
+     0.555,
+     0.602
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.618,
+    "ci95": [
+     0.594,
+     0.643
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "jina-0.5B",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   5543
+  ],
+  "ratio": {
+   "stock": 1.675,
+   "tuned here": 1.947,
+   "tuned on saleor": 1.903,
+   "tuned on zulip": 2.215
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.162,
+    "ci95": [
+     1.003,
+     1.355
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.136,
+    "ci95": [
+     0.969,
+     1.334
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.322,
+    "ci95": [
+     1.12,
+     1.571
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "jina-0.5B",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   22236
+  ],
+  "ratio": {
+   "stock": 1.309,
+   "tuned here": 1.646,
+   "tuned on saleor": 1.551,
+   "tuned on zulip": 1.556
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.257,
+    "ci95": [
+     1.133,
+     1.395
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.185,
+    "ci95": [
+     1.056,
+     1.332
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.189,
+    "ci95": [
+     1.062,
+     1.329
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "jina-0.5B",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   5543
+  ],
+  "ratio": {
+   "stock": 1.405,
+   "tuned here": 1.703,
+   "tuned on saleor": 1.643,
+   "tuned on zulip": 1.861
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.212,
+    "ci95": [
+     1.148,
+     1.282
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.169,
+    "ci95": [
+     1.097,
+     1.246
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.324,
+    "ci95": [
+     1.251,
+     1.403
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "jina-0.5B",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   22236
+  ],
+  "ratio": {
+   "stock": 1.131,
+   "tuned here": 1.478,
+   "tuned on saleor": 1.433,
+   "tuned on zulip": 1.509
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.307,
+    "ci95": [
+     1.259,
+     1.357
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.267,
+    "ci95": [
+     1.217,
+     1.319
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.334,
+    "ci95": [
+     1.285,
+     1.385
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "Qwen3-0.6B",
+  "k": 10,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   5543
+  ],
+  "ratio": {
+   "stock": 1.653,
+   "tuned here": 1.917,
+   "tuned on saleor": 1.711,
+   "tuned on zulip": 1.635
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.16,
+    "ci95": [
+     0.986,
+     1.369
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.035,
+    "ci95": [
+     0.877,
+     1.221
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.989,
+    "ci95": [
+     0.842,
+     1.166
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "Qwen3-0.6B",
+  "k": 10,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   22236
+  ],
+  "ratio": {
+   "stock": 1.669,
+   "tuned here": 1.868,
+   "tuned on saleor": 1.472,
+   "tuned on zulip": 1.461
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.119,
+    "ci95": [
+     1.015,
+     1.235
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.882,
+    "ci95": [
+     0.796,
+     0.979
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.876,
+    "ci95": [
+     0.788,
+     0.97
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "Qwen3-0.6B",
+  "k": 100,
+  "groups": "claude-m3 golds vs other held-out symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   400,
+   5543
+  ],
+  "ratio": {
+   "stock": 1.471,
+   "tuned here": 1.716,
+   "tuned on saleor": 1.523,
+   "tuned on zulip": 1.601
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.166,
+    "ci95": [
+     1.106,
+     1.232
+    ]
+   },
+   "tuned on saleor": {
+    "point": 1.036,
+    "ci95": [
+     0.979,
+     1.093
+    ]
+   },
+   "tuned on zulip": {
+    "point": 1.089,
+    "ci95": [
+     1.03,
+     1.149
+    ]
+   }
+  }
+ },
+ {
+  "target": "posthog",
+  "model": "Qwen3-0.6B",
+  "k": 100,
+  "groups": "qwen-train1 golds vs other training symbols",
+  "n_queries": 800,
+  "group_sizes": [
+   1500,
+   22236
+  ],
+  "ratio": {
+   "stock": 1.346,
+   "tuned here": 1.529,
+   "tuned on saleor": 1.314,
+   "tuned on zulip": 1.344
+  },
+  "tuned_over_stock": {
+   "tuned here": {
+    "point": 1.136,
+    "ci95": [
+     1.098,
+     1.176
+    ]
+   },
+   "tuned on saleor": {
+    "point": 0.976,
+    "ci95": [
+     0.942,
+     1.012
+    ]
+   },
+   "tuned on zulip": {
+    "point": 0.998,
+    "ci95": [
+     0.963,
+     1.035
+    ]
+   }
+  }
+ }
+]

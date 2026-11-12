@@ -1,0 +1,20 @@
+{
+ "repo": "saleor",
+ "questions": "$TUNA_OUT/saleor/questions/qwen-m1.jsonl",
+ "n": 100,
+ "unreachable_gold": [],
+ "missing_gold": {},
+ "results": {
+  "bm25_qwen-m1": {
+   "hit@1": 0.55,
+   "hit@3": 0.69,
+   "hit@5": 0.77,
+   "hit@10": 0.8,
+   "hit@20": 0.83,
+   "mrr": 0.6418,
+   "mrr@10": 0.6372,
+   "recall@200": 0.95,
+   "n": 100
+  }
+ }
+}

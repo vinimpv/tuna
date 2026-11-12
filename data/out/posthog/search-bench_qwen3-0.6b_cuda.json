@@ -1,0 +1,28 @@
+{
+ "repo": "posthog",
+ "tag": "qwen3-0.6b",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": null,
+ "device": "cuda",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 29681,
+ "symbols": 29679,
+ "dim": 1024,
+ "index_bytes": 121693069,
+ "query_ms": {
+  "p50": 15.26,
+  "p95": 16.73,
+  "mean": 15.47
+ },
+ "encode_ms": {
+  "p50": 12.95,
+  "p95": 13.92,
+  "mean": 13.1
+ },
+ "search_ms": {
+  "p50": 2.3,
+  "p95": 2.86,
+  "mean": 2.37
+ }
+}

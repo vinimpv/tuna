@@ -1,0 +1,40 @@
+{
+ "repo": "zulip",
+ "tag": "lfm25-emb",
+ "model": "LiquidAI/LFM2.5-Embedding-350M",
+ "weights": null,
+ "device": "cpu",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 8457,
+ "symbols": 6836,
+ "dim": 1024,
+ "index_bytes": 34674586,
+ "query_ms": {
+  "p50": 102.38,
+  "p95": 108.01,
+  "mean": 102.62
+ },
+ "encode_ms": {
+  "p50": 97.77,
+  "p95": 103.5,
+  "mean": 97.95
+ },
+ "search_ms": {
+  "p50": 4.11,
+  "p95": 6.53,
+  "mean": 4.67
+ },
+ "cpu_rebuild": {
+  "sample_symbols": 32,
+  "sample_documents": 42,
+  "sample_seconds": 8.61,
+  "documents_per_s": 4.88,
+  "estimated_full_rebuild_s": 1733.1,
+  "cpu": {
+   "model": "AMD Ryzen 9 9950X3D 16-Core Processor",
+   "logical_cores": 32
+  },
+  "threads": 16
+ }
+}

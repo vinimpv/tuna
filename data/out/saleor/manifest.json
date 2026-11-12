@@ -1,0 +1,42 @@
+{
+ "repo": "saleor",
+ "tag": "3.23.41",
+ "commit": "28a1227b9a2db153c22ed6165b0987d0c96f80f8",
+ "config": "saleor.toml",
+ "include": [
+  "saleor/*"
+ ],
+ "exclude": [
+  "*/tests/*",
+  "*/test/*",
+  "*/test_*.py",
+  "*_test.py",
+  "*/tests.py",
+  "*/conftest.py",
+  "conftest.py",
+  "*/migrations/*"
+ ],
+ "languages": [
+  "python"
+ ],
+ "extractor": "tuna tree-sitter",
+ "grammars": {
+  "tree-sitter": "0.25.2",
+  "tree-sitter-python": "0.25.0"
+ },
+ "symbols": 11678,
+ "files": 1164,
+ "files_with_symbols": 1010,
+ "kinds": {
+  "Class": 4285,
+  "Method": 4194,
+  "Function": 3199
+ },
+ "dropped": {
+  "files_without_symbols": 154,
+  "duplicate_fqn": 20
+ },
+ "parse_error_files": [],
+ "symbols_sha256": "5ac20c9d0e87f38908c6f64d8609ee5b287c93344679f9991635039b862d4321",
+ "created": "2026-11-11T14:20:24+00:00"
+}

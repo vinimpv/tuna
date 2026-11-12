@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# stdio MCP search server over a saved index; see src/tuna/mcp.py.
+#   scripts/tuna-mcp --repo saleor --tag lfm25-ft-lora [--log FILE] [--threads N]
+# Query encoding runs on the CPU, offline: no GPU, no network, no corpus embedding.
+set -euo pipefail
+here=$(cd "$(dirname "$0")/.." && pwd)
+export CUDA_VISIBLE_DEVICES="" HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+exec "$here/.venv/bin/python" -m tuna mcp "$@"

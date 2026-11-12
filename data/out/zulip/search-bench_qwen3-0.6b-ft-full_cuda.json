@@ -1,0 +1,29 @@
+{
+ "repo": "zulip",
+ "tag": "qwen3-0.6b-ft-full",
+ "model": "Qwen/Qwen3-Embedding-0.6B",
+ "weights": "$TUNA_OUT/zulip/models/qwen3-0.6b-ft-full",
+ "device": "cuda",
+ "machine": "local",
+ "questions_set": "qwen-m2",
+ "questions": 100,
+ "documents": 6836,
+ "symbols": 6836,
+ "dim": 1024,
+ "index_bytes": 28028760,
+ "query_ms": {
+  "p50": 12.49,
+  "p95": 14.28,
+  "mean": 13.01
+ },
+ "encode_ms": {
+  "p50": 12.32,
+  "p95": 13.38,
+  "mean": 12.62
+ },
+ "search_ms": {
+  "p50": 0.14,
+  "p95": 0.67,
+  "mean": 0.39
+ }
+}

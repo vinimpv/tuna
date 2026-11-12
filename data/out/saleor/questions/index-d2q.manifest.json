@@ -1,0 +1,58 @@
+{
+ "name": "index-d2q",
+ "index_side": true,
+ "note": "doc2query control: index-side questions, never training data",
+ "symbols": 11678,
+ "questions": 11151,
+ "fallback_symbols": 527,
+ "passes": [
+  {
+   "set": "index-d2q-s0of12-p1",
+   "accepted": 917
+  },
+  {
+   "set": "index-d2q-s10of12-p1",
+   "accepted": 917
+  },
+  {
+   "set": "index-d2q-s11of12-p1",
+   "accepted": 919
+  },
+  {
+   "set": "index-d2q-s1of12-p1",
+   "accepted": 912
+  },
+  {
+   "set": "index-d2q-s2of12-p1",
+   "accepted": 906
+  },
+  {
+   "set": "index-d2q-s3of12-p1",
+   "accepted": 920
+  },
+  {
+   "set": "index-d2q-s4of12-p1",
+   "accepted": 988
+  },
+  {
+   "set": "index-d2q-s5of12-p1",
+   "accepted": 927
+  },
+  {
+   "set": "index-d2q-s6of12-p1",
+   "accepted": 912
+  },
+  {
+   "set": "index-d2q-s7of12-p1",
+   "accepted": 948
+  },
+  {
+   "set": "index-d2q-s8of12-p1",
+   "accepted": 948
+  },
+  {
+   "set": "index-d2q-s9of12-p1",
+   "accepted": 937
+  }
+ ]
+}
